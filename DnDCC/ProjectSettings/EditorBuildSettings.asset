@@ -4,5 +4,50 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu2.unity
+    guid: 62cc16e9fae76eb448664b00bc60afbf
+  - enabled: 1
+    path: Assets/Scenes/MainMenu3.unity
+    guid: d109f2b4532fa7b4b9b663bc7bc771a1
+  - enabled: 1
+    path: Assets/Scenes/Race.unity
+    guid: 71bac59171fd67341beb22a0815949c0
+  - enabled: 1
+    path: Assets/Scenes/Class.unity
+    guid: 9c6067ccce27de74cacc764f74115f1d
+  - enabled: 1
+    path: Assets/Scenes/Background.unity
+    guid: 2b1d64a7b1e37174a849e288ea22d44e
+  - enabled: 1
+    path: Assets/Scenes/AbilityScores.unity
+    guid: f76bc704a09299544a5602e6d10351b1
+  - enabled: 1
+    path: Assets/Scenes/ClassFeatures.unity
+    guid: efef3a403bf4d554ca82b056800c175d
+  - enabled: 1
+    path: Assets/Scenes/Proficiencies.unity
+    guid: 7716dabc069759048b374227c50fdf00
+  - enabled: 1
+    path: Assets/Scenes/Equipment.unity
+    guid: 18702abc2441ea64da46f420ff36a603
+  - enabled: 1
+    path: Assets/Scenes/SetHP.unity
+    guid: 8029c75347a1ea44fa7135fc756b5e15
+  - enabled: 1
+    path: Assets/Scenes/Spells.unity
+    guid: da7bb3d475107ed47a59e83258939da3
+  - enabled: 1
+    path: Assets/Scenes/Personality.unity
+    guid: 92d2c9e42a679fb4391d603a068701e9
+  - enabled: 1
+    path: Assets/Scenes/FinishedCharacter.unity
+    guid: 01e05e709095be342bebce3c1153e351
+  - enabled: 1
+    path: Assets/Scenes/LoadCharacter.unity
+    guid: 9e20fcccb0fb56f449bac64f2565bd4f
   m_configObjects: {}
