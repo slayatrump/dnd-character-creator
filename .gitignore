@@ -69,3 +69,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 DnDCC/Temp/UnityLockfile
+DnDCC/Library/ArtifactDB
+DnDCC/Library/CurrentLayout-default.dwlt
+DnDCC/Library/LastSceneManagerSetup.txt
+DnDCC/Library/SceneVisibilityState.asset
+DnDCC/Library/SourceAssetDB
+DnDCC/Packages/packages-lock.json
