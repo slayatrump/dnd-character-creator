@@ -18,13 +18,6 @@ public class AbilityScoreRoller : MonoBehaviour
     public bool rerollOnes;
     public bool rerollTwos;
 
-    /*public int score1;
-    public int score2;
-    public int score3;
-    public int score4;
-    public int score5;
-    public int score6;*/
-
     public int[] scores;
     public int sum;
 
@@ -32,12 +25,6 @@ public class AbilityScoreRoller : MonoBehaviour
     private int die2;
     private int die3;
     private int die4;
-
-    /*public AbilityScoreRoller(bool rerollones, bool rerolltwos)
-    {
-        rerollOnes = rerollones;
-        rerollTwos = rerolltwos;
-    }*/
 
     public void Start()
     {
@@ -48,7 +35,6 @@ public class AbilityScoreRoller : MonoBehaviour
         RollScores();
     }
 
-    //Dont know if this will actually get used, but ill keep it here just in case
     public void RollScoresButton()
     {
         RollScores();
