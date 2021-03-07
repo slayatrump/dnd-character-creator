@@ -129,9 +129,11 @@ public class PointBuyScript : MonoBehaviour
                         {
                             points -= 2;
                             Str.score += 1;
-                            Str.modifier = 2;
+
                             str.text = Str.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Str.modifier = 2;
                             strMod.text = "+" + Str.modifier.ToString();
                         }
                         else
@@ -153,6 +155,22 @@ public class PointBuyScript : MonoBehaviour
                             Dex.score += 1;
                             dex.text = Dex.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Dex.score == 13 || Dex.score == 12)
+                            {
+                                Dex.modifier = 1;
+                                dexMod.text = "+" + Dex.modifier.ToString();
+                            }
+                            if (Dex.score == 11 || Dex.score == 10)
+                            {
+                                Dex.modifier = 0;
+                                dexMod.text = "+" + Dex.modifier.ToString();
+                            }
+                            if (Dex.score == 9 || Dex.score == 8)
+                            {
+                                Dex.modifier = -1;
+                                dexMod.text = Dex.modifier.ToString();
+                            }
                         }
                         else if (Dex.score < 15 && points >= 2)
                         {
@@ -160,6 +178,9 @@ public class PointBuyScript : MonoBehaviour
                             Dex.score += 1;
                             dex.text = Dex.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Dex.modifier = 2;
+                            dexMod.text = "+" + Dex.modifier.ToString();
                         }
                         else
                         {
@@ -180,6 +201,22 @@ public class PointBuyScript : MonoBehaviour
                             Con.score += 1;
                             con.text = Con.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Con.score == 13 || Con.score == 12)
+                            {
+                                Con.modifier = 1;
+                                conMod.text = "+" + Con.modifier.ToString();
+                            }
+                            if (Con.score == 11 || Con.score == 10)
+                            {
+                                Con.modifier = 0;
+                                conMod.text = "+" + Con.modifier.ToString();
+                            }
+                            if (Con.score == 9 || Con.score == 8)
+                            {
+                                Con.modifier = -1;
+                                conMod.text = Con.modifier.ToString();
+                            }
                         }
                         else if (Con.score < 15 && points >= 2)
                         {
@@ -187,6 +224,9 @@ public class PointBuyScript : MonoBehaviour
                             Con.score += 1;
                             con.text = Con.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Con.modifier = 2;
+                            conMod.text = "+" + Con.modifier.ToString();
                         }
                         else
                         {
@@ -207,6 +247,22 @@ public class PointBuyScript : MonoBehaviour
                             Int.score += 1;
                             inte.text = Int.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Int.score == 13 || Int.score == 12)
+                            {
+                                Int.modifier = 1;
+                                inteMod.text = "+" + Int.modifier.ToString();
+                            }
+                            if (Int.score == 11 || Int.score == 10)
+                            {
+                                Int.modifier = 0;
+                                inteMod.text = "+" + Int.modifier.ToString();
+                            }
+                            if (Int.score == 9 || Int.score == 8)
+                            {
+                                Int.modifier = -1;
+                                inteMod.text = Int.modifier.ToString();
+                            }
                         }
                         else if (Int.score < 15 && points >= 2)
                         {
@@ -214,6 +270,9 @@ public class PointBuyScript : MonoBehaviour
                             Int.score += 1;
                             inte.text = Int.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Int.modifier = 2;
+                            inteMod.text = "+" + Int.modifier.ToString();
                         }
                         else
                         {
@@ -234,6 +293,22 @@ public class PointBuyScript : MonoBehaviour
                             Wis.score += 1;
                             wis.text = Wis.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Wis.score == 13 || Wis.score == 12)
+                            {
+                                Wis.modifier = 1;
+                                wisMod.text = "+" + Wis.modifier.ToString();
+                            }
+                            if (Wis.score == 11 || Wis.score == 10)
+                            {
+                                Wis.modifier = 0;
+                                wisMod.text = "+" + Wis.modifier.ToString();
+                            }
+                            if (Wis.score == 9 || Wis.score == 8)
+                            {
+                                Wis.modifier = -1;
+                                wisMod.text = Wis.modifier.ToString();
+                            }
                         }
                         else if (Wis.score < 15 && points >= 2)
                         {
@@ -241,6 +316,9 @@ public class PointBuyScript : MonoBehaviour
                             Wis.score += 1;
                             wis.text = Wis.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Wis.modifier = 2;
+                            wisMod.text = "+" + Wis.modifier.ToString();
                         }
                         else
                         {
@@ -261,6 +339,22 @@ public class PointBuyScript : MonoBehaviour
                             Cha.score += 1;
                             cha.text = Cha.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Cha.score == 13 || Cha.score == 12)
+                            {
+                                Cha.modifier = 1;
+                                chaMod.text = "+" + Cha.modifier.ToString();
+                            }
+                            if (Cha.score == 11 || Cha.score == 10)
+                            {
+                                Cha.modifier = 0;
+                                chaMod.text = "+" + Cha.modifier.ToString();
+                            }
+                            if (Cha.score == 9 || Cha.score == 8)
+                            {
+                                Cha.modifier = -1;
+                                chaMod.text = Cha.modifier.ToString();
+                            }
                         }
                         else if (Cha.score < 15 && points >= 2)
                         {
@@ -268,6 +362,9 @@ public class PointBuyScript : MonoBehaviour
                             Cha.score += 1;
                             cha.text = Cha.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Cha.modifier = 2;
+                            chaMod.text = "+" + Cha.modifier.ToString();
                         }
                         else
                         {
@@ -290,12 +387,25 @@ public class PointBuyScript : MonoBehaviour
                 {
                     if (Str.score > 8)
                     {
-                        if (Str.score > 13)
+                        if (Str.score == 15)
                         {
                             points += 2;
                             Str.score -= 1;
                             str.text = Str.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Str.modifier = 2;
+                            strMod.text = "+" + Str.modifier.ToString();
+                        }
+                        else if (Str.score == 14)
+                        {
+                            points += 2;
+                            Str.score -= 1;
+                            str.text = Str.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Str.modifier = 1;
+                            strMod.text = "+" + Str.modifier.ToString();
                         }
                         else
                         {
@@ -303,25 +413,53 @@ public class PointBuyScript : MonoBehaviour
                             Str.score -= 1;
                             str.text = Str.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Str.score == 13 || Str.score == 12)
+                            {
+                                Str.modifier = 1;
+                                strMod.text = "+" + Str.modifier.ToString();
+                            }
+                            if (Str.score == 11 || Str.score == 10)
+                            {
+                                Str.modifier = 0;
+                                strMod.text = "+" + Str.modifier.ToString();
+                            }
+                            if (Str.score == 9 || Str.score == 8)
+                            {
+                                Str.modifier = -1;
+                                strMod.text = Str.modifier.ToString();
+                            }
                         }
                     }
                     else
                     {
                         //cant go under 8
                     }
-
                     break;
                 }
             case "Dex-":
                 {
                     if (Dex.score > 8)
                     {
-                        if (Dex.score > 13)
+                        if (Dex.score == 15)
                         {
                             points += 2;
                             Dex.score -= 1;
                             dex.text = Dex.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Dex.modifier = 2;
+                            dexMod.text = "+" + Dex.modifier.ToString();
+                        }
+                        else if (Dex.score == 14)
+                        {
+                            points += 2;
+                            Dex.score -= 1;
+                            dex.text = Dex.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Dex.modifier = 1;
+                            dexMod.text = "+" + Dex.modifier.ToString();
                         }
                         else
                         {
@@ -329,6 +467,22 @@ public class PointBuyScript : MonoBehaviour
                             Dex.score -= 1;
                             dex.text = Dex.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Dex.score == 13 || Dex.score == 12)
+                            {
+                                Dex.modifier = 1;
+                                dexMod.text = "+" + Dex.modifier.ToString();
+                            }
+                            if (Dex.score == 11 || Dex.score == 10)
+                            {
+                                Dex.modifier = 0;
+                                dexMod.text = "+" + Dex.modifier.ToString();
+                            }
+                            if (Dex.score == 9 || Dex.score == 8)
+                            {
+                                Dex.modifier = -1;
+                                dexMod.text = Dex.modifier.ToString();
+                            }
                         }
                     }
                     else
@@ -342,12 +496,25 @@ public class PointBuyScript : MonoBehaviour
                 {
                     if (Con.score > 8)
                     {
-                        if (Con.score > 13)
+                        if (Con.score == 15)
                         {
                             points += 2;
                             Con.score -= 1;
                             con.text = Con.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Con.modifier = 2;
+                            conMod.text = "+" + Con.modifier.ToString();
+                        }
+                        else if (Con.score == 14)
+                        {
+                            points += 2;
+                            Con.score -= 1;
+                            con.text = Con.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Con.modifier = 1;
+                            conMod.text = "+" + Con.modifier.ToString();
                         }
                         else
                         {
@@ -355,6 +522,22 @@ public class PointBuyScript : MonoBehaviour
                             Con.score -= 1;
                             con.text = Con.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Con.score == 13 || Con.score == 12)
+                            {
+                                Con.modifier = 1;
+                                conMod.text = "+" + Con.modifier.ToString();
+                            }
+                            if (Con.score == 11 || Con.score == 10)
+                            {
+                                Con.modifier = 0;
+                                conMod.text = "+" + Con.modifier.ToString();
+                            }
+                            if (Con.score == 9 || Con.score == 8)
+                            {
+                                Con.modifier = -1;
+                                conMod.text = Con.modifier.ToString();
+                            }
                         }
                     }
                     else
@@ -368,12 +551,25 @@ public class PointBuyScript : MonoBehaviour
                 {
                     if (Int.score > 8)
                     {
-                        if (Int.score > 13)
+                        if (Int.score == 15)
                         {
                             points += 2;
                             Int.score -= 1;
                             inte.text = Int.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Int.modifier = 2;
+                            inteMod.text = "+" + Int.modifier.ToString();
+                        }
+                        else if (Int.score == 14)
+                        {
+                            points += 2;
+                            Int.score -= 1;
+                            inte.text = Int.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Int.modifier = 1;
+                            inteMod.text = "+" + Int.modifier.ToString();
                         }
                         else
                         {
@@ -381,6 +577,22 @@ public class PointBuyScript : MonoBehaviour
                             Int.score -= 1;
                             inte.text = Int.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Int.score == 13 || Int.score == 12)
+                            {
+                                Int.modifier = 1;
+                                inteMod.text = "+" + Int.modifier.ToString();
+                            }
+                            if (Int.score == 11 || Int.score == 10)
+                            {
+                                Int.modifier = 0;
+                                inteMod.text = "+" + Int.modifier.ToString();
+                            }
+                            if (Int.score == 9 || Int.score == 8)
+                            {
+                                Int.modifier = -1;
+                                inteMod.text = Int.modifier.ToString();
+                            }
                         }
                     }
                     else
@@ -394,12 +606,25 @@ public class PointBuyScript : MonoBehaviour
                 {
                     if (Wis.score > 8)
                     {
-                        if (Wis.score > 13)
+                        if (Wis.score == 15)
                         {
                             points += 2;
                             Wis.score -= 1;
                             wis.text = Wis.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Wis.modifier = 2;
+                            wisMod.text = "+" + Wis.modifier.ToString();
+                        }
+                        else if (Wis.score == 14)
+                        {
+                            points += 2;
+                            Wis.score -= 1;
+                            wis.text = Wis.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Wis.modifier = 1;
+                            wisMod.text = "+" + Wis.modifier.ToString();
                         }
                         else
                         {
@@ -407,6 +632,22 @@ public class PointBuyScript : MonoBehaviour
                             Wis.score -= 1;
                             wis.text = Wis.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Wis.score == 13 || Wis.score == 12)
+                            {
+                                Wis.modifier = 1;
+                                wisMod.text = "+" + Wis.modifier.ToString();
+                            }
+                            if (Wis.score == 11 || Wis.score == 10)
+                            {
+                                Wis.modifier = 0;
+                                wisMod.text = "+" + Wis.modifier.ToString();
+                            }
+                            if (Wis.score == 9 || Wis.score == 8)
+                            {
+                                Wis.modifier = -1;
+                                wisMod.text = Wis.modifier.ToString();
+                            }
                         }
                     }
                     else
@@ -420,12 +661,25 @@ public class PointBuyScript : MonoBehaviour
                 {
                     if (Cha.score > 8)
                     {
-                        if (Cha.score > 13)
+                        if(Cha.score == 15)
                         {
                             points += 2;
                             Cha.score -= 1;
                             cha.text = Cha.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            Cha.modifier = 2;
+                            chaMod.text = "+" + Cha.modifier.ToString();
+                        }
+                        else if (Cha.score == 14)
+                        {
+                            points += 2;
+                            Cha.score -= 1;
+                            cha.text = Cha.score.ToString();
+                            totalPointsText.text = points.ToString();
+
+                            Cha.modifier = 1;
+                            chaMod.text = "+" + Cha.modifier.ToString();
                         }
                         else
                         {
@@ -433,6 +687,22 @@ public class PointBuyScript : MonoBehaviour
                             Cha.score -= 1;
                             cha.text = Cha.score.ToString();
                             totalPointsText.text = points.ToString();
+
+                            if (Cha.score == 13 || Cha.score == 12)
+                            {
+                                Cha.modifier = 1;
+                                chaMod.text = "+" + Cha.modifier.ToString();
+                            }
+                            if (Cha.score == 11 || Cha.score == 10)
+                            {
+                                Cha.modifier = 0;
+                                chaMod.text = "+" + Cha.modifier.ToString();
+                            }
+                            if (Cha.score == 9 || Cha.score == 8)
+                            {
+                                Cha.modifier = -1;
+                                chaMod.text = Cha.modifier.ToString();
+                            }
                         }
                     }
                     else
