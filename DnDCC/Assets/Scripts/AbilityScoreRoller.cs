@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 using System.Linq;
 
@@ -11,8 +12,11 @@ public class AbilityScoreRoller : MonoBehaviour
     public TMP_Text randoNum;
 
     //Checkboxes
-    public Toggle rr1;
-    public Toggle rr2;
+    public Button rr1;
+    public Button rr2;
+
+    public Image checkmark1;
+    public Image checkmark2;
 
     //Some DM's alllow rerolling of low numbers
     public bool rerollOnes;
@@ -21,6 +25,8 @@ public class AbilityScoreRoller : MonoBehaviour
     public int[] scores;
     public int sum;
 
+    string select;
+
     private int die1;
     private int die2;
     private int die3;
@@ -28,11 +34,16 @@ public class AbilityScoreRoller : MonoBehaviour
 
     public void Start()
     {
-        rr1.GetComponentInChildren<Text>().text = "Reroll 1's: X";
-        rr2.GetComponentInChildren<Text>().text = "Reroll 2's: X";
+        rr1.GetComponentInChildren<TMP_Text>().text = "Reroll 1's: X";
+        rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 2's: X";
+
+        checkmark1.gameObject.SetActive(false);
+
+        rerollOnes = false;
+        rerollTwos = false;
 
         scores = new int[6];
-        RollScores();
+        //RollScores();
     }
 
     public void RollScoresButton()
@@ -97,34 +108,48 @@ public class AbilityScoreRoller : MonoBehaviour
 
     public void Reroll1Check()
     {
-        //Checks if the checkbox 1 is checked or not
-        if (rr1.isOn)
+        select = EventSystem.current.currentSelectedGameObject.name;
+
+        if (select == "Reroll1Button" && rerollOnes != true)
         {
             rerollOnes = true;
-            rr1.GetComponentInChildren<Text>().text = "Reroll 1's: ✓";
+            rr1.GetComponentInChildren<TMP_Text>().text = "Reroll 1's:  _";
+            rr1.GetComponentInChildren<Image>().gameObject.SetActive(true);
+            rr1.GetComponent<Image>().color = Color.green;
+            checkmark1.gameObject.SetActive(true);
             rr2.gameObject.SetActive(true);
+            checkmark2.gameObject.SetActive(false);
         }
-        else
+        else 
         {
             rerollOnes = false;
-            rr1.GetComponentInChildren<Text>().text = "Reroll 1's: X";
+            rerollTwos = false;
+            rr1.GetComponentInChildren<TMP_Text>().text = "Reroll 1's: X";
+            rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 1's: X";
+            rr1.GetComponent<Image>().color = Color.white;
+            rr2.GetComponent<Image>().color = Color.white;
             rr2.gameObject.SetActive(false);
-            rr2.isOn = false;
+            checkmark1.gameObject.SetActive(false);
         }
     }
 
     public void Reroll2Check()
     {
-        //Checks if the checkbox 2 is checked or not
-        if (rr2.isOn)
+        select = EventSystem.current.currentSelectedGameObject.name;
+
+        if (select == "Reroll2Button" && rerollOnes == true && rerollTwos != true)
         {
             rerollTwos = true;
-            rr2.GetComponentInChildren<Text>().text = "Reroll 2's: ✓";
+            rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 2's:  _";
+            rr2.GetComponent<Image>().color = Color.green;
+            checkmark2.gameObject.SetActive(true);
         }
         else
         {
             rerollTwos = false;
-            rr2.GetComponentInChildren<Text>().text = "Reroll 2's: X";
+            rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 2's: X";
+            rr2.GetComponent<Image>().color = Color.white;
+            checkmark2.gameObject.SetActive(false);
         }
     }
 }
