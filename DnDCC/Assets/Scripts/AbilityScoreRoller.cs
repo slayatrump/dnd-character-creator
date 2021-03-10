@@ -9,7 +9,7 @@ using System.Linq;
 public class AbilityScoreRoller : MonoBehaviour
 {
     //Textbox for the scores to display on
-    public TMP_Text randoNum;
+    //public TMP_Text randoNum;
 
     //Checkboxes
     public Button rr1;
@@ -27,6 +27,13 @@ public class AbilityScoreRoller : MonoBehaviour
 
     string select;
 
+    TMP_Text randoNum1;
+    TMP_Text randoNum2;
+    TMP_Text randoNum3;
+    TMP_Text randoNum4;
+    TMP_Text randoNum5;
+    TMP_Text randoNum6;
+
     private int die1;
     private int die2;
     private int die3;
@@ -34,8 +41,16 @@ public class AbilityScoreRoller : MonoBehaviour
 
     public void Start()
     {
+
         rr1.GetComponentInChildren<TMP_Text>().text = "Reroll 1's: X";
         rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 2's: X";
+
+        randoNum1 = GameObject.Find("Rando1").GetComponent<TMP_Text>();
+        randoNum2 = GameObject.Find("Rando2").GetComponent<TMP_Text>();
+        randoNum3 = GameObject.Find("Rando3").GetComponent<TMP_Text>();
+        randoNum4 = GameObject.Find("Rando4").GetComponent<TMP_Text>();
+        randoNum5 = GameObject.Find("Rando5").GetComponent<TMP_Text>();
+        randoNum6 = GameObject.Find("Rando6").GetComponent<TMP_Text>();
 
         checkmark1.gameObject.SetActive(false);
 
@@ -49,9 +64,16 @@ public class AbilityScoreRoller : MonoBehaviour
     public void RollScoresButton()
     {
         RollScores();
-        randoNum.text = scores[0].ToString() + ", " + scores[1].ToString() + ", " + scores[2].ToString()
-            + ", " + scores[3].ToString() + ", " + scores[4].ToString() + ", " + scores[5].ToString()
-            + " = " + sum;
+        //randoNum.text = scores[0].ToString() + ", " + scores[1].ToString() + ", " + scores[2].ToString()
+        //    + ", " + scores[3].ToString() + ", " + scores[4].ToString() + ", " + scores[5].ToString()
+        //    + " = " + sum;
+
+        randoNum1.text = scores[0].ToString();
+        randoNum2.text = scores[1].ToString();
+        randoNum3.text = scores[2].ToString();
+        randoNum4.text = scores[3].ToString();
+        randoNum5.text = scores[4].ToString();
+        randoNum6.text = scores[5].ToString();
 
         //randoNum.text = "Score 1: " + die1;
     }
