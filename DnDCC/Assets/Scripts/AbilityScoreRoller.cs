@@ -33,6 +33,21 @@ public class AbilityScoreRoller : MonoBehaviour
     TMP_Text randoNum4;
     TMP_Text randoNum5;
     TMP_Text randoNum6;
+    TMP_Text savedStrScore;
+
+    private Vector2 ogPos1;
+    private Vector2 ogPos2;
+    private Vector2 ogPos3;
+    private Vector2 ogPos4;
+    private Vector2 ogPos5;
+    private Vector2 ogPos6;
+
+    private GameObject num1;
+    private GameObject num2;
+    private GameObject num3;
+    private GameObject num4;
+    private GameObject num5;
+    private GameObject num6;
 
     private int die1;
     private int die2;
@@ -45,12 +60,30 @@ public class AbilityScoreRoller : MonoBehaviour
         rr1.GetComponentInChildren<TMP_Text>().text = "Reroll 1's: X";
         rr2.GetComponentInChildren<TMP_Text>().text = "Reroll 2's: X";
 
+        num1 = GameObject.Find("n1");
+        num2 = GameObject.Find("n2");
+        num3 = GameObject.Find("n3");
+        num4 = GameObject.Find("n4");
+        num5 = GameObject.Find("n5");
+        num6 = GameObject.Find("n6");
+
+        ogPos1 = new Vector2(num1.transform.position.x, num1.transform.position.y);
+        ogPos2 = new Vector2(num2.transform.position.x, num2.transform.position.y);
+        ogPos3 = new Vector2(num3.transform.position.x, num3.transform.position.y);
+        ogPos4 = new Vector2(num4.transform.position.x, num4.transform.position.y);
+        ogPos5 = new Vector2(num5.transform.position.x, num5.transform.position.y);
+        ogPos6 = new Vector2(num6.transform.position.x, num6.transform.position.y);
+
+
         randoNum1 = GameObject.Find("Rando1").GetComponent<TMP_Text>();
         randoNum2 = GameObject.Find("Rando2").GetComponent<TMP_Text>();
         randoNum3 = GameObject.Find("Rando3").GetComponent<TMP_Text>();
         randoNum4 = GameObject.Find("Rando4").GetComponent<TMP_Text>();
         randoNum5 = GameObject.Find("Rando5").GetComponent<TMP_Text>();
         randoNum6 = GameObject.Find("Rando6").GetComponent<TMP_Text>();
+        savedStrScore = GameObject.Find("SavedStrScore").GetComponent<TMP_Text>();
+
+        savedStrScore.text = "Str Score: " + SaveManager.instance.gameData.strScore.ToString();
 
         checkmark1.gameObject.SetActive(false);
 
@@ -58,7 +91,6 @@ public class AbilityScoreRoller : MonoBehaviour
         rerollTwos = false;
 
         scores = new int[6];
-        //RollScores();
     }
 
     public void RollScoresButton()
@@ -126,6 +158,7 @@ public class AbilityScoreRoller : MonoBehaviour
             }
         }
         sum = scores.Sum();
+        savedStrScore.text = "Str Score: " + SaveManager.instance.gameData.strScore.ToString();
     }
 
     public void Reroll1Check()
@@ -173,5 +206,15 @@ public class AbilityScoreRoller : MonoBehaviour
             rr2.GetComponent<Image>().color = Color.white;
             checkmark2.gameObject.SetActive(false);
         }
+    }
+
+    public void ResetPosition()
+    {
+        num1.transform.position = ogPos1;
+        num2.transform.position = ogPos2;
+        num3.transform.position = ogPos3;
+        num4.transform.position = ogPos4;
+        num5.transform.position = ogPos5;
+        num6.transform.position = ogPos6;
     }
 }
