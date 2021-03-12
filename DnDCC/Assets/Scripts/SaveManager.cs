@@ -80,7 +80,20 @@ public class SaveManager : MonoBehaviour
 [System.Serializable]
 public class SaveData
 {
+    //Name of the savefile
     public string saveName;
+
+    //Ability Scores and their Modifiers
     public int strScore;
     public int strMod;
+    public int dexScore;
+    public int dexMod;
+    public int conScore;
+    public int conMod;
+    public int intScore;
+    public int intMod;
+    public int wisScore;
+    public int wisMod;
+    public int chaScore;
+    public int chaMod;
 }
