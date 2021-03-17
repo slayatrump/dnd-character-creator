@@ -7,6 +7,8 @@ using TMPro;
 
 public class SelectionController : MonoBehaviour
 {
+    //References for the number of buttons in the scene
+    //Not every scene uses the max number below, this just a max value
     public Button b1;
     public Button b2;
     public Button b3;
@@ -21,6 +23,8 @@ public class SelectionController : MonoBehaviour
     public Button b12;
     public Button b13;
 
+    //References for the number of checkmarks in the buttons in the scene
+    //Not every scene uses the max number below, this just a max value
     public GameObject check1;
     public GameObject check2;
     public GameObject check3;
@@ -35,12 +39,15 @@ public class SelectionController : MonoBehaviour
     public GameObject check12;
     public GameObject check13;
 
+    //Way to check the size of these list in the inspector
     [SerializeField]
     private List<Button> buttons = new List<Button>();
     [SerializeField]
     private List<GameObject> checkmarks = new List<GameObject>();
 
-    string selected;
+    //Argument variables
+    [HideInInspector]
+    public string selected;
     int size;
 
     void Start()
@@ -52,78 +59,93 @@ public class SelectionController : MonoBehaviour
     private void CheckingButtons()
     {
         // Checking each button object to see if there is a reference in them
-        // then changes the buttons starting color
+        // then changes the buttons starting color and text
+        // then adding them to a list of buttons
         if (b1 != null)
         {
-            b1.GetComponent<Image>().color = Color.green;
             b1.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
             b1.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b1);
         }
         if (b2 != null)
         {
-            b2.GetComponent<Image>().color = Color.green;
+            b2.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b2.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b2);
         }
         if (b3 != null)
         {
-            b3.GetComponent<Image>().color = Color.green;
+            b3.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b3.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b3);
         }
         if (b4 != null)
         {
-            b4.GetComponent<Image>().color = Color.green;
+            b4.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b4.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b4);
         }
         if (b5 != null)
         {
-            b5.GetComponent<Image>().color = Color.green;
+            b5.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b5.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b5);
         }
         if (b6 != null)
         {
-            b6.GetComponent<Image>().color = Color.green;
             buttons.Add(b6);
+            b6.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b6.GetComponentInChildren<TMP_Text>().text = "X";
         }
         if (b7 != null)
         {
-            b7.GetComponent<Image>().color = Color.green;
             buttons.Add(b7);
+            b7.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b7.GetComponentInChildren<TMP_Text>().text = "X";
         }
         if (b8 != null)
         {
-            b8.GetComponent<Image>().color = Color.green;
+            b8.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b8.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b8);
         }
         if (b9 != null)
         {
-            b9.GetComponent<Image>().color = Color.green;
+            b9.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b9.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b9);
         }
         if (b10 != null)
         {
-            b10.GetComponent<Image>().color = Color.green;
+            b10.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b10.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b10);
         }
         if (b11 != null)
         {
-            b11.GetComponent<Image>().color = Color.green;
+            b11.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b11.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b11);
         }
         if (b12 != null)
         {
-            b12.GetComponent<Image>().color = Color.green;
+            b12.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b12.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b12);
         }
         if (b13 != null)
         {
-            b13.GetComponent<Image>().color = Color.green;
+            b13.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b13.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b13);
         }
     }
 
     private void CheckingCheckmarks()
     {
+        // Checking each checkmark object to see if there is a reference to them
+        // then changes the checkmarks starting active state
+        // then adding them to the list of checkmarks
         if (check1 != null)
         {
             check1.SetActive(false);
@@ -202,25 +224,344 @@ public class SelectionController : MonoBehaviour
             {
                 case "s1":
                     {
-                        b1.GetComponent<Image>().color = Color.white;
-                        b1.GetComponentInChildren<TMP_Text>().text = "";
-                        b2.GetComponent<Image>().color = Color.green;
-                        b3.GetComponent<Image>().color = Color.green;
-                        b4.GetComponent<Image>().color = Color.green;
-                        b5.GetComponent<Image>().color = Color.green;
-                        b6.GetComponent<Image>().color = Color.green;
-                        b7.GetComponent<Image>().color = Color.green;
-                        b8.GetComponent<Image>().color = Color.green;
-                        b9.GetComponent<Image>().color = Color.green;
-                        b10.GetComponent<Image>().color = Color.green;
-                        b11.GetComponent<Image>().color = Color.green;
-                        b12.GetComponent<Image>().color = Color.green;
-                        b13.GetComponent<Image>().color = Color.green;
-
+                        b1.GetComponentInChildren<TMP_Text>().text = "_";
                         check1.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s2":
+                    {
+                        b2.GetComponentInChildren<TMP_Text>().text = "_";
+                        check2.SetActive(true);
+
+                        Deselect1();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s3":
+                    {
+                        b3.GetComponentInChildren<TMP_Text>().text = "_";
+                        check3.SetActive(true);
+
+                        Deselect2();
+                        Deselect1();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s4":
+                    {
+                        b4.GetComponentInChildren<TMP_Text>().text = "_";
+                        check4.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect1();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s5":
+                    {
+                        b5.GetComponentInChildren<TMP_Text>().text = "_";
+                        check5.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect1();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s6":
+                    {
+                        b6.GetComponentInChildren<TMP_Text>().text = "_";
+                        check6.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect1();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s7":
+                    {
+                        b7.GetComponentInChildren<TMP_Text>().text = "_";
+                        check7.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect1();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s8":
+                    {
+                        b8.GetComponentInChildren<TMP_Text>().text = "_";
+                        check8.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect1();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s9":
+                    {
+                        b9.GetComponentInChildren<TMP_Text>().text = "_";
+                        check9.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect1();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s10":
+                    {
+                        b10.GetComponentInChildren<TMP_Text>().text = "_";
+                        check10.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect1();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s11":
+                    {
+                        b11.GetComponentInChildren<TMP_Text>().text = "_";
+                        check11.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect1();
+                        Deselect12();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s12":
+                    {
+                        b12.GetComponentInChildren<TMP_Text>().text = "_";
+                        check12.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect1();
+                        Deselect13();
+
+                        break;
+                    }
+                case "s13":
+                    {
+                        b13.GetComponentInChildren<TMP_Text>().text = "_";
+                        check13.SetActive(true);
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect1();
+
                         break;
                     }
             }
         }
+    }
+
+    void Deselect1()
+    {
+        b1.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b1.GetComponentInChildren<TMP_Text>().text = "X";
+        check1.SetActive(false);
+    }
+    void Deselect2()
+    {
+        b2.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b2.GetComponentInChildren<TMP_Text>().text = "X";
+        check2.SetActive(false);
+    }
+    void Deselect3()
+    {
+        b3.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b3.GetComponentInChildren<TMP_Text>().text = "X";
+        check3.SetActive(false);
+    }
+    void Deselect4()
+    {
+        b4.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b4.GetComponentInChildren<TMP_Text>().text = "X";
+        check4.SetActive(false);
+    }
+    void Deselect5()
+    {
+        b5.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b5.GetComponentInChildren<TMP_Text>().text = "X";
+        check5.SetActive(false);
+    }
+    void Deselect6()
+    {
+        b6.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b6.GetComponentInChildren<TMP_Text>().text = "X";
+        check6.SetActive(false);
+    }
+    void Deselect7()
+    {
+        b7.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b7.GetComponentInChildren<TMP_Text>().text = "X";
+        check7.SetActive(false);
+    }
+    void Deselect8()
+    {
+        b8.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b8.GetComponentInChildren<TMP_Text>().text = "X";
+        check8.SetActive(false);
+    }
+    void Deselect9()
+    {
+        b9.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b9.GetComponentInChildren<TMP_Text>().text = "X";
+        check9.SetActive(false);
+    }
+    void Deselect10()
+    {
+        b10.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b10.GetComponentInChildren<TMP_Text>().text = "X";
+        check10.SetActive(false);
+    }
+    void Deselect11()
+    {
+        b11.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b11.GetComponentInChildren<TMP_Text>().text = "X";
+        check11.SetActive(false);
+    }
+    void Deselect12()
+    {
+        b12.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b12.GetComponentInChildren<TMP_Text>().text = "X";
+        check12.SetActive(false);
+    }
+    void Deselect13()
+    {
+        b13.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+        b13.GetComponentInChildren<TMP_Text>().text = "X";
+        check13.SetActive(false);
     }
 }
