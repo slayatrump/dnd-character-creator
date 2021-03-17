@@ -46,8 +46,8 @@ public class SelectionController : MonoBehaviour
     private List<GameObject> checkmarks = new List<GameObject>();
 
     //Argument variables
-    [HideInInspector]
-    public string selected;
+    [HideInInspector] public string selected;
+    [HideInInspector] public static bool isSelected = false;
     int size;
 
     void Start()
@@ -226,6 +226,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b1.GetComponentInChildren<TMP_Text>().text = "_";
                         check1.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -246,6 +247,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b2.GetComponentInChildren<TMP_Text>().text = "_";
                         check2.SetActive(true);
+                        isSelected = true;
 
                         Deselect1();
                         Deselect3();
@@ -266,6 +268,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b3.GetComponentInChildren<TMP_Text>().text = "_";
                         check3.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect1();
@@ -286,6 +289,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b4.GetComponentInChildren<TMP_Text>().text = "_";
                         check4.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -306,6 +310,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b5.GetComponentInChildren<TMP_Text>().text = "_";
                         check5.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -326,6 +331,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b6.GetComponentInChildren<TMP_Text>().text = "_";
                         check6.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -346,6 +352,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b7.GetComponentInChildren<TMP_Text>().text = "_";
                         check7.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -366,6 +373,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b8.GetComponentInChildren<TMP_Text>().text = "_";
                         check8.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -386,6 +394,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b9.GetComponentInChildren<TMP_Text>().text = "_";
                         check9.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -406,6 +415,8 @@ public class SelectionController : MonoBehaviour
                     {
                         b10.GetComponentInChildren<TMP_Text>().text = "_";
                         check10.SetActive(true);
+                        isSelected = true;
+
 
                         Deselect2();
                         Deselect3();
@@ -426,6 +437,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b11.GetComponentInChildren<TMP_Text>().text = "_";
                         check11.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -446,6 +458,7 @@ public class SelectionController : MonoBehaviour
                     {
                         b12.GetComponentInChildren<TMP_Text>().text = "_";
                         check12.SetActive(true);
+                        isSelected = true;
 
                         Deselect2();
                         Deselect3();
@@ -466,6 +479,8 @@ public class SelectionController : MonoBehaviour
                     {
                         b13.GetComponentInChildren<TMP_Text>().text = "_";
                         check13.SetActive(true);
+                        isSelected = true;
+
 
                         Deselect2();
                         Deselect3();

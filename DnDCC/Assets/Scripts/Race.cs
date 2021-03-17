@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Race : MonoBehaviour
 {
-    public enum ASType { Str, Dex, Con, Int, Wis, Cha, All, ChoicePool};
+    public enum ASType { Str, Dex, Con, Int, Wis, Cha, All, ChoicePool };
     public enum SizeType { Small, Medium, Large };
 
     [System.Serializable]
@@ -29,18 +29,21 @@ public class Race : MonoBehaviour
 
     private SelectionController sc;
 
+    #region Race Text Variables
     private TMP_Text asScoreBonusInfo;
     private TMP_Text sizeSpeedInfo;
     private TMP_Text languagesInfo;
     private TMP_Text raceFeaturesInfo;
+    #endregion
 
-    private void Start()
+    #region Race UI Functionality
+    void Start()
     {
         asScoreBonusInfo = GameObject.Find("ASScoreBonus").GetComponent<TMP_Text>();
         sizeSpeedInfo = GameObject.Find("Speed&Size").GetComponent<TMP_Text>();
         languagesInfo = GameObject.Find("Languages").GetComponent<TMP_Text>();
         raceFeaturesInfo = GameObject.Find("RaceFeatures").GetComponent<TMP_Text>();
-        sc = GameObject.Find("Races").GetComponent<SelectionController>();
+        sc = GameObject.Find("SelectionController").GetComponent<SelectionController>();
     }
 
     public void RaceSelected()
@@ -51,214 +54,257 @@ public class Race : MonoBehaviour
         {
             case "s1":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy + 
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
-                        raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1] 
+                        raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
                             + ", " + this.Features[2];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s2":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
                             + ", " + this.Features[2] + ", " + this.Features[3];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s3":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
-                        languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1] 
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
+                        languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1]
                             + ", " + this.Languages[2];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
                             + ", " + this.Features[2];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s4":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
                             + ", " + this.Features[2] + ", " + this.Features[3];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s5":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1]
-                            + ", " + this.Languages[2];
-                    }
-                    foreach (string f in Features)
-                    {
+                                + ", " + this.Languages[2];
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
-                            + ", " + this.Features[5] + ", " + this.Features[6];
+                                + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
+                                + ", " + this.Features[5] + ", " + this.Features[6];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s6":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
-                            + ", " + this.Features[5];
+                                + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
+                                + ", " + this.Features[5];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
+
                     break;
                 }
             case "s7":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
+                    if (SelectionController.isSelected == true)
                     {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy;
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
+                        raceFeaturesInfo.text = "Features: N/A";
                     }
-                    raceFeaturesInfo.text = "Features: N/A";
+                    else
+                    {
+                        Deselect();
+                    }
+                    
+
                     break;
                 }
             case "s8":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3];
+                                + ", " + this.Features[2] + ", " + this.Features[3];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
                     break;
                 }
             case "s9":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
-                            + ", " + this.Features[5];
+                                + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
+                                + ", " + this.Features[5];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
+
                     break;
                 }
             case "s10":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3];
+                                + ", " + this.Features[2] + ", " + this.Features[3];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
+
                     break;
                 }
             case "s11":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3];
+                                + ", " + this.Features[2] + ", " + this.Features[3];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+                    
+
                     break;
                 }
             case "s12":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2];
+                                + ", " + this.Features[2];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+
                     break;
                 }
             case "s13":
                 {
-                    asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
+                    if (SelectionController.isSelected == true)
+                    {
+                        asScoreBonusInfo.text = "AS Bonus 1: " + this.AS1.AbilityScore + " +" + this.AS1.IncreaseBy +
                         "\nAS Bonus 2: " + this.AS2.AbilityScore + " +" + this.AS2.IncreaseBy;
-                    sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
-                    foreach (string l in Languages)
-                    {
+                        sizeSpeedInfo.text = "Size: " + this.Size + "\nSpeed: " + this.Speed;
                         languagesInfo.text = "Languages: \n" + this.Languages[0] + ", " + this.Languages[1];
-                    }
-                    foreach (string f in Features)
-                    {
                         raceFeaturesInfo.text = "Features: \n" + this.Features[0] + ", " + this.Features[1]
-                            + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
-                            + ", " + this.Features[5] + ", " + this.Features[6];
+                                + ", " + this.Features[2] + ", " + this.Features[3] + ", " + this.Features[4]
+                                + ", " + this.Features[5] + ", " + this.Features[6];
                     }
+                    else
+                    {
+                        Deselect();
+                    }
+
                     break;
                 }
 
         }
     }
+
+    private void Deselect()
+    {
+        asScoreBonusInfo.text = "";
+        sizeSpeedInfo.text = "";
+        languagesInfo.text = "";
+        raceFeaturesInfo.text = "";
+    }
+    #endregion
 }
