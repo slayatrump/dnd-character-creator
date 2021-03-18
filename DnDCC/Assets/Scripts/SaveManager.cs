@@ -96,4 +96,15 @@ public class SaveData
     public int wisMod;
     public int chaScore;
     public int chaMod;
+
+    //Race Selection
+    public string raceName;
+    public int raceASIncrease1;
+    public int raceASIncrease2;
+    public string raceASType1;
+    public string raceASType2;
+    public List<string> raceLanguages;
+    public List<string> raceFeatures;
+    public int raceSpeed;
+    public string raceBuild;
 }
