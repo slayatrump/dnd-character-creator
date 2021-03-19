@@ -99,12 +99,13 @@ public class SaveData
 
     //Race Selection
     public string raceName;
-    public int raceASIncrease1;
-    public int raceASIncrease2;
     public string raceASType1;
     public string raceASType2;
-    public List<string> raceLanguages;
-    public List<string> raceFeatures;
+    public int raceASIncrease1;
+    public int raceASIncrease2;
     public int raceSpeed;
     public string raceBuild;
+    public List<string> raceLanguages;
+    public List<string> raceFeatures;
+    
 }

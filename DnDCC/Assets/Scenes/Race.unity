@@ -4005,14 +4005,14 @@ MonoBehaviour:
     chaScore: 0
     chaMod: 0
     raceName: 
-    raceASIncrease1: 0
-    raceASIncrease2: 0
     raceASType1: 
     raceASType2: 
-    raceLanguages: []
-    raceFeatures: []
+    raceASIncrease1: 0
+    raceASIncrease2: 0
     raceSpeed: 0
     raceBuild: 
+    raceLanguages: []
+    raceFeatures: []
   hasLoaded: 0
   hasSaved: 0
 --- !u!1001 &2032178965

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
 
 public class DropSlot : MonoBehaviour, IDropHandler
 {
     //Switch checks
     private string dropSlotName;
     private string dropedScoreName;
+
+    public static Button rollBTN;
 
     //Variable to help with saving scores
     public static int savedScore;
@@ -25,6 +28,11 @@ public class DropSlot : MonoBehaviour, IDropHandler
         //Checks if the the object being drop is not null
         if (eventData.pointerDrag != null)
         {
+            rollBTN = GameObject.Find("Roll").GetComponent<Button>();
+            rollBTN.enabled = false;
+            rollBTN.GetComponentInChildren<TMP_Text>().text = "Press Reset Button";
+            rollBTN.GetComponent<Image>().color = Color.gray;
+
             //Snaps the droped object into the anchored position of the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition
                 = GetComponent<RectTransform>().anchoredPosition;

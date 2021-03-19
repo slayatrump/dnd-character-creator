@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using System.IO;
+using System.Linq;
 
 public class Race : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class Race : MonoBehaviour
         selectedRaceName = GameObject.Find("RaceName").GetComponent<TMP_Text>();
         sc = GameObject.Find("SelectionController").GetComponent<SelectionController>();
 
+        //SaveManager.instance.DeleteSavedData();
         LoadRace();
     }
 
@@ -358,12 +360,26 @@ public class Race : MonoBehaviour
                 SaveManager.instance.gameData.raceSpeed;
             foreach (string l in SaveManager.instance.gameData.raceLanguages)
             {
-                languages = languages.ToString() + l.ToString() + "\n";
+                if (l == SaveManager.instance.gameData.raceLanguages.Last())
+                {
+                    languages = languages.ToString() + l.ToString();
+                }
+                else
+                {
+                    languages = languages.ToString() + l.ToString() + ", ";
+                }
             }
             languagesInfo.text = "Languages: \n" + languages;
             foreach (string f in SaveManager.instance.gameData.raceFeatures)
             {
-                features = features.ToString() + f.ToString() + ", ";
+                if (f == SaveManager.instance.gameData.raceFeatures.Last())
+                {
+                    features = features.ToString() + f.ToString();
+                }
+                else
+                {
+                    features = features.ToString() + f.ToString() + ", ";
+                }
             }
             raceFeaturesInfo.text = "Features: \n" + features;
         }
