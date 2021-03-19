@@ -28,12 +28,23 @@ public class MenuController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(4);
+            Race.SaveRace();
             SelectionController.isSelected = false;
+            SceneManager.LoadScene(4);
         }
     }
     public void ASToFeatures()
     {
-        SceneManager.LoadScene(7);
+        if (AbilityScoreRoller.strFinalScore.text != "0" && AbilityScoreRoller.dexFinalScore.text != "0"
+            && AbilityScoreRoller.conFinalScore.text != "0" && AbilityScoreRoller.intFinalScore.text != "0"
+            && AbilityScoreRoller.wisFinalScore.text != "0" && AbilityScoreRoller.chaFinalScore.text != "0")
+        {
+            AbilityScoreRoller.SavingScore();
+            SceneManager.LoadScene(7);
+        }
+        else
+        {
+            warning.SetActive(true);
+        }
     }
 }

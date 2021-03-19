@@ -385,7 +385,7 @@ public class Race : MonoBehaviour
         }
     }
 
-    public void SaveRace()
+    public void SetRaceData()
     {
         SaveManager.instance.gameData.raceLanguages.Clear();
         SaveManager.instance.gameData.raceFeatures.Clear();
@@ -405,6 +405,10 @@ public class Race : MonoBehaviour
         {
             SaveManager.instance.gameData.raceFeatures.Add(f);
         }
+    }
+
+    public static void SaveRace()
+    {
         SaveManager.instance.Save();
     }
     #endregion

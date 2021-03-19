@@ -16,7 +16,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
     //Variable to help with saving scores
     public static int savedScore;
 
-    //Access to the 6 AS score rolls
+    //Access to the 6 AS scores
     public AbilityScoreRoller asr;
 
     public void OnDrop(PointerEventData eventData)
@@ -28,10 +28,19 @@ public class DropSlot : MonoBehaviour, IDropHandler
         //Checks if the the object being drop is not null
         if (eventData.pointerDrag != null)
         {
+            #region Resetting various buttons
             rollBTN = GameObject.Find("Roll").GetComponent<Button>();
             rollBTN.enabled = false;
-            rollBTN.GetComponentInChildren<TMP_Text>().text = "Press Reset Button";
+            rollBTN.GetComponentInChildren<TMP_Text>().text = "Press Reset Button to Roll Again";
             rollBTN.GetComponent<Image>().color = Color.gray;
+
+            AbilityScoreRoller.modifier.enabled = true;
+            AbilityScoreRoller.modifier.GetComponent<Image>().color = Color.white;
+            AbilityScoreRoller.modifier.GetComponentInChildren<TMP_Text>().text = "Modifiers Here";
+
+            AbilityScoreRoller.reset.enabled = true;
+            AbilityScoreRoller.reset.GetComponent<Image>().color = Color.white;
+            #endregion
 
             //Snaps the droped object into the anchored position of the slot
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition
@@ -92,7 +101,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -104,7 +112,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -116,7 +123,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -128,7 +134,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -140,7 +145,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -152,7 +156,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.strScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Strength AS Score is: " +
                         SaveManager.instance.gameData.strScore.ToString());
@@ -171,7 +174,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -183,7 +185,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -195,7 +196,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -207,7 +207,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -219,7 +218,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -231,7 +229,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.dexScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Dexterity AS Score is: " +
                         SaveManager.instance.gameData.dexScore.ToString());
@@ -250,7 +247,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -262,7 +258,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -274,7 +269,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -286,7 +280,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -298,7 +291,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -310,7 +302,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.conScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Constitution AS Score is: " +
                         SaveManager.instance.gameData.conScore.ToString());
@@ -329,7 +320,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -341,7 +331,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -353,7 +342,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -365,7 +353,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -377,7 +364,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -389,7 +375,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.intScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Intelligence AS Score is: " +
                         SaveManager.instance.gameData.intScore.ToString());
@@ -408,7 +393,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -420,7 +404,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -432,7 +415,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -444,7 +426,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -456,7 +437,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -468,7 +448,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.wisScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Wisdom AS Score is: " +
                         SaveManager.instance.gameData.wisScore.ToString());
@@ -487,7 +466,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[0];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
@@ -499,7 +477,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[1];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
@@ -511,7 +488,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[2];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
@@ -523,7 +499,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[3];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
@@ -535,7 +510,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[4];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
@@ -547,7 +521,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     savedScore = asr.scores[5];
 
                     SaveManager.instance.gameData.chaScore = savedScore;
-                    //SaveManager.instance.Save();
 
                     Debug.Log("Charisma AS Score is: " +
                         SaveManager.instance.gameData.chaScore.ToString());
