@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,8 +13,6 @@ public class MainMenuController : MonoBehaviour
 
     public void Start()
     {
-
-
         mStrips = GameObject.Find("MMStrips");
         oStrips = GameObject.Find("OptionsStrips");
 
@@ -23,12 +22,20 @@ public class MainMenuController : MonoBehaviour
 
     public void NewCharacter()
     {
-        SceneManager.LoadScene(3);
+        SaveManager.instance.DeleteSavedData();
+        SaveManager.instance.gameData.saveName = "save1.dat";
+        SaveManager.instance.Save();
+        SceneManager.LoadScene(1);
     }
 
     public void LoadCharacter()
     {
-        SceneManager.LoadScene(14);
+        string savePath = Application.persistentDataPath;
+
+        if (File.Exists(savePath + "/" + SaveManager.instance.gameData.saveName + ".dat"))
+        {
+            SceneManager.LoadScene(12);
+        }
     }
 
     public void Options()

@@ -29,6 +29,7 @@ public class AbilityScoreRoller : MonoBehaviour
     //Modifier and Reset Buttons
     public static Button modifier;
     public static Button reset;
+    public static int asMethodChoice;
 
     #region 4d6 Scores
     private GameObject num1;
@@ -619,7 +620,7 @@ public class AbilityScoreRoller : MonoBehaviour
         #endregion
     }
 
-    public static void SavingScore()
+    public static void SavingScores()
     {
         SaveManager.instance.Save();
     }

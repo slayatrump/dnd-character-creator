@@ -35,16 +35,34 @@ public class MenuController : MonoBehaviour
     }
     public void ASToFeatures()
     {
-        if (AbilityScoreRoller.strFinalScore.text != "0" && AbilityScoreRoller.dexFinalScore.text != "0"
+        if (SaveManager.instance.gameData.asMethodChoice == "4d6 Method")
+        {
+            if (AbilityScoreRoller.strFinalScore.text != "0" && AbilityScoreRoller.dexFinalScore.text != "0"
             && AbilityScoreRoller.conFinalScore.text != "0" && AbilityScoreRoller.intFinalScore.text != "0"
             && AbilityScoreRoller.wisFinalScore.text != "0" && AbilityScoreRoller.chaFinalScore.text != "0")
-        {
-            AbilityScoreRoller.SavingScore();
-            SceneManager.LoadScene(7);
+            {
+                AbilityScoreRoller.SavingScores();
+                SceneManager.LoadScene(5);
+            }
+            else
+            {
+                warning.SetActive(true);
+            }
         }
-        else
+        if (SaveManager.instance.gameData.asMethodChoice == "Point Buy Method")
         {
-            warning.SetActive(true);
+            if (PointBuyScript.strFinalScore.text != "0" && PointBuyScript.dexFinalScore.text != "0"
+            && PointBuyScript.conFinalScore.text != "0" && PointBuyScript.intFinalScore.text != "0"
+            && PointBuyScript.wisFinalScore.text != "0" && PointBuyScript.chaFinalScore.text != "0")
+            {
+                PointBuyScript.SavingScores();
+                SceneManager.LoadScene(5);
+            }
+            else
+            {
+                warning.SetActive(true);
+            }
         }
+        
     }
 }

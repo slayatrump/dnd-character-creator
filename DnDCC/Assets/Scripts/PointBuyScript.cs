@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -36,6 +37,22 @@ public class PointBuyScript : MonoBehaviour
     Text inteMod;
     Text wisMod;
     Text chaMod;
+
+    #region Final Score and Modifiers Text Fields
+    public static TMP_Text strFinalScore;
+    public static TMP_Text dexFinalScore;
+    public static TMP_Text conFinalScore;
+    public static TMP_Text intFinalScore;
+    public static TMP_Text wisFinalScore;
+    public static TMP_Text chaFinalScore;
+
+    TMP_Text strModFinalScore;
+    TMP_Text dexModFinalScore;
+    TMP_Text conModFinalScore;
+    TMP_Text intModFinalScore;
+    TMP_Text wisModFinalScore;
+    TMP_Text chaModFinalScore;
+    #endregion
 
     private string select;
 
@@ -715,30 +732,98 @@ public class PointBuyScript : MonoBehaviour
         }
     }
 
-    public void FinishButton()
+    public void FinalScores()
     {
-        bool playerIsSure = true;
-        if(points > 0)
+        #region Setting Save AS Scores
+        SaveManager.instance.gameData.strScore = Str.score;
+        SaveManager.instance.gameData.strMod = Str.modifier;
+        SaveManager.instance.gameData.dexScore = Dex.score;
+        SaveManager.instance.gameData.dexMod = Dex.modifier;
+        SaveManager.instance.gameData.conScore = Con.score;
+        SaveManager.instance.gameData.conMod = Con.modifier;
+        SaveManager.instance.gameData.intScore = Int.score;
+        SaveManager.instance.gameData.intMod = Int.modifier;
+        SaveManager.instance.gameData.wisScore = Wis.score;
+        SaveManager.instance.gameData.wisMod = Wis.modifier;
+        SaveManager.instance.gameData.chaScore = Cha.score;
+        SaveManager.instance.gameData.chaMod = Cha.modifier;
+        #endregion
+
+        #region Locating the Final Score text fields
+        strFinalScore = GameObject.Find("ScoreNumStr").GetComponent<TMP_Text>();
+        strModFinalScore = GameObject.Find("ModNumStr").GetComponent<TMP_Text>();
+        dexFinalScore = GameObject.Find("ScoreNumDex").GetComponent<TMP_Text>();
+        dexModFinalScore = GameObject.Find("ModNumDex").GetComponent<TMP_Text>();
+        conFinalScore = GameObject.Find("ScoreNumCon").GetComponent<TMP_Text>();
+        conModFinalScore = GameObject.Find("ModNumCon").GetComponent<TMP_Text>();
+        intFinalScore = GameObject.Find("ScoreNumInt").GetComponent<TMP_Text>();
+        intModFinalScore = GameObject.Find("ModNumInt").GetComponent<TMP_Text>();
+        wisFinalScore = GameObject.Find("ScoreNumWis").GetComponent<TMP_Text>();
+        wisModFinalScore = GameObject.Find("ModNumWis").GetComponent<TMP_Text>();
+        chaFinalScore = GameObject.Find("ScoreNumCha").GetComponent<TMP_Text>();
+        chaModFinalScore = GameObject.Find("ModNumCha").GetComponent<TMP_Text>();
+        #endregion
+
+        #region Setting the Final Scores to the text fields
+        strFinalScore.text = SaveManager.instance.gameData.strScore.ToString();
+        if (SaveManager.instance.gameData.strMod > 0)
         {
-            //show something asking if player is sure they want to continue even with extra points left behind
-
-            if(points > 420)//if player chooses yes, current code there to reduce errors
-            {
-                playerIsSure = true;
-            }
-            else
-            {
-                playerIsSure = false;
-            }
+            strModFinalScore.text = "+" + SaveManager.instance.gameData.strMod.ToString();
         }
-
-        if(playerIsSure == true)
+        else 
         {
-            //racialBonus = character.raceBonuses;???
-            //add racialBonus to respective ability scores
-            //save the scores to a character sheet or something
-            //move to next scene
+            strModFinalScore.text = SaveManager.instance.gameData.strMod.ToString();
         }
+        dexFinalScore.text = SaveManager.instance.gameData.dexScore.ToString();
+        if (SaveManager.instance.gameData.dexMod > 0)
+        {
+            dexModFinalScore.text = "+" + SaveManager.instance.gameData.dexMod.ToString();
+        }
+        else 
+        {
+            dexModFinalScore.text = SaveManager.instance.gameData.dexMod.ToString();
+        }
+        conFinalScore.text = SaveManager.instance.gameData.conScore.ToString();
+        if (SaveManager.instance.gameData.conMod > 0)
+        {
+            conModFinalScore.text = "+" + SaveManager.instance.gameData.conMod.ToString();
+        }
+        else
+        {
+            conModFinalScore.text = SaveManager.instance.gameData.conMod.ToString();
+        }
+        intFinalScore.text = SaveManager.instance.gameData.intScore.ToString();
+        if (SaveManager.instance.gameData.intMod > 0)
+        {
+            intModFinalScore.text = "+" + SaveManager.instance.gameData.intMod.ToString();
+        }
+        else
+        {
+            intModFinalScore.text = SaveManager.instance.gameData.intMod.ToString();
+        }
+        wisFinalScore.text = SaveManager.instance.gameData.wisScore.ToString();
+        if (SaveManager.instance.gameData.wisMod > 0)
+        {
+            wisModFinalScore.text = "+" + SaveManager.instance.gameData.wisMod.ToString();
+        }
+        else
+        {
+            wisModFinalScore.text = SaveManager.instance.gameData.wisMod.ToString();
+        }
+        chaFinalScore.text = SaveManager.instance.gameData.chaScore.ToString();
+        if (SaveManager.instance.gameData.chaMod > 0)
+        {
+            chaModFinalScore.text = "+" + SaveManager.instance.gameData.chaMod.ToString();
+        }
+        else
+        {
+            chaModFinalScore.text = SaveManager.instance.gameData.chaMod.ToString();
+        }
+        #endregion
+    }
 
+    public static void SavingScores()
+    {
+        SaveManager.instance.Save();
     }
 }

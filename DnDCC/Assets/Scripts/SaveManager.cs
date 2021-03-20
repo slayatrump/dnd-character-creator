@@ -84,6 +84,7 @@ public class SaveData
     public string saveName;
 
     //Ability Scores and their Modifiers
+    public string asMethodChoice;
     public int strScore;
     public int strMod;
     public int dexScore;
@@ -96,7 +97,7 @@ public class SaveData
     public int wisMod;
     public int chaScore;
     public int chaMod;
-
+    
     //Race Selection
     public string raceName;
     public string raceASType1;
