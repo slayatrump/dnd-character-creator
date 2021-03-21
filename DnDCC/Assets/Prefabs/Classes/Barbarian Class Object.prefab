@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4762598759364989907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2788478016910728167}
+  - component: {fileID: 9104774972599011466}
+  m_Layer: 0
+  m_Name: Barbarian Class Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2788478016910728167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762598759364989907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 517.70386, y: 115.686455, z: -402.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9104774972599011466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762598759364989907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3713c7dadc494114a82d911c42f7ad96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Barbarian
+  HitDieType: 12
+  ArmorProficiencies: 000000000100000003000000
+  WeaponProficiencies:
+  - Simple Weapons
+  - Martial Weapons
+  SavingThrow1: 0
+  SavingThrow2: 2
+  SkillProficiencies: 2
+  SkillProficiencyChoices: 09000000000000000f000000070000000c0000000d000000
+  EquipmentChoiceGroups:
+  - ChoicesInGroup:
+    - Greataxe
+    - Martial Melee Weapon
+  - ChoicesInGroup:
+    - Two Handaxes
+    - Simple Weapon
+  - ChoicesInGroup:
+    - Explorer's Pack
+  - ChoicesInGroup:
+    - 4 Javelins
+  ClassFeatures:
+  - Rage
+  - Unarmored Defense
+  CastsSpellsAtFirstLevel: 0
