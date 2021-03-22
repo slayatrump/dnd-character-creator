@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Diagnostics;
 
 public class SelectionController : MonoBehaviour
 {
@@ -217,8 +218,16 @@ public class SelectionController : MonoBehaviour
     {
         selected = EventSystem.current.currentSelectedGameObject.name;
         size = buttons.Count;
+        //var watch = new System.Diagnostics.Stopwatch();
 
-        if (size == 13)
+        //watch.Start();
+
+        //for (int i = 0; i < 1000; i++)
+        //{
+        //    System.Diagnostics.Debug.WriteLine("" + i);
+        //}
+
+        if (size > 0)
         {
             switch (selected)
             {
@@ -417,7 +426,6 @@ public class SelectionController : MonoBehaviour
                         check10.SetActive(true);
                         isSelected = true;
 
-
                         Deselect2();
                         Deselect3();
                         Deselect4();
@@ -481,7 +489,6 @@ public class SelectionController : MonoBehaviour
                         check13.SetActive(true);
                         isSelected = true;
 
-
                         Deselect2();
                         Deselect3();
                         Deselect4();
@@ -498,85 +505,165 @@ public class SelectionController : MonoBehaviour
                         break;
                     }
             }
+            //watch.Stop();
+            //UnityEngine.Debug.Log($"Execution Time: {watch.Elapsed.TotalSeconds} seconds");
         }
     }
 
     void Deselect1()
     {
-        b1.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b1.GetComponentInChildren<TMP_Text>().text = "X";
-        check1.SetActive(false);
+        if (b1 != null)
+        {
+            if (b1.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b1.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b1.GetComponentInChildren<TMP_Text>().text = "X";
+                check1.SetActive(false);
+            }
+        }
     }
     void Deselect2()
     {
-        b2.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b2.GetComponentInChildren<TMP_Text>().text = "X";
-        check2.SetActive(false);
+        if (b2 != null)
+        {
+            if (b2.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b2.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b2.GetComponentInChildren<TMP_Text>().text = "X";
+                check2.SetActive(false);
+            }
+        }
     }
     void Deselect3()
     {
-        b3.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b3.GetComponentInChildren<TMP_Text>().text = "X";
-        check3.SetActive(false);
+        if (b3 != null)
+        {
+            if (b3.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b3.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b3.GetComponentInChildren<TMP_Text>().text = "X";
+                check3.SetActive(false);
+            }
+        }
     }
     void Deselect4()
     {
-        b4.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b4.GetComponentInChildren<TMP_Text>().text = "X";
-        check4.SetActive(false);
+        if (b4 != null)
+        {
+            if (b4.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b4.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b4.GetComponentInChildren<TMP_Text>().text = "X";
+                check4.SetActive(false);
+            }
+        }
     }
     void Deselect5()
     {
-        b5.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b5.GetComponentInChildren<TMP_Text>().text = "X";
-        check5.SetActive(false);
+        if (b5 != null)
+        {
+            if (b5.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b5.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b5.GetComponentInChildren<TMP_Text>().text = "X";
+                check5.SetActive(false);
+            }
+        }
     }
     void Deselect6()
     {
-        b6.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b6.GetComponentInChildren<TMP_Text>().text = "X";
-        check6.SetActive(false);
+        if (b6 != null)
+        {
+            if (b6.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b6.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b6.GetComponentInChildren<TMP_Text>().text = "X";
+                check6.SetActive(false);
+            }
+        }
     }
     void Deselect7()
     {
-        b7.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b7.GetComponentInChildren<TMP_Text>().text = "X";
-        check7.SetActive(false);
+        if (b7 != null)
+        {
+            if (b7.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b7.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b7.GetComponentInChildren<TMP_Text>().text = "X";
+                check7.SetActive(false);
+            }
+        }
     }
     void Deselect8()
     {
-        b8.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b8.GetComponentInChildren<TMP_Text>().text = "X";
-        check8.SetActive(false);
+        if (b8 != null)
+        {
+            if (b8.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b8.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b8.GetComponentInChildren<TMP_Text>().text = "X";
+                check8.SetActive(false);
+            }
+        }
     }
     void Deselect9()
     {
-        b9.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b9.GetComponentInChildren<TMP_Text>().text = "X";
-        check9.SetActive(false);
+        if (b9 != null)
+        {
+            if (b9.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b9.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b9.GetComponentInChildren<TMP_Text>().text = "X";
+                check9.SetActive(false);
+            }
+        }
     }
     void Deselect10()
     {
-        b10.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b10.GetComponentInChildren<TMP_Text>().text = "X";
-        check10.SetActive(false);
+        if (b10 != null)
+        {
+            if (b10.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b10.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b10.GetComponentInChildren<TMP_Text>().text = "X";
+                check10.SetActive(false);
+            }
+        }
     }
     void Deselect11()
     {
-        b11.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b11.GetComponentInChildren<TMP_Text>().text = "X";
-        check11.SetActive(false);
+        if (b11 != null)
+        {
+            if (b11.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b11.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b11.GetComponentInChildren<TMP_Text>().text = "X";
+                check11.SetActive(false);
+            }
+        }
     }
     void Deselect12()
     {
-        b12.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b12.GetComponentInChildren<TMP_Text>().text = "X";
-        check12.SetActive(false);
+        if (b12 != null)
+        {
+            if (b12.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b12.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b12.GetComponentInChildren<TMP_Text>().text = "X";
+                check12.SetActive(false);
+            }
+        }
     }
     void Deselect13()
     {
-        b13.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
-        b13.GetComponentInChildren<TMP_Text>().text = "X";
-        check13.SetActive(false);
+        if (b13 != null)
+        {
+            if (b13.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b13.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b13.GetComponentInChildren<TMP_Text>().text = "X";
+                check13.SetActive(false);
+            }
+        }
     }
 }
