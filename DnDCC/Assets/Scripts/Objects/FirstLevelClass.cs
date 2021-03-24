@@ -150,6 +150,207 @@ public class FirstLevelClass : MonoBehaviour
 
                     break;
                 }
+            case "s3":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0] + ", " + this.ArmorProficiencies[1]
+                        + ", " + this.ArmorProficiencies[2];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s4":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1]
+                        + ", " + this.WeaponProficiencies[2] + ", " + this.WeaponProficiencies[3] + ", " + this.WeaponProficiencies[4]
+                        + ", " + this.WeaponProficiencies[5] + ", " + this.WeaponProficiencies[6] + ", " + this.WeaponProficiencies[7]
+                        + ", " + this.WeaponProficiencies[8] + ", " + this.WeaponProficiencies[9];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0] + ", " + this.ArmorProficiencies[1]
+                        + ", " + this.ArmorProficiencies[2];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s5":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0] + ", " + this.ArmorProficiencies[1]
+                        + ", " + this.ArmorProficiencies[2] + ", " + this.ArmorProficiencies[3];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s6":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s7":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0] + ", " + this.ArmorProficiencies[1]
+                        + ", " + this.ArmorProficiencies[3] + ", " + this.ArmorProficiencies[3];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s8":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0] + ", " + this.ArmorProficiencies[1] 
+                        + ", " + this.ArmorProficiencies[2];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s9":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1]
+                        + ", " + this.WeaponProficiencies[2] + ", " + this.WeaponProficiencies[3] + ", " + this.WeaponProficiencies[4];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s10":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1]
+                        + ", " + this.WeaponProficiencies[2] + ", " + this.WeaponProficiencies[3] + ", " + this.WeaponProficiencies[4];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s11":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
+            case "s12":
+                {
+                    className.text = "Class Name: " + this.Name;
+                    currentRaceName.text = "Race: " + SaveManager.instance.gameData.raceName;
+                    hitDiceInfo.text = "Hit Dice: d" + this.HitDieType.ToString();
+                    savingThrowsInfo.text = "Saving Throws: \n" + this.SavingThrow1 +
+                        " & " + this.SavingThrow2;
+                    weaponProficienciesInfo.text = "Weapon Proficiencies: \n" + this.WeaponProficiencies[0] + ", " + this.WeaponProficiencies[1]
+                        + ", " + this.WeaponProficiencies[2] + ", " + this.WeaponProficiencies[3] + ", " + this.WeaponProficiencies[4];
+                    armorProficienciesInfo.text = "Armor Proficiencies: \n" + this.ArmorProficiencies[0];
+
+                    foreach (SkillType sk in SkillProficiencyChoices)
+                    {
+                        this.skills.Add(sk.ToString());
+                    }
+
+                    NumberOfSkillSelections();
+
+                    break;
+                }
         }
     }
 
