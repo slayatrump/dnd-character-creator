@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &777969430304430994
+--- !u!1 &8666205718314121988
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8342430420148207658}
-  - component: {fileID: 684063143474620795}
+  - component: {fileID: 92657459807789244}
+  - component: {fileID: 8930968952390486509}
   m_Layer: 0
-  m_Name: Acolyte Background Object
+  m_Name: Noble Background Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8342430420148207658
+--- !u!4 &92657459807789244
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777969430304430994}
+  m_GameObject: {fileID: 8666205718314121988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 517.70386, y: 115.686455, z: -402.875}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,29 +31,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &684063143474620795
+--- !u!114 &8930968952390486509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777969430304430994}
+  m_GameObject: {fileID: 8666205718314121988}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca80052bd08a3b4ba12408e479c26bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Acolyte
-  SkillProficiency1: 10
-  SkillProficiency2: 8
-  ToolProficiencies: []
-  ExtraLanguagesKnown: 2
+  Name: Noble
+  SkillProficiency1: 5
+  SkillProficiency2: 17
+  ToolProficiencies:
+  - 1 Gaming Set
+  ExtraLanguagesKnown: 1
   Equipment:
-  - Holy Symbol
-  - Prayer Book or Prayer Wheel
-  - 5 Sticks of Incense
-  - Vestments
-  - Common Clothes
-  - Belt Pouch
-  Gold: 15
-  BackgroundFeature: Shelter of the Faithful
+  - Fine Clothes
+  - Signet Ring
+  - Scroll of Pedigree
+  - Coin Purse
+  Gold: 25
+  BackgroundFeature: Position of Privilege
