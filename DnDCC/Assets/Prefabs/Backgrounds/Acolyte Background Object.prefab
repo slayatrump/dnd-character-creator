@@ -50,10 +50,10 @@ MonoBehaviour:
   ExtraLanguagesKnown: 2
   Equipment:
   - Holy Symbol
-  - Prayer Book
+  - Prayer Book or Prayer Wheel
   - 5 Sticks of Incense
   - Vestments
-  - Set of Common Clothes
+  - Common Clothes
   - Belt Pouch
   Gold: 15
   BackgroundFeature: Shelter of the Faithful
