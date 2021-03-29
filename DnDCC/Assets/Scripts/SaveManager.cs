@@ -80,10 +80,12 @@ public class SaveManager : MonoBehaviour
 [System.Serializable]
 public class SaveData
 {
+    [Header("Save Data Name")]
     //Name of the savefile
     public string saveName;
 
-    //Ability Scores and their Modifiers
+    [Header("Ability Score and Modifier Save Data")]
+    //Ability Scores and their Modifiers Info
     public string asMethodChoice;
     public int strScore;
     public int strMod;
@@ -97,8 +99,9 @@ public class SaveData
     public int wisMod;
     public int chaScore;
     public int chaMod;
-    
-    //Race Selection
+
+    [Header("Race Info Save Data")]
+    //Race Selection Info
     public string raceName;
     public string raceASType1;
     public string raceASType2;
@@ -108,5 +111,17 @@ public class SaveData
     public string raceBuild;
     public List<string> raceLanguages;
     public List<string> raceFeatures;
-    
+
+    [Header("Class Info Save Data")]
+    //Class Selection Info
+    public string className;
+    public int hitDieType;
+    public string ASTypeSavingThrow1;
+    public string ASTypeSavingThrow2;
+    public List<string> armorPreficiencies;
+    public List<string> weaponPreficiencies;
+    public List<string> classFeatures;
+    public List<string> skillPreficiencies;
+    public List<string> equipmentChoices;
+    public bool canUseSpellsAtLvlOne;
 }

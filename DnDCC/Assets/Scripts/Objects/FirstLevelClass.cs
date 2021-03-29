@@ -43,7 +43,7 @@ public class FirstLevelClass : MonoBehaviour
     public string[] ClassFeatures;
 
     //This does not need to be displayed to the user on class selection, its mostly here to tell the program if it should skip the spell selection scene
-    public static bool CastsSpellsAtFirstLevel;
+    public bool CastsSpellsAtFirstLevel;
     #endregion
 
     #region Class UI Functionality
@@ -151,6 +151,8 @@ public class FirstLevelClass : MonoBehaviour
         firstNext.gameObject.SetActive(false);
 
         sc = GameObject.Find("SelectionController").GetComponent<SelectionController>();
+
+
     }
 
     public void ClassSelected()
@@ -211,6 +213,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s2":
@@ -267,6 +271,8 @@ public class FirstLevelClass : MonoBehaviour
 
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
+
+                    SettingSaveClassInfoData();
 
                     break;
                 }
@@ -330,6 +336,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s4":
@@ -390,6 +398,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s5":
@@ -442,6 +452,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s6":
@@ -487,6 +499,8 @@ public class FirstLevelClass : MonoBehaviour
 
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
+
+                    SettingSaveClassInfoData();
 
                     break;
                 }
@@ -545,6 +559,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s8":
@@ -601,6 +617,8 @@ public class FirstLevelClass : MonoBehaviour
 
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
+
+                    SettingSaveClassInfoData();
 
                     break;
                 }
@@ -665,6 +683,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s10":
@@ -716,6 +736,8 @@ public class FirstLevelClass : MonoBehaviour
 
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
+
+                    SettingSaveClassInfoData();
 
                     break;
                 }
@@ -778,6 +800,8 @@ public class FirstLevelClass : MonoBehaviour
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
 
+                    SettingSaveClassInfoData();
+
                     break;
                 }
             case "s12":
@@ -829,6 +853,8 @@ public class FirstLevelClass : MonoBehaviour
 
                     NumberOfSkillSelections();
                     NumberOfEquipmentSelections();
+
+                    SettingSaveClassInfoData();
 
                     break;
                 }
@@ -1338,6 +1364,105 @@ public class FirstLevelClass : MonoBehaviour
         equipmentChoicePos6 = new Vector2(equipmentChoice6.gameObject.transform.position.x, equipmentChoice6.gameObject.transform.position.y);
 
         choiceTextPos = new Vector2(choiceText.gameObject.transform.position.x, choiceText.gameObject.transform.position.y);
+    }
+
+    private void SettingSaveClassInfoData()
+    {
+        SaveManager.instance.gameData.className = this.Name;
+        SaveManager.instance.gameData.hitDieType = this.HitDieType;
+        SaveManager.instance.gameData.ASTypeSavingThrow1 = this.SavingThrow1.ToString();
+        SaveManager.instance.gameData.ASTypeSavingThrow2 = this.SavingThrow2.ToString();
+        foreach (string wp in this.WeaponProficiencies)
+        {
+            SaveManager.instance.gameData.weaponPreficiencies.Add(wp);
+        }
+        foreach (ArmorType ap in this.ArmorProficiencies)
+        {
+            SaveManager.instance.gameData.armorPreficiencies.Add(ap.ToString());
+        }
+        foreach (string cf in this.ClassFeatures)
+        {
+            SaveManager.instance.gameData.classFeatures.Add(cf);
+        }
+        SaveManager.instance.gameData.canUseSpellsAtLvlOne = CastsSpellsAtFirstLevel;
+    }
+
+    public void SettingSaveSkillSelections()
+    {
+        SaveManager.instance.gameData.skillPreficiencies.Clear();
+
+        switch (SkillProficiencies)
+        {
+            case 2:
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+                    break;
+                }
+            case 3:
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                    break;
+                }
+            case 4:
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+                    break;
+                }
+        }
+        
+    }
+    public void SettingSaveEquipmentSelections()
+    {
+        SaveManager.instance.gameData.equipmentChoices.Clear();
+
+        switch (EquipmentChoiceGroups.Length)
+        {
+            case 3:
+                {
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
+                    break;
+                }
+            case 4:
+                {
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
+                    break;
+                }
+            case 5:
+                {
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice5.text);
+                    break;
+                }
+            case 6:
+                {
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice5.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice6.text);
+                    break;
+                }
+        }
+    }
+
+    public static void SavingClassData()
+    {
+        SaveManager.instance.Save();
     }
     #endregion
 }

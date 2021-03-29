@@ -30,9 +30,16 @@ public class MenuController : MonoBehaviour
         {
             Race.SaveRace();
             SelectionController.isSelected = false;
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(2);
         }
     }
+
+    public void ClassToBackground()
+    {
+        FirstLevelClass.SavingClassData();
+        SceneManager.LoadScene(3);
+    }
+
     public void ASToFeatures()
     {
         if (SaveManager.instance.gameData.asMethodChoice == "4d6 Method")

@@ -397,6 +397,7 @@ public class Race : MonoBehaviour
         SaveManager.instance.gameData.raceASIncrease2 = this.AS2.IncreaseBy;
         SaveManager.instance.gameData.raceBuild = this.Size.ToString();
         SaveManager.instance.gameData.raceSpeed = this.Speed;
+
         foreach (string l in this.Languages)
         {
             SaveManager.instance.gameData.raceLanguages.Add(l);
