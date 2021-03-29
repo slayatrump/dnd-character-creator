@@ -58,7 +58,7 @@ public class SaveManager : MonoBehaviour
 
             stream.Close();
 
-            Debug.Log("Game Loaded");
+            Debug.Log("Game Loaded: " + savePath);
 
             hasLoaded = true;
         }
