@@ -23,6 +23,11 @@ public class SelectionController : MonoBehaviour
     public Button b11;
     public Button b12;
     public Button b13;
+    public Button b14;
+    public Button b15;
+    public Button b16;
+    public Button b17;
+    public Button b18;
 
     //References for the number of checkmarks in the buttons in the scene
     //Not every scene uses the max number below, this just a max value
@@ -39,6 +44,11 @@ public class SelectionController : MonoBehaviour
     public GameObject check11;
     public GameObject check12;
     public GameObject check13;
+    public GameObject check14;
+    public GameObject check15;
+    public GameObject check16;
+    public GameObject check17;
+    public GameObject check18;
 
     //Way to check the size of these list in the inspector
     [SerializeField]
@@ -140,6 +150,36 @@ public class SelectionController : MonoBehaviour
             b13.GetComponentInChildren<TMP_Text>().text = "X";
             buttons.Add(b13);
         }
+        if (b14 != null)
+        {
+            b14.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b14.GetComponentInChildren<TMP_Text>().text = "X";
+            buttons.Add(b14);
+        }
+        if (b15 != null)
+        {
+            b15.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b15.GetComponentInChildren<TMP_Text>().text = "X";
+            buttons.Add(b15);
+        }
+        if (b16 != null)
+        {
+            b16.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b16.GetComponentInChildren<TMP_Text>().text = "X";
+            buttons.Add(b16);
+        }
+        if (b17 != null)
+        {
+            b17.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b17.GetComponentInChildren<TMP_Text>().text = "X";
+            buttons.Add(b17);
+        }
+        if (b18 != null)
+        {
+            b18.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+            b18.GetComponentInChildren<TMP_Text>().text = "X";
+            buttons.Add(b18);
+        }
     }
 
     private void CheckingCheckmarks()
@@ -212,20 +252,37 @@ public class SelectionController : MonoBehaviour
             check13.SetActive(false);
             checkmarks.Add(check13);
         }
+        if (check14 != null)
+        {
+            check14.SetActive(false);
+            checkmarks.Add(check14);
+        }
+        if (check15 != null)
+        {
+            check15.SetActive(false);
+            checkmarks.Add(check15);
+        }
+        if (check16 != null)
+        {
+            check16.SetActive(false);
+            checkmarks.Add(check16);
+        }
+        if (check17 != null)
+        {
+            check17.SetActive(false);
+            checkmarks.Add(check17);
+        }
+        if (check18 != null)
+        {
+            check18.SetActive(false);
+            checkmarks.Add(check18);
+        }
     }
 
     public void Selected()
     {
         selected = EventSystem.current.currentSelectedGameObject.name;
         size = buttons.Count;
-        //var watch = new System.Diagnostics.Stopwatch();
-
-        //watch.Start();
-
-        //for (int i = 0; i < 1000; i++)
-        //{
-        //    System.Diagnostics.Debug.WriteLine("" + i);
-        //}
 
         if (size > 0)
         {
@@ -249,6 +306,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -270,6 +332,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -291,6 +358,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -312,6 +384,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -333,6 +410,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -354,6 +436,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -375,6 +462,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -396,6 +488,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -417,6 +514,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -438,6 +540,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -459,6 +566,11 @@ public class SelectionController : MonoBehaviour
                         Deselect1();
                         Deselect12();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -480,6 +592,11 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect1();
                         Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
 
                         break;
                     }
@@ -501,12 +618,145 @@ public class SelectionController : MonoBehaviour
                         Deselect11();
                         Deselect12();
                         Deselect1();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
+
+                        break;
+                    }
+                case "s14":
+                    {
+                        b14.GetComponentInChildren<TMP_Text>().text = "_";
+                        check14.SetActive(true);
+                        isSelected = true;
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+                        Deselect1();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
+
+                        break;
+                    }
+                case "s15":
+                    {
+                        b15.GetComponentInChildren<TMP_Text>().text = "_";
+                        check15.SetActive(true);
+                        isSelected = true;
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+                        Deselect14();
+                        Deselect1();
+                        Deselect16();
+                        Deselect17();
+                        Deselect18();
+
+                        break;
+                    }
+                case "s16":
+                    {
+                        b16.GetComponentInChildren<TMP_Text>().text = "_";
+                        check16.SetActive(true);
+                        isSelected = true;
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect1();
+                        Deselect17();
+                        Deselect18();
+
+                        break;
+                    }
+                case "s17":
+                    {
+                        b17.GetComponentInChildren<TMP_Text>().text = "_";
+                        check17.SetActive(true);
+                        isSelected = true;
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect1();
+                        Deselect18();
+
+                        break;
+                    }
+                case "s18":
+                    {
+                        b18.GetComponentInChildren<TMP_Text>().text = "_";
+                        check18.SetActive(true);
+                        isSelected = true;
+
+                        Deselect2();
+                        Deselect3();
+                        Deselect4();
+                        Deselect5();
+                        Deselect6();
+                        Deselect7();
+                        Deselect8();
+                        Deselect9();
+                        Deselect10();
+                        Deselect11();
+                        Deselect12();
+                        Deselect13();
+                        Deselect14();
+                        Deselect15();
+                        Deselect16();
+                        Deselect17();
+                        Deselect1();
 
                         break;
                     }
             }
-            //watch.Stop();
-            //UnityEngine.Debug.Log($"Execution Time: {watch.Elapsed.TotalSeconds} seconds");
         }
     }
 
@@ -663,6 +913,66 @@ public class SelectionController : MonoBehaviour
                 b13.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
                 b13.GetComponentInChildren<TMP_Text>().text = "X";
                 check13.SetActive(false);
+            }
+        }
+    }
+    void Deselect14()
+    {
+        if (b14 != null)
+        {
+            if (b14.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b14.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b14.GetComponentInChildren<TMP_Text>().text = "X";
+                check14.SetActive(false);
+            }
+        }
+    }
+    void Deselect15()
+    {
+        if (b15 != null)
+        {
+            if (b15.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b15.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b15.GetComponentInChildren<TMP_Text>().text = "X";
+                check15.SetActive(false);
+            }
+        }
+    }
+    void Deselect16()
+    {
+        if (b16 != null)
+        {
+            if (b16.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b16.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b16.GetComponentInChildren<TMP_Text>().text = "X";
+                check16.SetActive(false);
+            }
+        }
+    }
+    void Deselect17()
+    {
+        if (b17 != null)
+        {
+            if (b17.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b17.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b17.GetComponentInChildren<TMP_Text>().text = "X";
+                check17.SetActive(false);
+            }
+        }
+    }
+    void Deselect18()
+    {
+        if (b18 != null)
+        {
+            if (b18.GetComponentInChildren<TMP_Text>().text != "X")
+            {
+                b18.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Underline;
+                b18.GetComponentInChildren<TMP_Text>().text = "X";
+                check18.SetActive(false);
             }
         }
     }

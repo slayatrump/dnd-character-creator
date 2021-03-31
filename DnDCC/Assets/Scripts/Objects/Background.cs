@@ -5,6 +5,7 @@ using GlobalEnums;
 
 public class Background : MonoBehaviour
 {
+    #region Background Prefab Info
     //Background objects should be saved as "[background name] Background Object"
 
     public string Name;
@@ -22,4 +23,9 @@ public class Background : MonoBehaviour
     public int Gold;
 
     public string BackgroundFeature;
+    #endregion
+
+    #region Background UI Functionality
+
+    #endregion
 }
