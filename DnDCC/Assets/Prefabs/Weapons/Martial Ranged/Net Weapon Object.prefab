@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6952847820824368119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113203138748887323}
+  - component: {fileID: 2475343261538868054}
+  m_Layer: 0
+  m_Name: Net Weapon Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113203138748887323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952847820824368119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 517.70386, y: 115.686455, z: -402.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2475343261538868054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952847820824368119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b087e0c8e4e5441ac3d610c6492143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: Net
+  WeaponType: 3
+  NumCost: 1
+  CostType: gp
+  Damage: 0
+  DamageType: 0
+  Weight: 3
+  Properties:
+  - Thrown (Range 5/15)
+  - A Large or smaller creature hit by a net is restrained until it is freed. A net
+    has no effect on creatures that are formless, or creatures that are Huge or larger.
+    A creature can use its action to make a DC 10 Strength check, freeing itself
+    or another creature within its reach on a success. Dealing 5 slashing damage
+    to the net (AC 10) also frees the creature without harming it, ending the effect
+    and destroying the net. When you use an action, bonus action, or reaction to
+    attack with a net, you can make only one attack regardless of the number of attacks
+    you can normally make.
