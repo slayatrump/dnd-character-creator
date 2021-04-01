@@ -114,7 +114,7 @@ public class AbilityScoreRoller : MonoBehaviour
 
         modifier = GameObject.Find("Modifier").GetComponent<Button>();
         modifier.enabled = false;
-        modifier.GetComponentInChildren<TMP_Text>().text = "Roll and Place First";
+        modifier.GetComponentInChildren<TMP_Text>().text = "Roll and Place Scores First";
         modifier.GetComponent<Image>().color = Color.gray;
 
         reset = GameObject.Find("ResetPosButton").GetComponent<Button>();

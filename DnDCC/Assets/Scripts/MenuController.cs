@@ -40,6 +40,12 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void BackgroundToAS()
+    {
+        Background.SavingBackgroundInfoData();
+        SceneManager.LoadScene(4);
+    }
+
     public void ASToFeatures()
     {
         if (SaveManager.instance.gameData.asMethodChoice == "4d6 Method")

@@ -31,7 +31,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
             #region Resetting various buttons
             rollBTN = GameObject.Find("Roll").GetComponent<Button>();
             rollBTN.enabled = false;
-            rollBTN.GetComponentInChildren<TMP_Text>().text = "Press Reset Button to Roll Again";
+            rollBTN.GetComponentInChildren<TMP_Text>().text = "Press Reset to Roll Again";
             rollBTN.GetComponent<Image>().color = Color.gray;
 
             AbilityScoreRoller.modifier.enabled = true;

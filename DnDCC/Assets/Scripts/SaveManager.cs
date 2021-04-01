@@ -124,4 +124,15 @@ public class SaveData
     public List<string> skillPreficiencies;
     public List<string> equipmentChoices;
     public bool canUseSpellsAtLvlOne;
+
+    [Header("Background Info Save Data")]
+    //Background Selection Info
+    public string backgroundName;
+    public int goldAmount;
+    public string additionalSkill1;
+    public string additionalSkill2;
+    public int extraLanguageOptions;
+    public List<string> toolPreficiencies;
+    public string backgroundFeatures;
+    public List<string> extraEquipment;
 }
