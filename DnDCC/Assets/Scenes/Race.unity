@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_enableWordWrapping
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_fontColor.r
@@ -181,10 +181,6 @@ PrefabInstance:
     - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 1869522678, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2116877268, guid: 2655d657cea8497419e238bfa894fb08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -496,11 +492,6 @@ MonoBehaviour:
   b11: {fileID: 1160942691}
   b12: {fileID: 1679113675}
   b13: {fileID: 1284999272}
-  b14: {fileID: 0}
-  b15: {fileID: 0}
-  b16: {fileID: 0}
-  b17: {fileID: 0}
-  b18: {fileID: 0}
   check1: {fileID: 562563979}
   check2: {fileID: 1642330861}
   check3: {fileID: 325281791}
@@ -514,11 +505,6 @@ MonoBehaviour:
   check11: {fileID: 1721374421}
   check12: {fileID: 656282905}
   check13: {fileID: 824181747}
-  check14: {fileID: 0}
-  check15: {fileID: 0}
-  check16: {fileID: 0}
-  check17: {fileID: 0}
-  check18: {fileID: 0}
   buttons: []
   checkmarks: []
   selected: 
@@ -908,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1331521748, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1331521748, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_enableWordWrapping
@@ -916,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1331521748, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1331521748, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_fontColor.r
@@ -934,7 +920,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4291028991
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 1642330863, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_Color.r
       value: 1
@@ -945,10 +930,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1642330863, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
       propertyPath: m_Color.b
-=======
-    - target: {fileID: 1331521748, guid: 00e96df117ae25a41ab4cb82d8a8297f, type: 3}
-      propertyPath: m_fontStyle
->>>>>>> parent of 1820e98 (Revert "Background Scene")
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3571434104231245360, guid: 00e96df117ae25a41ab4cb82d8a8297f,
@@ -1047,7 +1028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_enableWordWrapping
@@ -1055,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_fontColor.r
@@ -1072,10 +1053,6 @@ PrefabInstance:
     - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 940690466, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1427666371, guid: f85b2c07e1426e1429d93e4d8d5fb240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1294,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_enableWordWrapping
@@ -1302,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_fontColor.r
@@ -1319,10 +1296,6 @@ PrefabInstance:
     - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 143667107, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1284999272, guid: 74d45918381220343a42b9b15fc6d9d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2163,7 +2136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
       propertyPath: m_enableWordWrapping
@@ -2171,7 +2144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
       propertyPath: m_fontColor.r
@@ -2188,10 +2161,6 @@ PrefabInstance:
     - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 2068844833, guid: d8b3727703dcb3f4ba441f7885535147, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5803167207448830878, guid: d8b3727703dcb3f4ba441f7885535147,
         type: 3}
@@ -2295,7 +2264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_enableWordWrapping
@@ -2303,7 +2272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_fontColor.r
@@ -2320,10 +2289,6 @@ PrefabInstance:
     - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661608121, guid: da98d111897c034469d837746d94968e, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1679113675, guid: da98d111897c034469d837746d94968e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2542,7 +2507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_enableWordWrapping
@@ -2550,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_fontColor.r
@@ -2567,10 +2532,6 @@ PrefabInstance:
     - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 986363392, guid: 2397d3bec149247479497e4c5400632a, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1160942691, guid: 2397d3bec149247479497e4c5400632a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2942,7 +2903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
       propertyPath: m_enableWordWrapping
@@ -2950,7 +2911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
       propertyPath: m_fontColor.r
@@ -2967,10 +2928,6 @@ PrefabInstance:
     - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 1449154330, guid: bc62757481a99404689b7faf083c7ef4, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7247947631414099869, guid: bc62757481a99404689b7faf083c7ef4,
         type: 3}
@@ -3208,7 +3165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_enableWordWrapping
@@ -3216,7 +3173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_fontColor.r
@@ -3233,10 +3190,6 @@ PrefabInstance:
     - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 970313743, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1879011917, guid: 06dbdfb0d5469d040a0e7bede96272f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3498,7 +3451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
       propertyPath: m_enableWordWrapping
@@ -3506,7 +3459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
       propertyPath: m_fontColor.r
@@ -3523,10 +3476,6 @@ PrefabInstance:
     - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125131966, guid: 42853cdaacc42cf419e1aec8943fb9cf, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6927034649558811673, guid: 42853cdaacc42cf419e1aec8943fb9cf,
         type: 3}
@@ -3714,7 +3663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169701849, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 169701849, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_enableWordWrapping
@@ -3722,7 +3671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169701849, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 169701849, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_fontColor.r
@@ -3740,7 +3689,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4291028991
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 1305028816, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_Color.r
       value: 1
@@ -3757,12 +3705,6 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
-=======
-    - target: {fileID: 169701849, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
->>>>>>> parent of 1820e98 (Revert "Background Scene")
     - target: {fileID: 1646861578, guid: f2c0653e8fd5a99409e2e2a0a502803b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3954,7 +3896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_enableWordWrapping
@@ -3962,7 +3904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_fontColor.r
@@ -3979,10 +3921,6 @@ PrefabInstance:
     - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 1753338477, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2067260537, guid: bc031b5fe976852419f3f22bae5971c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4379,7 +4317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_fontSize
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_enableWordWrapping
@@ -4387,7 +4325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 41
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_fontColor.r
@@ -4404,10 +4342,6 @@ PrefabInstance:
     - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291028991
-      objectReference: {fileID: 0}
-    - target: {fileID: 143406198, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 874959040, guid: f4b18b41c21e9434fa07857ca183bbcb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
