@@ -11,7 +11,7 @@ namespace GlobalEnums
 
     public enum AbilityScoreType { Str, Dex, Con, Int, Wis, Cha};
     public enum DamageTypes { Bludgeoning, Piercing, Slashing, None};
-    public enum SchoolTypes { Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Nocromancy, Transmutation};
+    public enum SchoolTypes { Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, Transmutation};
     public enum ArmorType { Light_Armor, Medium_Armor, Heavy_Armor, Shield, None};
 
     public enum ClassTypes { Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard};

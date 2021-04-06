@@ -15,7 +15,7 @@ public class Spell : MonoBehaviour
 
     public string Range;
 
-    public string Components;
+    public List<string> Components;
 
     public string Duration;
 
