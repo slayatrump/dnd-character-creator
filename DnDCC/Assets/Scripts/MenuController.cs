@@ -5,14 +5,22 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.IO;
+using TMPro;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject warning;
+    public TMP_Text warningText;
+
+    public static bool isDone;
 
     private void Start()
     {
         if (warning == null)
+        {
+            return;
+        }
+        if (warningText == null)
         {
             return;
         }
@@ -36,8 +44,26 @@ public class MenuController : MonoBehaviour
 
     public void ClassToBackground()
     {
-        FirstLevelClass.SavingClassData();
-        SceneManager.LoadScene(3);
+        string savePath = Application.persistentDataPath;
+
+
+        if (File.Exists(savePath + "/" + SaveManager.instance.gameData.saveName + ".dat"))
+        {
+            foreach (string w in SaveManager.instance.gameData.equipmentChoices)
+            {
+                if (w.Contains("Simple") == true || w.Contains("Martial") == true)
+                {
+                    warning.SetActive(true);
+                    warningText.text = $"You have selected {w} during equiopment selection \n Please go back and selected a specific weapon";
+                    break;
+                }
+                else if (isDone == true)
+                {
+                    FirstLevelClass.SavingClassData();
+                    SceneManager.LoadScene(3);
+                }
+            }
+        }
     }
 
     public void BackgroundToAS()
