@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4218160699099554692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8453675563372760731}
+  - component: {fileID: 7332573399963480518}
+  m_Layer: 0
+  m_Name: Compelled Duel Spell Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8453675563372760731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218160699099554692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 517.70386, y: 115.686455, z: -402.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7332573399963480518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218160699099554692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpellName: Compelled Duel
+  SpellLevel: 1
+  SchoolType: 3
+  CastingTime: 1 Bonus Action
+  Range: 30 feet
+  Components:
+  - V
+  Duration: Concentration, up to 1 minute
+  Classes:
+  - Class: 6
+    ClassLevel: 1
+  DescriptionParagraphs:
+  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
+    within range that are within 5 feet of each other. A target must succeed on a
+    Dexterity saving throw or take 1d6 acid damage. '
+  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
+    within range that are within 5 feet of each other. A target must succeed on a
+    Dexterity saving throw or take 1d6 acid damage. '
