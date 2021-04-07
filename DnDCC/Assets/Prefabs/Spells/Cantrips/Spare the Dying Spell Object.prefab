@@ -55,6 +55,5 @@ MonoBehaviour:
   - Class: 2
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - You touch a living creature that has 0 hit points. The creature becomes stable.
+    This spell has no effect on undead or constructs.

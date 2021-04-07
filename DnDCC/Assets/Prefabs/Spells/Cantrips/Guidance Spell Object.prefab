@@ -57,6 +57,6 @@ MonoBehaviour:
   - Class: 3
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - You touch one willing creature. Once before the spell ends, the target can roll
+    a d4 and add the number rolled to one ability check of its choice. It can roll
+    the die before or after making the ability check. The spell then ends.

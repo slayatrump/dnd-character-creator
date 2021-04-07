@@ -56,9 +56,9 @@ MonoBehaviour:
   - Class: 10
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'A protective magical force surrounds you, manifesting as a spectral frost that
+    covers you and your gear. You gain 5 temporary hit points for the duration. If
+    a creature hits you with a melee attack while you have these hit points, the
+    creature takes 5 cold damage. '
+  - At Higher Levels. When you cast this spell using a spell slot of 2nd level or
+    higher, you can affect one additional beast for each slot level above 1st.

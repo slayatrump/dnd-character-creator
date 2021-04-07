@@ -55,9 +55,9 @@ MonoBehaviour:
   - Class: 10
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'A beam of crackling energy streaks toward a creature within range. Make a ranged
+    spell attack against the target. On a hit, the target takes 1d10 force damage. '
+  - 'At Higher Levels. The spell creates more than one beam when you reach higher
+    levels: Two beams at 5th level. Three beams at 11th level. Four beams at 17th
+    level. You can direct the beams at the same target or at different ones. Make
+    a separate attack roll for each beam.'

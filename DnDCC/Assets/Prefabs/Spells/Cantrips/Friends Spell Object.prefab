@@ -62,6 +62,9 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - "For the duration, you have advantage on all Charisma checks directed at one
+    creature of your choice that isn\u2019t hostile toward you. When the spell ends,
+    the creature realizes that you used magic to influence its mood and becomes hostile
+    toward you. A creature prone to violence might attack you. Another creature might
+    seek retribution in other ways (at the DM\u2019s discretion), depending on the
+    nature of your interaction with it."

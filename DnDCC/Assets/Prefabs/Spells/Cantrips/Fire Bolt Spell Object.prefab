@@ -57,9 +57,8 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - "You hurl a mote of fire at a creature or object within range. Make a ranged
+    spell attack against the target. On a hit, the target takes 1d10 fire damage.
+    A flammable object hit by this spell ignites if it isn\u2019t being worn or carried. "
+  - "At Higher Levels. This spell\u2019s damage increases by 1d10 when you reach
+    5th level (2d10), 11th level (3d10), and 17th level (4d10)."

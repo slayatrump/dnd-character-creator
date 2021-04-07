@@ -56,6 +56,8 @@ MonoBehaviour:
   - Class: 3
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - "The wood of a club or quarterstaff you are holding is imbued with nature\u2019s
+    power. For the duration, you can use your spellcasting ability instead of Strength
+    for the attack and damage rolls of melee attacks using that weapon, and the weapon\u2019s
+    damage die becomes a d8. The weapon also becomes magical, if it isn\u2019t already.
+    The spell ends if you cast it again or if you let go of the weapon."

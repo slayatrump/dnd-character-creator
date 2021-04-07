@@ -51,20 +51,22 @@ MonoBehaviour:
   Components:
   - V,S,M
   - Two lodestones
-  Duration: 1 hour
+  Duration: Instantaneous
   Classes:
   - Class: 1
     ClassLevel: 0
   - Class: 2
+    ClassLevel: 0
+  - Class: 3
     ClassLevel: 0
   - Class: 9
     ClassLevel: 0
   - Class: 11
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - This spell repairs a single break or tear in an object you touch, such as a broken
+    chain link, two halves of a broken key, a torn cloak, or a leaking wineskin.
+    As long as the break or tear is no larger than 1 foot in any dimension, you mend
+    it, leaving no trace of the former damage.
+  - "This spell can physically repair a magic item or construct, but the spell can\u2019t
+    restore magic to such an object."
