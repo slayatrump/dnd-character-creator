@@ -124,7 +124,7 @@ public class FirstLevelClass : MonoBehaviour
 
     private Button firstNext;
 
-    string isSimpleOrMarital;
+    public Transform weapon1;
 
     Stopwatch watch = new Stopwatch();
 
@@ -1462,45 +1462,7 @@ public class FirstLevelClass : MonoBehaviour
         }
     }
 
-    public void SimpleAndMartialWeaponCheck()
-    {
-
-        foreach (string w in SaveManager.instance.gameData.equipmentChoices)
-        {
-            isSimpleOrMarital = w;
-
-            if (isSimpleOrMarital.Contains("Simple") == true)
-            {
-                SimpleWeapons();
-                break;
-            }
-            if (isSimpleOrMarital.Contains("Martial") == true)
-            {
-                MartialWeapons();
-                break;
-            }
-        }
-    }
-
-    private void SimpleWeapons()
-    {
-        GameObject SRW = GameObject.Find("SRWPanel");
-        GameObject MMW = GameObject.Find("MMWPanel");
-        GameObject MRW = GameObject.Find("MRWPanel");
-        SRW.SetActive(false);
-        MMW.SetActive(false);
-        MRW.SetActive(false);
-    }
-
-    private void MartialWeapons()
-    {
-        GameObject SRW = GameObject.Find("SRWPanel");
-        GameObject SMW = GameObject.Find("SMWPanel");
-        GameObject MRW = GameObject.Find("MRWPanel");
-        SRW.SetActive(false);
-        SMW.SetActive(false);
-        MRW.SetActive(false);
-    }
+    
 
     public static void SavingClassData()
     {

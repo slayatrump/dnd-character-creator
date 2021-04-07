@@ -54,7 +54,8 @@ public class MenuController : MonoBehaviour
                 if (w.Contains("Simple") == true || w.Contains("Martial") == true)
                 {
                     warning.SetActive(true);
-                    warningText.text = $"You have selected {w} during equiopment selection \n Please go back and selected a specific weapon";
+                    warningText.text = $"You have selected {w} during equiopment selection \n Please continue and selected a specific weapon" +
+                        $"\n You also cannot change classes during that time";
                     break;
                 }
                 else if (isDone == true)
