@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellName: Speak with Animals
+  SpellName: Speak with Animals (Ritual)
   SpellLevel: 1
   SchoolType: 2
   CastingTime: 1 Action
@@ -59,6 +59,9 @@ MonoBehaviour:
   - Class: 7
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - You gain the ability to comprehend and verbally communicate with beasts for the
+    duration. The knowledge and awareness of many beasts is limited by their intelligence,
+    but at minimum, beasts can give you information about nearby locations and monsters,
+    including whatever they can perceive or have perceived within the past day. You
+    might be able to persuade a beast to perform a small favor for you, at the DM's
+    discretion.

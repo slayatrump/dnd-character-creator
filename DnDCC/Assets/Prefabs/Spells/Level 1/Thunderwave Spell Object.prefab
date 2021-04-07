@@ -47,7 +47,7 @@ MonoBehaviour:
   SpellLevel: 1
   SchoolType: 4
   CastingTime: 1 Action
-  Range: Self (15-foot cube)
+  Range: Self & 15-foot cube
   Components:
   - V,S
   Duration: Instantaneous
@@ -61,12 +61,12 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube
+    originating from you must make a Constitution saving throw. On a failed save,
+    a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a
+    successful save, the creature takes half as much damage and isn\u2019t pushed."
+  - "In addition, unsecured objects that are completely within the area of effect
+    are automatically pushed 10 feet away from you by the spell\u2019s effect, and
+    the spell emits a thunderous boom audible out to 300 feet. "
+  - 'At Higher Levels. When you cast this spell using a spell slot of 2nd level or
+    higher, the damage increases by 1d8 for each slot level above 1st. '

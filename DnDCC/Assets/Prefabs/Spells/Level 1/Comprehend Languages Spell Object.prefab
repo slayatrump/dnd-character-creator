@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellName: Comprehend Languages
+  SpellName: Comprehend Languages (Ritual)
   SpellLevel: 1
   SchoolType: 2
   CastingTime: 1 Action
@@ -62,9 +62,9 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - For the duration, you understand the literal meaning of any spoken language that
+    you hear. You also understand any spoken language that you hear. You also understand
+    any written language that you see, but you must be touching the surface of which
+    the words are written. It takes about 1 minute to read one page of text.
+  - "This spell doesn\u2019t decode secret messages in a text or glyph, such as an
+    arcane sigil, that isn\u2019t part of a written language. "

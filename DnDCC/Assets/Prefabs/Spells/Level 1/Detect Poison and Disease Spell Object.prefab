@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellName: Detect Poison and Disease
+  SpellName: Detect Poison and Disease (Ritual)
   SpellLevel: 1
   SchoolType: 2
   CastingTime: 1 Action
@@ -62,9 +62,8 @@ MonoBehaviour:
   - Class: 7
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - For the duration, you can sense the presence and location of poisons, poisonous
+    creatures, and diseases within 30 feet of you. You also identify the kind of
+    poison, poisonous creature, or disease in each case.
+  - The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch
+    of common metal, a thin sheet of lead, or 3 feet of wood or dirt.

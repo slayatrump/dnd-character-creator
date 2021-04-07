@@ -58,9 +58,9 @@ MonoBehaviour:
   - Class: 7
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - Up to ten berries appear in your hand and are infused with magic for the duration.
+    A creature can use its action to eat one berry. Eating a berry restores 1 hit
+    point, and the berry provides enough nourishment to sustain a creature for one
+    day.
+  - The berries lose their potency if they have not been consumed within 24 hours
+    of the casting of this spell.

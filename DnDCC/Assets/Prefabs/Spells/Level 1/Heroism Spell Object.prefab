@@ -57,9 +57,9 @@ MonoBehaviour:
   - Class: 6
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - A willing creature you touch is imbued with bravery. Until the spell ends, the
+    creature is immune to being frightened and gains temporary hit points equal to
+    your spellcasting ability modifier at the start of each of its turns. When the
+    spell ends, the target loses any remaining temporary hit points from this spell.
+  - At Higher Levels. When you cast this spell using a spell slot of 2nd level or
+    higher, you can target one additional creature for each slot level above 1st.

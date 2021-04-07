@@ -62,9 +62,10 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'Until the spell ends, one willing creature you touch is protected against certain
+    types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.'
+  - The protection grants several benefits. Creatures of those types have disadvantage
+    on attack rolls against the target. The target also can't be charmed, frightened,
+    or possessed by them. If the target is already charmed, frightened, or possessed
+    by such a creature, the target has advantage on any new saving throw against
+    the relevant effect.

@@ -59,6 +59,6 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - This spell allows you to move at an incredible pace. When you cast this spell,
+    and then as a bonus action on each of your turns until the spell ends, you can
+    take the Dash action.

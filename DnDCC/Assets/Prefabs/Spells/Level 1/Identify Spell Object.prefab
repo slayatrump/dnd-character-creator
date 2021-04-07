@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellName: Identify
+  SpellName: Identify (Ritual)
   SpellLevel: 1
   SchoolType: 2
   CastingTime: 1 minute
@@ -58,9 +58,10 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - You choose one object that you must touch throughout the casting of the spell.
+    If it is a magic item or some other magic-imbued object, you learn its properties
+    and how to use them, whether it requires attunement to use, and how many charges
+    it has, if any. You learn whether any spells are affecting the item and what
+    they are. If the item was created by a spell, you learn which spell created it.
+  - If you instead touch a creature throughout the casting, you learn what spells,
+    if any, are currently affecting it.

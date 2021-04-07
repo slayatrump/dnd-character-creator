@@ -63,9 +63,7 @@ MonoBehaviour:
   - Class: 7
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'A creature you touch regains a number of hit points equal to 1d8 + your spellcasting
+    ability modifier. This spell has no effect on undead or constructs. '
+  - 'At Higher Levels. When you cast this spell using a spell slot of 2nd level or
+    higher, the healing increases by 1d8 for each slot level above 1st. '

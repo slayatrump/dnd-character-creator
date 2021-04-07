@@ -58,6 +58,6 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - An invisible barrier of magical force appears and protects you. Until the start
+    of your next turn, you have a +5 bonus to AC, including against the triggering
+    attack, and you take no damage from magic missile.

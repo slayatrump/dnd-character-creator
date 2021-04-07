@@ -49,7 +49,7 @@ MonoBehaviour:
   CastingTime: Special
   Range: 60 feet
   Components:
-  - V,S
+  - V,M
   - A small feathr or piece of down
   Duration: 1 minute
   Classes:
@@ -60,9 +60,8 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 1
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'Reaction: When you or a creature within 60 feet of you falls.'
+  - "Choose up to five falling creatures within range. A falling creature\u2019s
+    rate of descent slows to 60 feet per round until the spell ends. If the creature
+    lands before the spell ends, it takes no falling damage and can land on its feet,
+    and the spell ends for that creature. "
