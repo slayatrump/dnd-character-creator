@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
     public GameObject warning;
     public TMP_Text warningText;
 
-    public static bool isDone;
+    public static bool isDone = false;
 
     private void Start()
     {
@@ -46,11 +46,14 @@ public class MenuController : MonoBehaviour
     {
         string savePath = Application.persistentDataPath;
 
-
         if (File.Exists(savePath + "/" + SaveManager.instance.gameData.saveName + ".dat"))
         {
+            int index = SaveManager.instance.gameData.equipmentChoices.Count;
+
             foreach (string w in SaveManager.instance.gameData.equipmentChoices)
             {
+                index--;
+
                 if (w.Contains("Simple") == true || w.Contains("Martial") == true)
                 {
                     warning.SetActive(true);
@@ -58,10 +61,16 @@ public class MenuController : MonoBehaviour
                         $"\n You also cannot change classes during that time";
                     break;
                 }
-                else if (isDone == true)
+                else if (index == 0)
+                {
+                    isDone = true;
+                }
+
+                if (isDone == true && index == 0)
                 {
                     FirstLevelClass.SavingClassData();
                     SceneManager.LoadScene(3);
+                    break;
                 }
             }
         }

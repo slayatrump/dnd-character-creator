@@ -122,16 +122,9 @@ public class FirstLevelClass : MonoBehaviour
 
     private SelectionController sc;
 
-    private Button firstNext;
-
-    public Transform weapon1;
+    public FirstLevelClass c;
 
     Stopwatch watch = new Stopwatch();
-
-    private void Awake()
-    {
-        firstNext = GameObject.Find("NextToSkills").GetComponent<Button>();
-    }
 
     private void Start()
     {
@@ -150,11 +143,7 @@ public class FirstLevelClass : MonoBehaviour
         SettingTextFields();
         SettingOriginalPositions();
 
-        firstNext.gameObject.SetActive(false);
-
         sc = GameObject.Find("SelectionController").GetComponent<SelectionController>();
-
-
     }
 
     public void ClassSelected()
@@ -862,8 +851,6 @@ public class FirstLevelClass : MonoBehaviour
                 }
         }
 
-        firstNext.gameObject.SetActive(true);
-
         watch.Stop();
         UnityEngine.Debug.Log($"Execution Time: {watch.Elapsed.TotalSeconds} seconds");
     }
@@ -1331,10 +1318,10 @@ public class FirstLevelClass : MonoBehaviour
         armorProficienciesInfo = GameObject.Find("ArmorProficienciesInfo").GetComponent<TMP_Text>();
         classFeaturesInfo = GameObject.Find("ClassFeaturesInfo").GetComponent<TMP_Text>();
 
-        skillChoice1 = GameObject.Find("SkillProficienciesInfo1").GetComponent<TMP_Text>();
-        skillChoice2 = GameObject.Find("SkillProficienciesInfo2").GetComponent<TMP_Text>();
-        skillChoice3 = GameObject.Find("SkillProficienciesInfo3").GetComponent<TMP_Text>();
-        skillChoice4 = GameObject.Find("SkillProficienciesInfo4").GetComponent<TMP_Text>();
+        skillChoice1 = GameObject.Find("SkillSelectionInfoPanel/SkillProficienciesInfo1").GetComponent<TMP_Text>();
+        skillChoice2 = GameObject.Find("SkillSelectionInfoPanel/SkillProficienciesInfo2").GetComponent<TMP_Text>();
+        skillChoice3 = GameObject.Find("SkillSelectionInfoPanel/SkillProficienciesInfo3").GetComponent<TMP_Text>();
+        skillChoice4 = GameObject.Find("SkillSelectionInfoPanel/SkillProficienciesInfo4").GetComponent<TMP_Text>();
 
         equipmentChoice1 = GameObject.Find("EquipmentChoiceInfo1").GetComponent<TMP_Text>();
         equipmentChoice2 = GameObject.Find("EquipmentChoiceInfo2").GetComponent<TMP_Text>();
@@ -1370,6 +1357,10 @@ public class FirstLevelClass : MonoBehaviour
 
     private void SettingSaveClassInfoData()
     {
+        SaveManager.instance.gameData.weaponPreficiencies.Clear();
+        SaveManager.instance.gameData.armorPreficiencies.Clear();
+        SaveManager.instance.gameData.classFeatures.Clear();
+
         SaveManager.instance.gameData.className = this.Name;
         SaveManager.instance.gameData.hitDieType = this.HitDieType;
         SaveManager.instance.gameData.ASTypeSavingThrow1 = this.SavingThrow1.ToString();
@@ -1393,76 +1384,39 @@ public class FirstLevelClass : MonoBehaviour
     {
         SaveManager.instance.gameData.skillPreficiencies.Clear();
 
-        switch (SkillProficiencies)
+        SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+        SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+
+        if (skillChoice3.text != "")
         {
-            case 2:
-                {
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
-                    break;
-                }
-            case 3:
-                {
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
-                    break;
-                }
-            case 4:
-                {
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
-                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
-                    break;
-                }
+            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
         }
-        
+        if (skillChoice4.text != "")
+        {
+            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+        }
     }
     public void SettingSaveEquipmentSelections()
     {
         SaveManager.instance.gameData.equipmentChoices.Clear();
 
-        switch (EquipmentChoiceGroups.Length)
+        SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
+        SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
+        SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
+
+        if (equipmentChoice4.text != "")
         {
-            case 3:
-                {
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
-                    break;
-                }
-            case 4:
-                {
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
-                    break;
-                }
-            case 5:
-                {
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice5.text);
-                    break;
-                }
-            case 6:
-                {
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice2.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice3.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice5.text);
-                    SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice6.text);
-                    break;
-                }
+            SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice4.text);
+        }
+        if (equipmentChoice5.text != "")
+        {
+            SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice5.text);
+        }
+        if (equipmentChoice6.text != "")
+        {
+            SaveManager.instance.gameData.equipmentChoices.Add(equipmentChoice1.text);
         }
     }
-
-    
 
     public static void SavingClassData()
     {
