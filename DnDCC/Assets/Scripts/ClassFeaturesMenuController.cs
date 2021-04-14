@@ -44,11 +44,11 @@ public class ClassFeaturesMenuController : MonoBehaviour
             {
                 if (featureList.gameObject.transform.GetChild(0).GetChild(i).GetChild(1).name == selectedName)
                 {
-                    SaveManager.instance.gameData.choice1 = featureList.gameObject.transform.GetChild(0).GetChild(i).name;
+                    SaveManager.instance.gameData.classFeaturesChoice1 = featureList.gameObject.transform.GetChild(0).GetChild(i).name;
                     break;
                 }
             }
-            Debug.Log($"{SaveManager.instance.gameData.choice1}");
+            Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
 
             //disable first choice panel and enable second choice panel
@@ -71,11 +71,11 @@ public class ClassFeaturesMenuController : MonoBehaviour
             {
                 if (featureList.gameObject.transform.GetChild(4).GetChild(i).GetChild(1).name == selectedName)
                 {
-                    SaveManager.instance.gameData.choice2 = featureList.gameObject.transform.GetChild(4).GetChild(i).name;
+                    SaveManager.instance.gameData.classFeaturesChoice2 = featureList.gameObject.transform.GetChild(4).GetChild(i).name;
                     break;
                 }
             }
-            Debug.Log($"{SaveManager.instance.gameData.choice2}");
+            Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice2}");
 
             SceneManager.LoadScene("Spells");
             return;
@@ -95,11 +95,11 @@ public class ClassFeaturesMenuController : MonoBehaviour
             {
                 if (featureList.gameObject.transform.GetChild(1).GetChild(i).GetChild(1).name == selectedName)
                 {
-                    SaveManager.instance.gameData.choice1 = featureList.gameObject.transform.GetChild(1).GetChild(i).name;
+                    SaveManager.instance.gameData.classFeaturesChoice1 = featureList.gameObject.transform.GetChild(1).GetChild(i).name;
                     break;
                 }
             }
-            Debug.Log($"{SaveManager.instance.gameData.choice1}");
+            Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
             SceneManager.LoadScene("Spells");
             return;
@@ -119,11 +119,11 @@ public class ClassFeaturesMenuController : MonoBehaviour
             {
                 if (featureList.gameObject.transform.GetChild(2).GetChild(i).GetChild(1).name == selectedName)
                 {
-                    SaveManager.instance.gameData.choice1 = featureList.gameObject.transform.GetChild(2).GetChild(i).name;
+                    SaveManager.instance.gameData.classFeaturesChoice1 = featureList.gameObject.transform.GetChild(2).GetChild(i).name;
                     break;
                 }
             }
-            Debug.Log($"{SaveManager.instance.gameData.choice1}");
+            Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
             SceneManager.LoadScene("Spells");
             return;
@@ -143,11 +143,11 @@ public class ClassFeaturesMenuController : MonoBehaviour
             {
                 if (featureList.gameObject.transform.GetChild(3).GetChild(i).GetChild(1).name == selectedName)
                 {
-                    SaveManager.instance.gameData.choice1 = featureList.gameObject.transform.GetChild(3).GetChild(i).name;
+                    SaveManager.instance.gameData.classFeaturesChoice1 = featureList.gameObject.transform.GetChild(3).GetChild(i).name;
                     break;
                 }
             }
-            Debug.Log($"{SaveManager.instance.gameData.choice1}");
+            Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
             SceneManager.LoadScene("Spells");
             return;

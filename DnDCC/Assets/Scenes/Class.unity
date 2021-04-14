@@ -3212,6 +3212,8 @@ MonoBehaviour:
     toolPreficiencies: []
     backgroundFeatures: 
     extraEquipment: []
+    classFeaturesChoice1: 
+    classFeaturesChoice2: 
   hasLoaded: 0
   hasSaved: 0
 --- !u!1 &177242330 stripped
@@ -4787,7 +4789,7 @@ PrefabInstance:
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
@@ -4802,13 +4804,18 @@ PrefabInstance:
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: WeaponSelected
+      value: MRWWeaponSelected
       objectReference: {fileID: 0}
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TMPro.TMP_Dropdown, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1090140825}
     - target: {fileID: 6064920648505510347, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14734,7 +14741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 325497538}
+      - m_Target: {fileID: 62923738}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -14745,7 +14752,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1370470678}
+      - m_Target: {fileID: 1267410604}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -27238,7 +27245,7 @@ PrefabInstance:
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
@@ -27253,13 +27260,18 @@ PrefabInstance:
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: WeaponSelected
+      value: MRWWeaponSelected
       objectReference: {fileID: 0}
     - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TMPro.TMP_Dropdown, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 4081921308311015073, guid: 16a5993de30195345bcfbf1d56ff1d0c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 572047481}
     - target: {fileID: 6064920648505510347, guid: 16a5993de30195345bcfbf1d56ff1d0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28962,6 +28974,11 @@ PrefabInstance:
       propertyPath: c
       value: 
       objectReference: {fileID: 1397886433}
+    - target: {fileID: 7265464046455991882, guid: ac7d1a9d44d5ace45bfb0094a54c1e96,
+        type: 3}
+      propertyPath: EquipmentChoiceGroups.Array.data[1].ChoicesInGroup.Array.data[1]
+      value: 2 Martial Weapons
+      objectReference: {fileID: 0}
     - target: {fileID: 8724638032503327099, guid: ac7d1a9d44d5ace45bfb0094a54c1e96,
         type: 3}
       propertyPath: m_LocalPosition.x
