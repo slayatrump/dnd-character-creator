@@ -11,29 +11,31 @@ public class ClassFeaturesController : MonoBehaviour
     {
 
         //TEST CODE REMOVE BEFORE DELIVERABLE
-        SaveManager.instance.gameData.raceName = "Warlock";
+        //SaveManager.instance.gameData.className = "Cleric";
         //END TEST CODE
 
-        if (SaveManager.instance.gameData.raceName == "Warlock")
+        if (SaveManager.instance.gameData.className == "Warlock")
         {
             //enable the warlock panel
             transform.GetChild(3).gameObject.SetActive(true);
 
         }
-        else if(SaveManager.instance.gameData.raceName == "Sorcerer")
+        else if(SaveManager.instance.gameData.className == "Sorcerer")
         {
             //enable the sorcerer panel
             transform.GetChild(2).gameObject.SetActive(true);
         }
-        else if(SaveManager.instance.gameData.raceName == "Fighter")
+        else if(SaveManager.instance.gameData.className == "Fighter")
         {
             //enable the fighter panel
             transform.GetChild(1).gameObject.SetActive(true);
         }
-        else if(SaveManager.instance.gameData.raceName == "Cleric")
+        else if(SaveManager.instance.gameData.className == "Cleric")
         {
             //enable the cleric panel
             transform.GetChild(0).gameObject.SetActive(true);
+
+            //need to enable the second domain panel after this one is chosen
         }
         else
         {
@@ -42,6 +44,8 @@ public class ClassFeaturesController : MonoBehaviour
             SceneManager.LoadScene("Spells");
         }
     }
+
+    
 
     // Update is called once per frame
     void Update()

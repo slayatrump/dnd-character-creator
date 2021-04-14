@@ -135,4 +135,9 @@ public class SaveData
     public List<string> toolPreficiencies;
     public string backgroundFeatures;
     public List<string> extraEquipment;
+
+    [Header("Class Features Info Save Data")]
+    //Class Features Selection Info
+    public string classFeaturesChoice1;
+    public string classFeaturesChoice2;
 }
