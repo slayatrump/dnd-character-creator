@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6943657378749796903}
   m_Layer: 0
   m_Name: Shocking Grasp Spell Object
-  m_TagString: Untagged
+  m_TagString: Cantrip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

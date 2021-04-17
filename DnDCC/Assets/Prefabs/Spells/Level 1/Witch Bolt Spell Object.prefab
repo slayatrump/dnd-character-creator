@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3083248551638348583}
   m_Layer: 0
   m_Name: Witch Bolt Spell Object
-  m_TagString: Untagged
+  m_TagString: FirstLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6638421206490585805}
   m_Layer: 0
   m_Name: Arms of Hadar Spell Object
-  m_TagString: Untagged
+  m_TagString: FirstLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

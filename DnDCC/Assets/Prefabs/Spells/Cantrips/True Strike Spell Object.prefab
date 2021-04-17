@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5906686322028113494}
   m_Layer: 0
   m_Name: True Strike Spell Object
-  m_TagString: Untagged
+  m_TagString: Cantrip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

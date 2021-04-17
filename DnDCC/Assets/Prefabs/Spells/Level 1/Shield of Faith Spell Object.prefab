@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2377577428405488014}
   m_Layer: 0
   m_Name: Shield of Faith Spell Object
-  m_TagString: Untagged
+  m_TagString: FirstLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

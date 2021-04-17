@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 99955318788084790}
   m_Layer: 0
   m_Name: Tasha's Hideous Laughter Spell Object
-  m_TagString: Untagged
+  m_TagString: FirstLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
