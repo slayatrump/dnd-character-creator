@@ -1385,12 +1385,12 @@ public class FirstLevelClass : MonoBehaviour
 
     public void SettingSaveSkillSelections()
     {
-        if (string.Equals(skillChoice1.text, skillChoice2.text) || string.Equals(skillChoice1, skillChoice3) ||
-            string.Equals(skillChoice1, skillChoice4) || string.Equals(skillChoice2, skillChoice1) ||
-            string.Equals(skillChoice2, skillChoice3) || string.Equals(skillChoice2, skillChoice4) ||
-            string.Equals(skillChoice3, skillChoice1) || string.Equals(skillChoice3, skillChoice2) ||
-            string.Equals(skillChoice3, skillChoice4) || string.Equals(skillChoice4, skillChoice1) ||
-            string.Equals(skillChoice4, skillChoice2) || string.Equals(skillChoice4, skillChoice3))
+        if (string.Equals(skillChoice1.text, skillChoice2.text) || string.Equals(skillChoice1.text, skillChoice3.text) ||
+            string.Equals(skillChoice1.text, skillChoice4.text) || string.Equals(skillChoice2.text, skillChoice1.text) ||
+            string.Equals(skillChoice2.text, skillChoice3.text) || string.Equals(skillChoice2.text, skillChoice4.text) ||
+            string.Equals(skillChoice3.text, skillChoice1.text) || string.Equals(skillChoice3.text, skillChoice2.text) ||
+            string.Equals(skillChoice3.text, skillChoice4.text) || string.Equals(skillChoice4.text, skillChoice1.text) ||
+            string.Equals(skillChoice4.text, skillChoice2.text) || string.Equals(skillChoice4.text, skillChoice3.text))
         {
             warningPanelForSkills.SetActive(true);
             warningMessage.text = "You have selected two or more of the same skills.\nPlease go back and select again.";
