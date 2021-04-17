@@ -33,24 +33,32 @@ public class Weapon : MonoBehaviour
     [SerializeField] private TMP_Dropdown SMWDropMenu2;
     [SerializeField] private TMP_Dropdown SRWDropMenu1;
     [SerializeField] private TMP_Dropdown SRWDropMenu2;
+    [SerializeField] private TMP_Dropdown SRWDropMenu3;
     [SerializeField] private TMP_Dropdown MMWDropMenu1;
     [SerializeField] private TMP_Dropdown MMWDropMenu2;
     [SerializeField] private TMP_Dropdown MRWDropMenu1;
     [SerializeField] private TMP_Dropdown MRWDropMenu2;
+    [SerializeField] private TMP_Dropdown MRWDropMenu3;
 
     [Header("Weapon Selection Text")]
     public TMP_Text SMWTXT1;
     public TMP_Text SMWTXT2;
     public TMP_Text SRWTXT1;
     public TMP_Text SRWTXT2;
+    public TMP_Text SRWTXT3;
     public TMP_Text MMWTXT1;
     public TMP_Text MMWTXT2;
     public TMP_Text MRWTXT1;
     public TMP_Text MRWTXT2;
+    public TMP_Text MRWTXT3;
 
     [Header("Simple Or Martial Weapon Choices Panels")]
     public GameObject simpleWeaponChoicePanel;
     public GameObject martialWeaponChoicePanel;
+    public GameObject SMW;
+    public GameObject SRW;
+    public GameObject MMW;
+    public GameObject MRW;
 
     //Argument Variables
     string isSimpleOrMarital;
@@ -67,6 +75,8 @@ public class Weapon : MonoBehaviour
     Button nextWeapon2;
     Button nextWeapon3;
     Button nextWeapon4;
+    Button nextWeapon5;
+    Button nextWeapon6;
 
     Button continue1;
     Button continue2;
@@ -75,72 +85,24 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        SettingStuff();
+
         WeaponDropmenu1();
         WeaponDropmenu2();
         WeaponDropmenu3();
         WeaponDropmenu4();
 
-        //SMWWeaponSelected(SMWDropMenu1);
-        //SMWWeaponSelected(SMWDropMenu2);
-        //WeaponSelected2(SRWDropMenu);
-        //WeaponSelected3(MMWDropMenu);
-        //WeaponSelected4(MRWDropMenu);
-
-        //SMWDropMenu1.onValueChanged.AddListener(delegate { SMWWeaponSelected(SMWDropMenu1); });
-        //SRWDropMenu.onValueChanged.AddListener(delegate { WeaponSelected2(SRWDropMenu); });
-        //MMWDropMenu.onValueChanged.AddListener(delegate { WeaponSelected3(MMWDropMenu); });
-        //MRWDropMenu.onValueChanged.AddListener(delegate { WeaponSelected4(MRWDropMenu); });
-
-        TMP_Text damageInfo = GameObject.Find("DamageInfo").GetComponent<TMP_Text>();
-        damageInfo.text = $"Damage: {this.Damage}";
-        TMP_Text damageTypeInfo = GameObject.Find("DamageTypeInfo").GetComponent<TMP_Text>();
-        damageTypeInfo.text = $"Damage Type: {this.DamageType}";
-
-        nextWeapon1 = GameObject.Find("SMWPanel/NextWeapon").GetComponent<Button>();
+        nextWeapon1 = GameObject.Find("SMWPanel/NextWeapon(SMW)").GetComponent<Button>();
         nextWeapon2 = GameObject.Find("SRWPanel/NextWeapon").GetComponent<Button>();
-        nextWeapon3 = GameObject.Find("MMWPanel/NextWeapon").GetComponent<Button>();
+        nextWeapon3 = GameObject.Find("MMWPanel/NextWeapon(MMW)").GetComponent<Button>();
         nextWeapon4 = GameObject.Find("MRWPanel/NextWeapon").GetComponent<Button>();
+        nextWeapon5 = GameObject.Find("SMWPanel/NextWeapon(SRW)").GetComponent<Button>();
+        nextWeapon6 = GameObject.Find("MMWPanel/NextWeapon(MRW)").GetComponent<Button>();
 
         continue1 = GameObject.Find("SMWPanel/Continue").GetComponent<Button>();
         continue2 = GameObject.Find("SRWPanel/Continue").GetComponent<Button>();
         continue3 = GameObject.Find("MMWPanel/Continue").GetComponent<Button>();
         continue4 = GameObject.Find("MRWPanel/Continue").GetComponent<Button>();
-    }
-
-    public void WeaponSelected()
-    {
-        SMWWeaponSelected(SMWDropMenu1);
-        if (SMWDropMenu2 != null)
-        {
-            SMWWeaponSelected(SMWDropMenu2);
-            SMWDropMenu1.onValueChanged.AddListener(delegate { SMWWeaponSelected(SMWDropMenu2); });
-        }
-        
-        SRWWeaponSelected(SRWDropMenu1);
-        if (SRWDropMenu2 != null)
-        {
-            SRWWeaponSelected(SRWDropMenu2);
-            SRWDropMenu1.onValueChanged.AddListener(delegate { SRWWeaponSelected(SRWDropMenu2); });
-        }
-
-        MMWWeaponSelected(MMWDropMenu1);
-        if (MMWDropMenu2 != null)
-        {
-            MMWWeaponSelected(MMWDropMenu2);
-            MMWDropMenu1.onValueChanged.AddListener(delegate { MMWWeaponSelected(MMWDropMenu2); });
-        }
-
-        MRWWeaponSelected(MRWDropMenu1);
-        if (MRWDropMenu2 != null)
-        {
-            MRWWeaponSelected(MRWDropMenu2);
-            MRWDropMenu1.onValueChanged.AddListener(delegate { MRWWeaponSelected(MRWDropMenu2); });
-        }
-
-        SMWDropMenu1.onValueChanged.AddListener(delegate { SMWWeaponSelected(SMWDropMenu1); });
-        SRWDropMenu1.onValueChanged.AddListener(delegate { SRWWeaponSelected(SRWDropMenu1); });
-        MMWDropMenu1.onValueChanged.AddListener(delegate { MMWWeaponSelected(MMWDropMenu1); });
-        MRWDropMenu1.onValueChanged.AddListener(delegate { MRWWeaponSelected(MRWDropMenu1); });
     }
 
     private void WeaponDropmenu1()
@@ -159,11 +121,13 @@ public class Weapon : MonoBehaviour
     {
         SRWDropMenu1.options.Clear();
         SRWDropMenu2.options.Clear();
+        SRWDropMenu3.options.Clear();
 
         foreach (GameObject w in WeaponListController.SRW)
         {
             SRWDropMenu1.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
             SRWDropMenu2.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
+            SRWDropMenu3.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
         }
     }
     private void WeaponDropmenu3()
@@ -182,17 +146,28 @@ public class Weapon : MonoBehaviour
     {
         MRWDropMenu1.options.Clear();
         MRWDropMenu2.options.Clear();
+        MRWDropMenu3.options.Clear();
 
         foreach (GameObject w in WeaponListController.MRW)
         {
             MRWDropMenu1.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
             MRWDropMenu2.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
+            MRWDropMenu3.options.Add(new TMP_Dropdown.OptionData() { text = w.name.ToString() });
         }
     }
 
     public void SMWWeaponSelected(TMP_Dropdown dropdownItem)
     {
         int index = dropdownItem.value;
+
+        SMWTXT1.text = dropdownItem.options[index].text;
+        SMWDropMenu1.GetComponentInChildren<TMP_Text>().text = SMWTXT1.text;
+
+        if (SMWDropMenu2 != null)
+        {
+            SMWTXT2.text = dropdownItem.options[index].text;
+            SMWDropMenu2.GetComponentInChildren<TMP_Text>().text = SMWTXT2.text;
+        }
 
         foreach (string weapon in SaveManager.instance.gameData.equipmentChoices)
         {
@@ -202,20 +177,30 @@ public class Weapon : MonoBehaviour
                 isNext = true;
                 break;
             }
+            else if (weapon.Contains("2 Simple Weapon") == true)
+            {
+                if (isMelee == true && isRanged == false)
+                {
+                    nextWeapon1.gameObject.SetActive(true);
+                    isNext = true;
+                    break;
+                }
+                else if (isMelee == true && isRanged == true)
+                {
+                    nextWeapon5.gameObject.SetActive(true);
+                    isNext = true;
+                    break;
+                }
+            }
+            else if (weapon.Contains("Simple Melee Weapon") == true || weapon.Contains("Simple Weapon") == true)
+            {
+                continue1.gameObject.SetActive(true);
+            }
             else if (isNext == true)
             {
                 continue1.gameObject.SetActive(true);
                 isNext = false;
             }
-        }
-        
-        SMWTXT1.text = dropdownItem.options[index].text;
-        SMWDropMenu1.GetComponentInChildren<TMP_Text>().text = SMWTXT1.text;
-
-        if (SMWDropMenu2 != null)
-        {
-            SMWTXT2.text = dropdownItem.options[index].text;
-            SMWDropMenu2.GetComponentInChildren<TMP_Text>().text = SMWTXT2.text;
         }
 
         TMP_Text damageInfo = GameObject.Find("SMWPanel/DamageInfo").GetComponent<TMP_Text>();
@@ -300,7 +285,39 @@ public class Weapon : MonoBehaviour
     {
         int index = dropdownItem.value;
 
-        nextWeapon2.gameObject.SetActive(true);
+        foreach (string weapon in SaveManager.instance.gameData.equipmentChoices)
+        {
+            if (isRanged == true && isMelee == true)
+            {
+                break;
+            }
+            if (weapon.Contains("2 Simple Ranged Weapon") == true)
+            {
+                nextWeapon2.gameObject.SetActive(true);
+                isNext = true;
+                break;
+            }
+            else if (weapon.Contains("Simple Ranged Weapon") == true)
+            {
+                continue2.gameObject.SetActive(true);
+            }
+            else if (weapon.Contains("Simple Weapon") == true)
+            {
+                if (isSingle == true)
+                {
+                    continue2.gameObject.SetActive(true);
+                }
+                else if (isTwo == true)
+                {
+                    nextWeapon2.gameObject.SetActive(true);
+                }
+            }
+            else if (isNext == true)
+            {
+                continue2.gameObject.SetActive(true);
+                isNext = false;
+            }
+        }
 
         SRWTXT1.text = dropdownItem.options[index].text;
         SRWDropMenu1.GetComponentInChildren<TMP_Text>().text = SRWTXT1.text;
@@ -311,60 +328,142 @@ public class Weapon : MonoBehaviour
             SRWDropMenu2.GetComponentInChildren<TMP_Text>().text = SRWTXT2.text;
         }
 
-        TMP_Text damageInfo = GameObject.Find("SRWPanel/DamageInfo").GetComponent<TMP_Text>();
-        TMP_Text damageTypeInfo = GameObject.Find("SRWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
-
-        switch (SRWTXT1.text)
+        if (SRWDropMenu3 != null)
         {
-            case "Boomerang":
-                {
-                    Weapon w = GameObject.Find("Boomerang").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Dart":
-                {
-                    Weapon w = GameObject.Find("Dart").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Light Crossbow":
-                {
-                    Weapon w = GameObject.Find("Light Crossbow").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Shortbow":
-                {
-                    Weapon w = GameObject.Find("Shortbow").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Sling":
-                {
-                    Weapon w = GameObject.Find("Sling").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
+            SRWTXT3.text = dropdownItem.options[index].text;
+            SRWDropMenu3.GetComponentInChildren<TMP_Text>().text = SRWTXT3.text;
+        }
+
+        TMP_Text damageInfo;
+        TMP_Text damageTypeInfo;
+
+        if (isRanged == true && isMelee == false)
+        {
+            damageInfo = GameObject.Find("SRWPanel/DamageInfo").GetComponent<TMP_Text>();
+            damageTypeInfo = GameObject.Find("SRWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
+
+            switch (SRWTXT1.text)
+            {
+                case "Boomerang":
+                    {
+                        Weapon w = GameObject.Find("Boomerang").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Dart":
+                    {
+                        Weapon w = GameObject.Find("Dart").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Light Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Light Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Shortbow":
+                    {
+                        Weapon w = GameObject.Find("Shortbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Sling":
+                    {
+                        Weapon w = GameObject.Find("Sling").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+            }
+        }
+        else if (isRanged == true && isMelee == true)
+        {
+            damageInfo = GameObject.Find("SMWPanel/DamageInfo").GetComponent<TMP_Text>();
+            damageTypeInfo = GameObject.Find("SMWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
+
+            continue1.gameObject.SetActive(true);
+
+            switch (SRWTXT3.text)
+            {
+                case "Boomerang":
+                    {
+                        Weapon w = GameObject.Find("Boomerang").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Dart":
+                    {
+                        Weapon w = GameObject.Find("Dart").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Light Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Light Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Shortbow":
+                    {
+                        Weapon w = GameObject.Find("Shortbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Sling":
+                    {
+                        Weapon w = GameObject.Find("Sling").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+            }
         }
     }
     public void MMWWeaponSelected(TMP_Dropdown dropdownItem)
     {
         int index = dropdownItem.value;
 
-        if (isSimpleOrMarital.Contains("2"))
+        foreach (string weapon in SaveManager.instance.gameData.equipmentChoices)
         {
-            nextWeapon3.gameObject.SetActive(true);
-        }
-        else
-        {
-            continue3.gameObject.SetActive(true);
-            nextWeapon3.gameObject.SetActive(false);
+            if (weapon.Contains("2 Martial Melee Weapon") == true)
+            {
+                nextWeapon3.gameObject.SetActive(true);
+                isNext = true;
+                break;
+            }
+            else if (weapon.Contains("2 Martial Weapon") == true)
+            {
+                if (isMelee == true && isRanged == false)
+                {
+                    nextWeapon3.gameObject.SetActive(true);
+                    isNext = true;
+                    break;
+                }
+                else if (isMelee == true && isRanged == true)
+                {
+                    nextWeapon6.gameObject.SetActive(true);
+                    isNext = true;
+                    break;
+                }
+            }
+            else if (weapon.Contains("Martial Melee Weapon") == true || weapon.Contains("Martial Weapon") == true)
+            {
+                continue3.gameObject.SetActive(true);
+            }
+            else if (isNext == true)
+            {
+                continue3.gameObject.SetActive(true);
+                isNext = false;
+            }
         }
 
         MMWTXT1.text = dropdownItem.options[index].text;
@@ -513,14 +612,38 @@ public class Weapon : MonoBehaviour
     {
         int index = dropdownItem.value;
 
-        if (isSimpleOrMarital.Contains("2"))
+        foreach (string weapon in SaveManager.instance.gameData.equipmentChoices)
         {
-            nextWeapon4.gameObject.SetActive(true);
-        }
-        else
-        {
-            continue4.gameObject.SetActive(true);
-            nextWeapon4.gameObject.SetActive(false);
+            if (isRanged == true && isMelee == true)
+            {
+                break;
+            }
+            if (weapon.Contains("2 Martial Ranged Weapon") == true)
+            {
+                nextWeapon4.gameObject.SetActive(true);
+                isNext = true;
+                break;
+            }
+            else if (weapon.Contains("Martial Ranged Weapon") == true)
+            {
+                continue4.gameObject.SetActive(true);
+            }
+            else if (weapon.Contains("Martial Weapon") == true)
+            {
+                if (isSingle == true)
+                {
+                    continue4.gameObject.SetActive(true);
+                }
+                else if (isTwo == true)
+                {
+                    nextWeapon4.gameObject.SetActive(true);
+                }
+            }
+            else if (isNext == true)
+            {
+                continue4.gameObject.SetActive(true);
+                isNext = false;
+            }
         }
 
         MRWTXT1.text = dropdownItem.options[index].text;
@@ -532,47 +655,126 @@ public class Weapon : MonoBehaviour
             MRWDropMenu2.GetComponentInChildren<TMP_Text>().text = MRWTXT2.text;
         }
 
-        TMP_Text damageInfo = GameObject.Find("MRWPanel/DamageInfo").GetComponent<TMP_Text>();
-        TMP_Text damageTypeInfo = GameObject.Find("MRWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
-
-        switch (MRWTXT1.text)
+        if (MRWDropMenu3 != null)
         {
-            case "Blowgun":
-                {
-                    Weapon w = GameObject.Find("Blowgun").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Hand Crossbow":
-                {
-                    Weapon w = GameObject.Find("Hand Crossbow").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Heavy Crossbow":
-                {
-                    Weapon w = GameObject.Find("Heavy Crossbow").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Longbow":
-                {
-                    Weapon w = GameObject.Find("Longbow").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
-            case "Net":
-                {
-                    Weapon w = GameObject.Find("Net").GetComponent<Weapon>();
-                    damageInfo.text = $"Damage: {w.Damage}";
-                    damageTypeInfo.text = $"Damage Type: {w.DamageType}";
-                    break;
-                }
+            MRWTXT3.text = dropdownItem.options[index].text;
+            MRWDropMenu3.GetComponentInChildren<TMP_Text>().text = MRWTXT3.text;
         }
+
+        TMP_Text damageInfo;
+        TMP_Text damageTypeInfo;
+
+        if (isRanged == true && isMelee == false)
+        {
+            damageInfo = GameObject.Find("MRWPanel/DamageInfo").GetComponent<TMP_Text>();
+            damageTypeInfo = GameObject.Find("MRWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
+
+            switch (MRWTXT1.text)
+            {
+                case "Blowgun":
+                    {
+                        Weapon w = GameObject.Find("Blowgun").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Hand Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Hand Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Heavy Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Heavy Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Longbow":
+                    {
+                        Weapon w = GameObject.Find("Longbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Net":
+                    {
+                        Weapon w = GameObject.Find("Net").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+            }
+        }
+        else if (isRanged == true && isMelee == true)
+        {
+            damageInfo = GameObject.Find("MMWPanel/DamageInfo").GetComponent<TMP_Text>();
+            damageTypeInfo = GameObject.Find("MMWPanel/DamageTypeInfo").GetComponent<TMP_Text>();
+
+            continue3.gameObject.SetActive(true);
+
+            switch (MRWTXT3.text)
+            {
+                case "Blowgun":
+                    {
+                        Weapon w = GameObject.Find("Blowgun").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Hand Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Hand Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Heavy Crossbow":
+                    {
+                        Weapon w = GameObject.Find("Heavy Crossbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Longbow":
+                    {
+                        Weapon w = GameObject.Find("Longbow").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+                case "Net":
+                    {
+                        Weapon w = GameObject.Find("Net").GetComponent<Weapon>();
+                        damageInfo.text = $"Damage: {w.Damage}";
+                        damageTypeInfo.text = $"Damage Type: {w.DamageType}";
+                        break;
+                    }
+            }
+        }
+    }
+
+    public void SettingStuff()
+    {
+        SMW = GameObject.Find("SMWPanel");
+        SRW = GameObject.Find("SRWPanel");
+        MMW = GameObject.Find("MMWPanel");
+        MRW = GameObject.Find("MRWPanel");
+}
+
+    public void ResettingPanels()
+    {
+        SMW.gameObject.SetActive(true);
+        SRW.gameObject.SetActive(true);
+        MMW.gameObject.SetActive(true);
+        MRW.gameObject.SetActive(true);
+
+        simpleWeaponChoicePanel.SetActive(true);
+        martialWeaponChoicePanel.SetActive(true);
+
+        isRemoved = false;
     }
 
     public void SimpleAndMartialWeaponCheck()
@@ -581,6 +783,14 @@ public class Weapon : MonoBehaviour
         continue2.gameObject.SetActive(false);
         continue3.gameObject.SetActive(false);
         continue4.gameObject.SetActive(false);
+
+        nextWeapon1.gameObject.SetActive(false);
+        nextWeapon2.gameObject.SetActive(false);
+        nextWeapon3.gameObject.SetActive(false);
+        nextWeapon4.gameObject.SetActive(false);
+        nextWeapon5.gameObject.SetActive(false);
+        nextWeapon6.gameObject.SetActive(false);
+
 
         foreach (string w in SaveManager.instance.gameData.equipmentChoices)
         {
@@ -609,6 +819,10 @@ public class Weapon : MonoBehaviour
                     martialWeaponChoicePanel.SetActive(false);
                     isTwo = true;
                     isSingle = false;
+                    GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
+                    weapon2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("SMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     SimpleWeapons();
                     break;
                 }
@@ -619,6 +833,40 @@ public class Weapon : MonoBehaviour
                     martialWeaponChoicePanel.SetActive(false);
                     isTwo = true;
                     isSingle = false;
+                    GameObject weapon2 = GameObject.Find("SRWPanel/Weapon2");
+                    weapon2.SetActive(false);
+                    SimpleWeapons();
+                    break;
+                }
+                else if (isSimpleOrMarital.Contains("Simple Melee") == true)
+                {
+                    isMelee = true;
+                    simpleWeaponChoicePanel.SetActive(false);
+                    martialWeaponChoicePanel.SetActive(false);
+                    isTwo = false;
+                    isSingle = true;
+                    GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
+                    if(weapon2 != null)
+                    {
+                        weapon2.SetActive(false);
+                    }
+                    GameObject weapon3 = GameObject.Find("SMWPanel/Weapon3");
+                    if (weapon3 != null)
+                    {
+                        weapon3.SetActive(false);
+                    }
+                    SimpleWeapons();
+                    break;
+                }
+                else if (isSimpleOrMarital.Contains("Simple Ranged") == true)
+                {
+                    isRanged = true;
+                    simpleWeaponChoicePanel.SetActive(false);
+                    martialWeaponChoicePanel.SetActive(false);
+                    isTwo = false;
+                    isSingle = true;
+                    GameObject weapon2 = GameObject.Find("SRWPanel/Weapon2");
+                    weapon2.SetActive(false);
                     SimpleWeapons();
                     break;
                 }
@@ -657,6 +905,24 @@ public class Weapon : MonoBehaviour
                     martialWeaponChoicePanel.SetActive(false);
                     isTwo = true;
                     isSingle = false;
+                    GameObject w2 = GameObject.Find("MMWPanel/Weapon2");
+                    w2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("MMWPanel/Weapon3");
+                    weapon3.SetActive(false);
+                    MartialWeapons();
+                    break;
+                }
+                else if (isSimpleOrMarital.Contains("Martial Melee") == true)
+                {
+                    isMelee = true;
+                    simpleWeaponChoicePanel.SetActive(false);
+                    martialWeaponChoicePanel.SetActive(false);
+                    isTwo = false;
+                    isSingle = true;
+                    GameObject w2 = GameObject.Find("MMWPanel/Weapon2");
+                    w2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("MMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     MartialWeapons();
                     break;
                 }
@@ -667,6 +933,20 @@ public class Weapon : MonoBehaviour
                     martialWeaponChoicePanel.SetActive(false);
                     isTwo = true;
                     isSingle = false;
+                    GameObject w2 = GameObject.Find("MRWPanel/Weapon2");
+                    w2.SetActive(false);
+                    MartialWeapons();
+                    break;
+                }
+                else if (isSimpleOrMarital.Contains("Martial Ranged") == true)
+                {
+                    isRanged = true;
+                    simpleWeaponChoicePanel.SetActive(false);
+                    martialWeaponChoicePanel.SetActive(false);
+                    isTwo = false;
+                    isSingle = true;
+                    GameObject w2 = GameObject.Find("MRWPanel/Weapon2");
+                    w2.SetActive(false);
                     MartialWeapons();
                     break;
                 }
@@ -692,10 +972,12 @@ public class Weapon : MonoBehaviour
         {
             case "s1":
                 {
-                    GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
-                    weapon2.SetActive(false);
                     isMelee = true;
                     isRanged = false;
+                    GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
+                    weapon2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("SMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     simpleWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -715,7 +997,7 @@ public class Weapon : MonoBehaviour
                     GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
                     weapon2.SetActive(false);
                     GameObject weapon3 = GameObject.Find("SMWPanel/Weapon3");
-                    weapon3.SetActive(true);
+                    weapon3.SetActive(false);
                     simpleWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -725,6 +1007,8 @@ public class Weapon : MonoBehaviour
                     isRanged = false;
                     GameObject weapon2 = GameObject.Find("SMWPanel/Weapon2");
                     weapon2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("SMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     simpleWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -780,6 +1064,8 @@ public class Weapon : MonoBehaviour
                     isRanged = false;
                     GameObject w2 = GameObject.Find("MMWPanel/Weapon2");
                     w2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("MMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     martialWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -798,6 +1084,8 @@ public class Weapon : MonoBehaviour
                     isRanged = true;
                     GameObject w2 = GameObject.Find("MMWPanel/Weapon2");
                     w2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("MMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     martialWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -807,6 +1095,8 @@ public class Weapon : MonoBehaviour
                     isRanged = false;
                     GameObject w2 = GameObject.Find("MMWPanel/Weapon2");
                     w2.SetActive(false);
+                    GameObject weapon3 = GameObject.Find("MMWPanel/Weapon3");
+                    weapon3.SetActive(false);
                     martialWeaponChoicePanel.SetActive(false);
                     break;
                 }
@@ -858,8 +1148,53 @@ public class Weapon : MonoBehaviour
         {
             index--;
 
-            if ((weapon.Contains("Simple") == true || weapon.Contains("2") == true) && isRemoved == false)
+            if (weapon.Contains("Simple") == true && isRemoved == true)
             {
+                ResettingPanels();
+            }
+            else if (weapon.Contains("Martial") == true && isRemoved == true)
+            {
+                ResettingPanels();
+            }
+
+            if ((weapon.Contains("Simple") == true || weapon.Contains("2 Simple") == true) && isRemoved == false)
+            {
+                if (weapon.Contains("Simple Weapon") == true)
+                {
+                    if (isSingle == true)
+                    {
+                        if (isMelee == true && isRanged == false)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                            SaveManager.instance.gameData.equipmentChoices.Add(SMWTXT1.text);
+                            MenuController.isDone = true;
+                            break;
+                        }
+                        else if (isRanged == true && isMelee == false)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                            SaveManager.instance.gameData.equipmentChoices.Add(SRWTXT1.text);
+                            MenuController.isDone = true;
+                            break;
+                        }
+                    }
+                    else if (isTwo == true)
+                    {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+
+                        if (isMelee == true)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Add(SMWTXT1.text);
+                        }
+                        else if (isRanged == true)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Add(SRWTXT1.text);
+                        }
+
+                        isRemoved = true;
+                        break;
+                    }
+                }
                 if (weapon.Contains("Simple Melee") == true)
                 {
                     if (isSingle == true)
@@ -867,6 +1202,13 @@ public class Weapon : MonoBehaviour
                         SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
                         SaveManager.instance.gameData.equipmentChoices.Add(SMWTXT1.text);
                         MenuController.isDone = true;
+                        break;
+                    }
+                    if (isTwo == true)
+                    {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                        SaveManager.instance.gameData.equipmentChoices.Add(SMWTXT1.text);
+                        isRemoved = true;
                         break;
                     }
                 }
@@ -879,25 +1221,16 @@ public class Weapon : MonoBehaviour
                         MenuController.isDone = true;
                         break;
                     }
-                }
-                else if (weapon.Contains("2 Simple") == true)
-                {
-                    SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
-
-                    if (isMelee == true)
+                    if (isTwo == true)
                     {
-                        SaveManager.instance.gameData.equipmentChoices.Add(SMWTXT1.text);
-                    }
-                    else if (isRanged == true)
-                    {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
                         SaveManager.instance.gameData.equipmentChoices.Add(SRWTXT1.text);
+                        isRemoved = true;
+                        break;
                     }
-
-                    isRemoved = true;
-                    break;
                 }
             }
-            else if(weapon.Contains("Simple") == false && isRemoved == true && isTwo == true && index == 0 && isSimple == true)
+            else if (weapon.Contains("Simple") == false && isRemoved == true && isTwo == true && index == 0 && isSimple == true)
             {
                 if (isMelee == true && isRanged == false)
                 {
@@ -911,37 +1244,52 @@ public class Weapon : MonoBehaviour
                 }
                 if (isRanged == true && isMelee == true && SRWTXT1.text != "")
                 {
-                    SaveManager.instance.gameData.equipmentChoices.Add(SRWTXT1.text);
+                    SaveManager.instance.gameData.equipmentChoices.Add(SRWTXT3.text);
                     MenuController.isDone = true;
                 }
                 break;
             }
+            
 
-            if ((weapon.Contains("Martial") == true || weapon.Contains("2") == true) && isRemoved == false)
+            if ((weapon.Contains("Martial") == true || weapon.Contains("2 Martial") == true) && isRemoved == false)
             {
-                if (weapon.Contains("Martial Melee") == true)
+                if (weapon.Contains("Martial Weapon") == true)
                 {
                     if (isSingle == true)
                     {
-                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
-                        SaveManager.instance.gameData.equipmentChoices.Add(MMWTXT1.text);
-                        MenuController.isDone = true;
-                        break;
+                        if (weapon.Contains("Martial Weapon & Shield") == true)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+
+                            if (isMelee == true)
+                            {
+                                SaveManager.instance.gameData.equipmentChoices.Add(MMWTXT1.text);
+                            }
+                            else if (isRanged == true)
+                            {
+                                SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
+                            }
+
+                            SaveManager.instance.gameData.equipmentChoices.Add("Shield");
+                            MenuController.isDone = true;
+                            break;
+                        }
+                        else if (isMelee == true && isRanged == false)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                            SaveManager.instance.gameData.equipmentChoices.Add(MMWTXT1.text);
+                            MenuController.isDone = true;
+                            break;
+                        }
+                        else if (isRanged == true && isMelee == false)
+                        {
+                            SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                            SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
+                            MenuController.isDone = true;
+                            break;
+                        }
                     }
-                }
-                else if (weapon.Contains("Martial Ranged") == true)
-                {
-                    if (isSingle == true)
-                    {
-                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
-                        SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
-                        MenuController.isDone = true;
-                        break;
-                    }
-                }
-                else if (weapon.Contains("Martial Weapon & Shield") == true)
-                {
-                    if (isSingle == true)
+                    else if (isTwo == true)
                     {
                         SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
 
@@ -954,26 +1302,43 @@ public class Weapon : MonoBehaviour
                             SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
                         }
 
-                        SaveManager.instance.gameData.equipmentChoices.Add("Shield");
-                        MenuController.isDone = true;
+                        isRemoved = true;
                         break;
                     }
                 }
-                else if (weapon.Contains("2 Martial") == true)
+                if (weapon.Contains("Martial Melee") == true)
                 {
-                    SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
-
-                    if (isMelee == true)
+                    if (isSingle == true)
                     {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
                         SaveManager.instance.gameData.equipmentChoices.Add(MMWTXT1.text);
+                        MenuController.isDone = true;
+                        break;
                     }
-                    else if (isRanged == true)
+                    if (isTwo == true)
                     {
-                        SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                        SaveManager.instance.gameData.equipmentChoices.Add(MMWTXT1.text);
+                        isRemoved = true;
+                        break;
                     }
-
-                    isRemoved = true;
-                    break;
+                }
+                else if (weapon.Contains("Martial Ranged") == true)
+                {
+                    if (isSingle == true)
+                    {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                        SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
+                        MenuController.isDone = true;
+                        break;
+                    }
+                    if (isTwo == true)
+                    {
+                        SaveManager.instance.gameData.equipmentChoices.Remove(isSimpleOrMarital);
+                        SaveManager.instance.gameData.equipmentChoices.Add(MRWTXT1.text);
+                        isRemoved = true;
+                        break;
+                    }
                 }
             }
             else if (weapon.Contains("Martial") == false && isRemoved == true && isTwo == true && index == 0 && isMartial == true)

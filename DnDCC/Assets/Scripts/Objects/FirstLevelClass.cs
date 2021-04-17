@@ -124,6 +124,9 @@ public class FirstLevelClass : MonoBehaviour
 
     public FirstLevelClass c;
 
+    public GameObject warningPanelForSkills;
+    public TMP_Text warningMessage;
+
     Stopwatch watch = new Stopwatch();
 
     private void Start()
@@ -1382,18 +1385,31 @@ public class FirstLevelClass : MonoBehaviour
 
     public void SettingSaveSkillSelections()
     {
-        SaveManager.instance.gameData.skillPreficiencies.Clear();
-
-        SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
-        SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
-
-        if (skillChoice3.text != "")
+        if (string.Equals(skillChoice1.text, skillChoice2.text) || string.Equals(skillChoice1, skillChoice3) ||
+            string.Equals(skillChoice1, skillChoice4) || string.Equals(skillChoice2, skillChoice1) ||
+            string.Equals(skillChoice2, skillChoice3) || string.Equals(skillChoice2, skillChoice4) ||
+            string.Equals(skillChoice3, skillChoice1) || string.Equals(skillChoice3, skillChoice2) ||
+            string.Equals(skillChoice3, skillChoice4) || string.Equals(skillChoice4, skillChoice1) ||
+            string.Equals(skillChoice4, skillChoice2) || string.Equals(skillChoice4, skillChoice3))
         {
-            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+            warningPanelForSkills.SetActive(true);
+            warningMessage.text = "You have selected two or more of the same skills.\nPlease go back and select again.";
         }
-        if (skillChoice4.text != "")
+        else
         {
-            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+            SaveManager.instance.gameData.skillPreficiencies.Clear();
+
+            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+
+            if (skillChoice3.text != "")
+            {
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+            }
+            if (skillChoice4.text != "")
+            {
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+            }
         }
     }
     public void SettingSaveEquipmentSelections()
