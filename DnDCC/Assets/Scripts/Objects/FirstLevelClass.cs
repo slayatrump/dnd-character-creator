@@ -1358,6 +1358,12 @@ public class FirstLevelClass : MonoBehaviour
         choiceTextPos = new Vector2(choiceText.gameObject.transform.position.x, choiceText.gameObject.transform.position.y);
     }
 
+    public void WarningMessage()
+    {
+        warningPanelForSkills.SetActive(true);
+        warningMessage.text = "You have selected two or more of the same skills.\nPlease go back and select again.";
+    }
+
     private void SettingSaveClassInfoData()
     {
         SaveManager.instance.gameData.weaponPreficiencies.Clear();
@@ -1385,30 +1391,86 @@ public class FirstLevelClass : MonoBehaviour
 
     public void SettingSaveSkillSelections()
     {
-        if (string.Equals(skillChoice1.text, skillChoice2.text) || string.Equals(skillChoice1.text, skillChoice3.text) ||
-            string.Equals(skillChoice1.text, skillChoice4.text) || string.Equals(skillChoice2.text, skillChoice1.text) ||
-            string.Equals(skillChoice2.text, skillChoice3.text) || string.Equals(skillChoice2.text, skillChoice4.text) ||
-            string.Equals(skillChoice3.text, skillChoice1.text) || string.Equals(skillChoice3.text, skillChoice2.text) ||
-            string.Equals(skillChoice3.text, skillChoice4.text) || string.Equals(skillChoice4.text, skillChoice1.text) ||
-            string.Equals(skillChoice4.text, skillChoice2.text) || string.Equals(skillChoice4.text, skillChoice3.text))
+        if (skillChoice3.text == "" && skillChoice4.text == "")
         {
-            warningPanelForSkills.SetActive(true);
-            warningMessage.text = "You have selected two or more of the same skills.\nPlease go back and select again.";
-        }
-        else
-        {
-            SaveManager.instance.gameData.skillPreficiencies.Clear();
-
-            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
-            SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
-
-            if (skillChoice3.text != "")
+            if (string.Equals(skillChoice1.text, skillChoice2.text))
             {
-                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                WarningMessage();
             }
-            if (skillChoice4.text != "")
+            else
             {
-                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+                SaveManager.instance.gameData.skillPreficiencies.Clear();
+
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+
+                if (skillChoice3.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                }
+                if (skillChoice4.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+                }
+            }
+        }
+        else if (skillChoice3.text != "" && skillChoice4.text == "")
+        {
+            if (string.Equals(skillChoice1.text, skillChoice2.text))
+            {
+                WarningMessage();
+            }
+            else if (string.Equals(skillChoice1.text, skillChoice3.text) || string.Equals(skillChoice2.text, skillChoice3.text))
+            {
+                WarningMessage();
+            }
+            else
+            {
+                SaveManager.instance.gameData.skillPreficiencies.Clear();
+
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+
+                if (skillChoice3.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                }
+                if (skillChoice4.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+                }
+            }
+        }
+        else if (skillChoice3.text != "" && skillChoice4.text != "")
+        {
+            if (string.Equals(skillChoice1.text, skillChoice2.text))
+            {
+                WarningMessage();
+            }
+            else if (string.Equals(skillChoice1.text, skillChoice3.text) || string.Equals(skillChoice2.text, skillChoice3.text))
+            {
+                WarningMessage();
+            }
+            else if (string.Equals(skillChoice1.text, skillChoice4.text) || string.Equals(skillChoice2.text, skillChoice4.text) 
+                || string.Equals(skillChoice3.text, skillChoice4.text))
+            {
+                WarningMessage();
+            }
+            else
+            {
+                SaveManager.instance.gameData.skillPreficiencies.Clear();
+
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice1.text);
+                SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice2.text);
+
+                if (skillChoice3.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice3.text);
+                }
+                if (skillChoice4.text != "")
+                {
+                    SaveManager.instance.gameData.skillPreficiencies.Add(skillChoice4.text);
+                }
             }
         }
     }
