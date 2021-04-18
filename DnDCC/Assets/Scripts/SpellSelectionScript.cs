@@ -12,20 +12,14 @@ public class SpellSelectionScript : SpellListController
     //the checkbox prefab will be set in the inspector so that it can be instantiated during the population methods
     public GameObject checkboxPrefab;
 
+    Spell spell;
+
     public int[] numList; //The numbers associated with classes for cantrips and spells
 
     public string[] allCantrips; //All cantrips
     public string[] allFirstLevel; //All First Level spells
 
     GameObject[] displayThese; //the cantrips to display
-
-    //Two arrays for each section of components and descriptions of the spells
-    string[] spellComponentsArray;
-    string[] spellDescriptionArray;
-
-    //This is the spell that is chosen when the user hits the checkbox
-    string selectedSpellText;
-    GameObject selectedSpell;
 
     //Test case at the moment
     //When functional, it should just take the class name from the current save data and use that instead
@@ -126,6 +120,8 @@ public class SpellSelectionScript : SpellListController
 
         foreach (GameObject cantrip in popList)
         {
+            spell = GameObject.Find("spell").GetComponent<Spell>();
+
             //Create the game object that will be displayed
             GameObject cantripCheckbox = Instantiate(checkboxPrefab);
             Transform parent = GameObject.Find("CantripPanel/CantripList/Scroll").transform;
@@ -137,6 +133,8 @@ public class SpellSelectionScript : SpellListController
 
             //The text of the textbox should be the text of the spell name
             cantripCheckbox.GetComponentInChildren<Text>().text = cantrip.name;
+
+            cantripCheckbox.GetComponent<Toggle>().onValueChanged.AddListener(delegate { spell.DisplayInfo(); });
         }
     }
     #endregion
@@ -185,57 +183,4 @@ public class SpellSelectionScript : SpellListController
         }
     }
     #endregion
-
-    //Methods to display the spell information when the user selects a spell
-    #region Spell Information Methods
-    //This method should be called when the checkbox is checked or unchecked.
-    //There is an onvaluechanged feature with the unity checkbox, but I am unsure how to get it to work with this
-    public void SpellInformation(GameObject[] displayThese)
-    {
-        //the string selectedSpell needs to be set based on text of the checkbox that was just clicked
-        //the following code isn't functional
-
-        //selectedSpellText is the item used to compare
-
-        for (int i = 0; i < displayThese.Length; i++)
-        {
-            //if both texts match up, make the GameObject selectedSpell equal displayThese[i]
-            if (selectedSpellText == displayThese[i].GetComponent<Text>().text)
-            {
-                selectedSpell = displayThese[i];
-            }
-        }
-
-        //Sets the text of each respective object in the scene to the text of the respective property
-        GameObject.Find("NText").GetComponent<Text>().text = 
-            selectedSpell.GetComponent<Spell>().SpellName.ToString();
-        GameObject.Find("SText").GetComponent<Text>().text = 
-            selectedSpell.GetComponent<Spell>().SchoolType.ToString();
-        GameObject.Find("CTText").GetComponent<Text>().text = 
-            selectedSpell.GetComponent<Spell>().CastingTime.ToString();
-        GameObject.Find("RText").GetComponent<Text>().text = 
-            selectedSpell.GetComponent<Spell>().Range.ToString();
-
-        //Should go through the list of items in components and get then display the text properly
-        for (int i = 0; i < selectedSpell.GetComponent<Spell>().Components.Count; i++)
-        {
-            spellComponentsArray[i] = selectedSpell.GetComponent<Spell>().Components[i].ToString();
-            GameObject.Find("CompText").GetComponent<Text>().text =
-                string.Join(spellComponentsArray[i], "/n");
-        }
-
-        //same as above but for the descriptions instead
-        for (int i = 0; i < selectedSpell.GetComponent<Spell>().DescriptionParagraphs.Count; i++)
-        {
-            spellDescriptionArray[i] = selectedSpell.GetComponent<Spell>().DescriptionParagraphs[i];
-            GameObject.Find("DText").GetComponent<Text>().text =
-                string.Join(spellDescriptionArray[i], "/n");
-        }
-    }
-    #endregion
-
-    public void CheckBoxClicked(bool toggle)
-    {
-
-    }
 }
