@@ -140,4 +140,12 @@ public class SaveData
     //Class Features Selection Info
     public string classFeaturesChoice1;
     public string classFeaturesChoice2;
+
+    [Header("Personality Info Save Data")]
+    public string characterName;
+    public string playerName;
+    public string personalityTraits;
+    public string ideals;
+    public string bonds;
+    public string flaws;
 }
