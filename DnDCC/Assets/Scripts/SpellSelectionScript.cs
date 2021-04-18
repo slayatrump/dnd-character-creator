@@ -7,7 +7,7 @@ using GlobalEnums;
 using UnityEngine.EventSystems;
 using System.Diagnostics;
 
-public class SpellSelectionScript : MonoBehaviour
+public class SpellSelectionScript : SpellListController
 {
     //the checkbox prefab will be set in the inspector so that it can be instantiated during the population methods
     public GameObject checkboxPrefab;
@@ -36,24 +36,15 @@ public class SpellSelectionScript : MonoBehaviour
     {
         numList = new int[2];
 
-        //TODO: Get this to display the right numbers instead of zeroes
         SetNumbers(chosenClass);
 
-        FindCantrips(chosenClass);
-        FindFirstLevel(chosenClass);
-
-        //TODO: Get population to work right
         PopCantripList();
-        PopFirstLevelList();
-
-        //get the text component of labels and change it to array values
-        GameObject.Find("Cantrips Number").GetComponent<TextMeshProUGUI>().text = $"{numList[0]}";
-        GameObject.Find("1L Number").GetComponent<TextMeshProUGUI>().text = $"{numList[1]}";
+        PopSpellList();
     }
 
     //Methods to set the Cantrip and First Level spell numbers according to chosen class
     #region Setting Spell Numbers
-    public int[] SetNumbers(string chosenClass)
+    public void SetNumbers(string chosenClass)
     {
         //array can be increased to 3 if spell slots are needed
         int[] numList = new int[2];
@@ -99,94 +90,98 @@ public class SpellSelectionScript : MonoBehaviour
                 break;
         }
 
-        return numList;
+        //get the text component of labels and change it to array values
+        GameObject.Find("Cantrips Number").GetComponent<TextMeshProUGUI>().text = $"{numList[0]}";
+        GameObject.Find("1L Number").GetComponent<TextMeshProUGUI>().text = $"{numList[1]}";
     }
     #endregion
 
     //Methods to grab the appropriate cantrips for the class and then populate the scroll list with them
     #region Cantrips Methods
-    public GameObject[] FindCantrips(string chosenClass)
-    {
-        GameObject[] theCantrips = GameObject.FindGameObjectsWithTag("Cantrip"); //find every cantrip
-        string[] spellClasses; //temporary cantrip class holder
-
-        //For each cantrip, find ones that have the right class name in it
-        for (int i = 0; i < theCantrips.Length; i++)
-        {
-            spellClasses = new string[] { theCantrips[i].GetComponent<Spell>().SpellName };
-
-            foreach (string element in spellClasses)
-            {
-                if (element == chosenClass)
-                {
-                    //Should input the cantrip that matches into the array we will want to display
-                    displayThese = new GameObject[] { theCantrips[i] };
-                }
-            }
-        }
-
-        return displayThese;
-    }
-
-    //TODO: Something needs to be set to an instance of an object here, but I can't figure out what
     public void PopCantripList()
     {
-        //for each element that passed the check, create a checkbox for it
-        for (int i = 0; i < displayThese.Length; i++)
+        List<GameObject> popList = new List<GameObject>();
+
+        switch (chosenClass)
+        {
+            case "Bard":
+                popList = bardCantripList;
+                break;
+            case "Cleric":
+                popList = clericCantripList;
+                break;
+            case "Druid":
+                popList = druidCantripList;
+                break;
+            case "Sorcerer":
+                popList = sorcererCantripList;
+                break;
+            case "Warlock":
+                popList = warlockCantripList;
+                break;
+            case "Wizard":
+                popList = wizardCantripList;
+                break;
+        }
+
+        foreach (GameObject cantrip in popList)
         {
             //Create the game object that will be displayed
             GameObject cantripCheckbox = Instantiate(checkboxPrefab);
+            Transform parent = GameObject.Find("CantripPanel/CantripList/Scroll").transform;
 
             //checkbox needs to be a parent of the right scrollpanel so it populates properly
             //The scroll panel object in the project has components that will organize things properly, so the only thing that has to be done
             //is setting the new checkbox as a parent of the right panel, no need for more transofrmation edits past that.
-            cantripCheckbox.transform.parent = GameObject.Find("CantripPanel/CantripList/Scroll/ScrollPanel").transform;
+            cantripCheckbox.transform.SetParent(parent, false);
 
             //The text of the textbox should be the text of the spell name
-            cantripCheckbox.GetComponentInChildren<Text>().text = displayThese[i].name;
+            cantripCheckbox.GetComponentInChildren<Text>().text = cantrip.name;
         }
     }
     #endregion
 
-    //TODO: Once the Cantrips methods are solved, copy past the information into the First Level methods and replace names appropriately
     //Methods to grab the appropriate first level spells for the class and then populate the scroll list with them
     #region First Level Spells Methods
-    public GameObject[] FindFirstLevel(string chosenClass)
+    public void PopSpellList()
     {
-        GameObject[] theCantrips = GameObject.FindGameObjectsWithTag("Cantrip"); //find every cantrip
-        string[] spellClasses; //temporary cantrip class holder
+        List<GameObject> popList = new List<GameObject>();
 
-        //For each cantrip, find ones that have the right class name in it
-        for (int i = 0; i < theCantrips.Length; i++)
+        switch (chosenClass)
         {
-            spellClasses = new string[] { theCantrips[i].GetComponent<Spell>().SpellName };
-
-            foreach (string element in spellClasses)
-            {
-                if (element == chosenClass)
-                {
-                    //Should input the cantrip that matches into the array we will want to display
-                    displayThese = new GameObject[] { theCantrips[i] };
-                }
-            }
+            case "Bard":
+                popList = bardSpellList;
+                break;
+            case "Cleric":
+                popList = clericSpellList;
+                break;
+            case "Druid":
+                popList = druidSpellList;
+                break;
+            case "Sorcerer":
+                popList = sorcererSpellList;
+                break;
+            case "Warlock":
+                popList = warlockSpellList;
+                break;
+            case "Wizard":
+                popList = wizardSpellList;
+                break;
         }
 
-        return displayThese;
-    }
-
-    public void PopFirstLevelList()
-    {
-        //for each element that passed the check, create a checkbox for it
-        for (int i = 0; i < displayThese.Length; i++)
+        foreach (GameObject cantrip in popList)
         {
             //Create the game object that will be displayed
             GameObject cantripCheckbox = Instantiate(checkboxPrefab);
+            Transform parent = GameObject.Find("SpellPanel/SpellList/Scroll").transform;
 
             //checkbox needs to be a parent of the right scrollpanel so it populates properly
-            cantripCheckbox.transform.parent = GameObject.Find("CantripPanel/CantripList/Scroll/ScrollPanel").transform;
+            //The scroll panel object in the project has components that will organize things properly, so the only thing that has to be done
+            //is setting the new checkbox as a parent of the right panel, no need for more transofrmation edits past that.
+            cantripCheckbox.transform.SetParent(parent, false);
 
             //The text of the textbox should be the text of the spell name
-            cantripCheckbox.GetComponentInChildren<Text>().text = displayThese[i].name;
+            cantripCheckbox.GetComponentInChildren<Text>().text = cantrip.name;
         }
     }
     #endregion
@@ -238,4 +233,9 @@ public class SpellSelectionScript : MonoBehaviour
         }
     }
     #endregion
+
+    public void CheckBoxClicked(bool toggle)
+    {
+
+    }
 }
