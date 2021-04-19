@@ -8429,7 +8429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Acid Splash
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -8457,7 +8457,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.8
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11528,7 +11528,7 @@ PrefabInstance:
     - target: {fileID: 8687440215765427859, guid: b6092add6e814ee438d1d9c0b3659c14,
         type: 3}
       propertyPath: chosenClass
-      value: Sorcerer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8687440215765427859, guid: b6092add6e814ee438d1d9c0b3659c14,
         type: 3}

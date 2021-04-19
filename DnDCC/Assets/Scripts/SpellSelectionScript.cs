@@ -23,9 +23,8 @@ public class SpellSelectionScript : SpellListController
 
     GameObject[] displayThese; //the cantrips to display
 
-    //Test case at the moment
     //When functional, it should just take the class name from the current save data and use that instead
-    public string chosenClass = ""; //SaveManager.instance.gameData.className;
+    public string chosenClass;
 
     GameObject cantripCheckbox;
     GameObject spellCheckbox;
@@ -35,6 +34,8 @@ public class SpellSelectionScript : SpellListController
     // Start is called before the first frame update
     void Start()
     {
+        chosenClass = SaveManager.instance.gameData.className;
+
         if (SaveManager.instance.gameData.spellList.Count != 0)
         {
             SaveManager.instance.gameData.spellList.Clear();

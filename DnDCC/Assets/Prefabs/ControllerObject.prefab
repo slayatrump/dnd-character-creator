@@ -45,10 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spells: []
   cantrips: []
-  checkboxPrefab: {fileID: 3452560050675741128, guid: e4dc0143d2957eb4e994c08e0eebceb7,
-    type: 3}
-  numList: 
+  spellCheckboxPrefab: {fileID: 0}
+  cantripCheckboxPrefab: {fileID: 0}
   allCantrips: []
   allFirstLevel: []
-  chosenClass: Cleric
+  chosenClass: 
   spell: {fileID: 4591586225794731193, guid: e4dc0143d2957eb4e994c08e0eebceb7, type: 3}
