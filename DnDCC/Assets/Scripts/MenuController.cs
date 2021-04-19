@@ -114,4 +114,10 @@ public class MenuController : MonoBehaviour
         }
         
     }
+
+    public void SpellsToPersonality()
+    {
+        Spell.SavingSpellData();
+        SceneManager.LoadScene(10);
+    }
 }

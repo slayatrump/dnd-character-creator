@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using GlobalEnums;
 using TMPro;
 
-public class Spell : MonoBehaviour
+public class Spell : SpellListController
 {
     public string SpellName;
 
@@ -34,28 +34,79 @@ public class Spell : MonoBehaviour
     //Using a list here to split descriptions by sections, such as if it has bullet points like for prestidigitation
     public List<string> DescriptionParagraphs;
 
-    TMP_Text spellName, spellSchool, spellCast, spellRange, spellComp, spellDesc;
+    public TMP_Text spellName, spellSchool, spellCast, spellRange, spellComp, spellDesc;
 
     private void Awake()
     {
         SetUI();
     }
 
-    public void DisplayInfo()
+    public void DisplayInfo(bool isActive)
     {
-        spellName.text = this.SpellName;
-        spellSchool.text = this.SchoolType.ToString();
-        spellCast.text = this.CastingTime;
-        spellRange.text = this.Range;
-
-        foreach(string element in Components)
+        if (isActive)
         {
-            spellComp.text += this.Components.ToString();
+            spellComp.text = "";
+            spellDesc.text = "";
+
+            spellName.text = this.SpellName;
+            spellSchool.text = this.SchoolType.ToString();
+            spellCast.text = this.CastingTime;
+            spellRange.text = this.Range;
+
+            foreach (string element in Components)
+            {
+                int max = Components.Count;
+
+                if (max == 2)
+                {
+                    spellComp.text += element + "\n";
+                }
+                else
+                {
+                    spellComp.text += element;
+                }
+            }
+
+            foreach (string element in DescriptionParagraphs)
+            {
+                spellDesc.text += element;
+            }
+
+            if (SpellLevel == 0)
+            {
+                SpellSelectionScript.maxCants -= 1;
+                GameObject.Find("Cantrips Number").GetComponent<TMP_Text>().text = $"{SpellSelectionScript.maxCants}";
+                SettingSavedCantrips(this.SpellName);
+            }
+            else if (SpellLevel == 1)
+            {
+                SpellSelectionScript.maxSpells -= 1;
+                GameObject.Find("1L Number").GetComponent<TMP_Text>().text = $"{SpellSelectionScript.maxSpells}";
+                SettingSavedSpells(this.SpellName);
+            }
         }
-
-        foreach(string element in DescriptionParagraphs)
+        else if(!isActive)
         {
-            spellDesc.text += this.DescriptionParagraphs.ToString();
+            spellComp.text = "";
+            spellDesc.text = "";
+
+            spellName.text = "";
+            spellSchool.text = "";
+            spellCast.text = "";
+            spellRange.text = "";
+
+            if (SpellLevel == 0)
+            {
+                SpellSelectionScript.maxCants += 1;
+                GameObject.Find("Cantrips Number").GetComponent<TMP_Text>().text = $"{SpellSelectionScript.maxCants}";
+                RemovingSavedCantrips(this.SpellName);
+            }
+            else if (SpellLevel == 1)
+            {
+                SpellSelectionScript.maxSpells += 1;
+                GameObject.Find("1L Number").GetComponent<TMP_Text>().text = $"{SpellSelectionScript.maxSpells}";
+                RemovingSavedSpells(this.SpellName);
+            }
         }
     }
 
@@ -67,5 +118,27 @@ public class Spell : MonoBehaviour
         spellRange = GameObject.Find("RText").GetComponent<TMP_Text>();
         spellComp = GameObject.Find("CompText").GetComponent<TMP_Text>();
         spellDesc = GameObject.Find("DText").GetComponent<TMP_Text>();
+    }
+
+    public void SettingSavedSpells(string Spell)
+    {
+        SaveManager.instance.gameData.spellList.Add(Spell);
+    }
+    public void SettingSavedCantrips(string Cantrip)
+    {
+        SaveManager.instance.gameData.cantripList.Add(Cantrip);
+    }
+    public void RemovingSavedSpells(string Spell)
+    {
+        SaveManager.instance.gameData.spellList.Remove(Spell);
+    }
+    public void RemovingSavedCantrips(string Cantrip)
+    {
+        SaveManager.instance.gameData.cantripList.Remove(Cantrip);
+    }
+
+    public static void SavingSpellData()
+    {
+        SaveManager.instance.Save();
     }
 }

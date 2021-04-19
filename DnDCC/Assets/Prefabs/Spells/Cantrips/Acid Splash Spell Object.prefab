@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc2cb98df449cf45a48d35036c0b8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spells: []
+  cantrips: []
   SpellName: Acid Splash
   SpellLevel: 0
   SchoolType: 1
@@ -57,8 +59,14 @@ MonoBehaviour:
   - Class: 11
     ClassLevel: 0
   DescriptionParagraphs:
-  - 'You hurl a bubble of acid. Choose one creature within range, or choose two creatures
-    within range that are within 5 feet of each other. A target must succeed on a
-    Dexterity saving throw or take 1d6 acid damage. '
+  - 'Saving throw or take 1d6 acid damage.  creature within range, or choose two
+    creatures within range that are within 5 feet of each other. A target must succeed
+    on a Dexterity saving throw or take 1d6 acid damage. '
   - "This spell\u2019s damage increases by 1d6 when you reach 5th level (2d6), 11th
     level (3d6), and 17th level (4d6)."
+  spellName: {fileID: 0}
+  spellSchool: {fileID: 0}
+  spellCast: {fileID: 0}
+  spellRange: {fileID: 0}
+  spellComp: {fileID: 0}
+  spellDesc: {fileID: 0}

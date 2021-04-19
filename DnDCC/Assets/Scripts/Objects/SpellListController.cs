@@ -29,6 +29,20 @@ public class SpellListController : MonoBehaviour
     {
         SettingClassSpells();
         SettingClassCantrips();
+
+        //Debug.Log($"Bard Spell List Size: {bardSpellList.Count}");
+        //Debug.Log($"Cleric Spell List Size: {clericSpellList.Count}");
+        //Debug.Log($"Druid Spell List Size: {druidSpellList.Count}");
+        //Debug.Log($"Sorcerer Spell List Size: {sorcererSpellList.Count}");
+        //Debug.Log($"Warlock Spell List Size: {warlockSpellList.Count}");
+        //Debug.Log($"Wizard Spell List Size: {wizardSpellList.Count}");
+
+        //Debug.Log($"Bard Cantrip List Size: {bardCantripList.Count}");
+        //Debug.Log($"Cleric Cantrip List Size: {clericCantripList.Count}");
+        //Debug.Log($"Druid Cantrip List Size: {druidCantripList.Count}");
+        //Debug.Log($"Sorcerer Cantrip List Size: {sorcererCantripList.Count}");
+        //Debug.Log($"Warlock Cantrip List Size: {warlockCantripList.Count}");
+        //Debug.Log($"Wizard Cantrip List Size: {wizardCantripList.Count}");
     }
 
     public void SettingClassSpells()
@@ -410,13 +424,6 @@ public class SpellListController : MonoBehaviour
                     }
             }
         }
-
-        Debug.Log($"Bard Spell List Size: {bardSpellList.Count}");
-        Debug.Log($"Cleric Spell List Size: {clericSpellList.Count}");
-        Debug.Log($"Druid Spell List Size: {druidSpellList.Count}");
-        Debug.Log($"Sorcerer Spell List Size: {sorcererSpellList.Count}");
-        Debug.Log($"Warlock Spell List Size: {warlockSpellList.Count}");
-        Debug.Log($"Wizard Spell List Size: {wizardSpellList.Count}");
     }
 
     public void SettingClassCantrips()
@@ -603,11 +610,6 @@ public class SpellListController : MonoBehaviour
             }
         }
 
-        Debug.Log($"Bard Cantrip List Size: {bardCantripList.Count}");
-        Debug.Log($"Cleric Cantrip List Size: {clericCantripList.Count}");
-        Debug.Log($"Druid Cantrip List Size: {druidCantripList.Count}");
-        Debug.Log($"Sorcerer Cantrip List Size: {sorcererCantripList.Count}");
-        Debug.Log($"Warlock Cantrip List Size: {warlockCantripList.Count}");
-        Debug.Log($"Wizard Cantrip List Size: {wizardCantripList.Count}");
+        
     }
 }

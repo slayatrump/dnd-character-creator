@@ -148,4 +148,8 @@ public class SaveData
     public string ideals;
     public string bonds;
     public string flaws;
+
+    [Header("Spells and Cantrips Save Data")]
+    public List<string> spellList;
+    public List<string> cantripList;
 }
