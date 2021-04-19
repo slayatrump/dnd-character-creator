@@ -3529,6 +3529,14 @@ MonoBehaviour:
     extraEquipment: []
     classFeaturesChoice1: 
     classFeaturesChoice2: 
+    characterName: 
+    playerName: 
+    personalityTraits: 
+    ideals: 
+    bonds: 
+    flaws: 
+    spellList: []
+    cantripList: []
   hasLoaded: 0
   hasSaved: 0
 --- !u!1 &177242330 stripped
@@ -9322,8 +9330,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9b57ac045c908024c8e5f0ad7c70ecff, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
