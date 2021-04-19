@@ -42,7 +42,7 @@ public class Spell : SpellListController
     {
         SetUI();
         button = GameObject.Find("MoveOnButton").GetComponent<Button>();
-        button.enabled = false;
+        button.interactable = false;
     }
 
     public void DisplayInfo(bool isActive)
@@ -161,11 +161,13 @@ public class Spell : SpellListController
         if(SpellSelectionScript.maxSpells == 0 
             && SpellSelectionScript.maxCants == 0)
         {
-            button.enabled = true;
+            button.interactable = true;
+
         }
         else
         {
-            button.enabled = false;
+            button.interactable = false;
+
         }
     }
 
