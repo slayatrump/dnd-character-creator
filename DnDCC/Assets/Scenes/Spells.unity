@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &32995197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 Round
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.05
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lots of space for descriptions. Change font size as needed
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Number of 1st Level Spells Can Learn:'
+  m_text: 'Number of 1st Level Spells Learnable:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -4226,7 +4226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Number of Cantrips Can Learn:'
+  m_text: 'Number of Cantrips Learnable:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -6564,7 +6564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1158084690
 Transform:
   m_ObjectHideFlags: 0
@@ -7231,7 +7231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lots of space here for text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -7259,7 +7259,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.15
+  m_fontSize: 25
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8133,7 +8133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Self
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -8161,7 +8161,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.55
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9891,7 +9891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524, y: 487}
+  m_AnchoredPosition: {x: -524, y: 500}
   m_SizeDelta: {x: 401.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884935233
@@ -10292,7 +10292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Conjuration
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e962b6184aaa9164c88e28420339e744, type: 2}
   m_sharedMaterial: {fileID: -8008496515895853014, guid: e962b6184aaa9164c88e28420339e744,
@@ -10320,7 +10320,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.55
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11535,6 +11535,18 @@ PrefabInstance:
       propertyPath: save
       value: 
       objectReference: {fileID: 230701102}
+    - target: {fileID: 8687440215765427859, guid: b6092add6e814ee438d1d9c0b3659c14,
+        type: 3}
+      propertyPath: spellCheckboxPrefab
+      value: 
+      objectReference: {fileID: 3452560050675741128, guid: e4dc0143d2957eb4e994c08e0eebceb7,
+        type: 3}
+    - target: {fileID: 8687440215765427859, guid: b6092add6e814ee438d1d9c0b3659c14,
+        type: 3}
+      propertyPath: cantripCheckboxPrefab
+      value: 
+      objectReference: {fileID: 8946364243183232311, guid: ca0f44c5688760e4dbfdf660aa495e6b,
+        type: 3}
     - target: {fileID: 8687440215765427868, guid: b6092add6e814ee438d1d9c0b3659c14,
         type: 3}
       propertyPath: m_LocalPosition.x

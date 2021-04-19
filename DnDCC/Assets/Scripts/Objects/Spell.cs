@@ -36,9 +36,13 @@ public class Spell : SpellListController
 
     public TMP_Text spellName, spellSchool, spellCast, spellRange, spellComp, spellDesc;
 
+    public Button button;
+
     private void Awake()
     {
         SetUI();
+        button = GameObject.Find("MoveOnButton").GetComponent<Button>();
+        button.enabled = false;
     }
 
     public void DisplayInfo(bool isActive)
@@ -85,7 +89,7 @@ public class Spell : SpellListController
                 SettingSavedSpells(this.SpellName);
             }
         }
-        else if(!isActive)
+        else if (!isActive)
         {
             spellComp.text = "";
             spellDesc.text = "";
@@ -107,6 +111,61 @@ public class Spell : SpellListController
                 GameObject.Find("1L Number").GetComponent<TMP_Text>().text = $"{SpellSelectionScript.maxSpells}";
                 RemovingSavedSpells(this.SpellName);
             }
+        }
+
+        GameObject[] cantrips = GameObject.FindGameObjectsWithTag("CantripCheckbox");
+        GameObject[] spells = GameObject.FindGameObjectsWithTag("SpellCheckbox");
+
+        if (SpellSelectionScript.maxCants == 0)
+        {
+            foreach (GameObject c in cantrips)
+            {
+                if (!c.GetComponent<Toggle>().isOn)
+                {
+                    c.GetComponent<Toggle>().interactable = false;
+                }
+            }
+        }
+        else if (SpellSelectionScript.maxCants > 0)
+        {
+            foreach (GameObject c in cantrips)
+            {
+                if (!c.GetComponent<Toggle>().isOn)
+                {
+                    c.GetComponent<Toggle>().interactable = true;
+                }
+            }
+        }
+
+        if (SpellSelectionScript.maxSpells == 0)
+        {
+            foreach (GameObject s in spells)
+            {
+                if (!s.GetComponent<Toggle>().isOn)
+                {
+                    s.GetComponent<Toggle>().interactable = false;
+                }
+            }
+        }
+        else if (SpellSelectionScript.maxSpells > 0)
+        {
+            foreach (GameObject s in spells)
+            {
+                if (!s.GetComponent<Toggle>().isOn)
+                {
+                    s.GetComponent<Toggle>().interactable = true;
+                }
+            }
+        }
+
+        if(SpellSelectionScript.maxSpells == 0 
+            && SpellSelectionScript.maxCants == 0)
+        {
+            button.enabled = true;
+        }
+        else
+        {
+            button.enabled = false;
         }
     }
 

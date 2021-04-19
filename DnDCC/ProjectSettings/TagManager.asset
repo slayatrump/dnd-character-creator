@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cantrip
   - FirstLevel
+  - SpellCheckbox
+  - CantripCheckbox
   layers:
   - Default
   - TransparentFX
