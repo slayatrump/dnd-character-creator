@@ -1785,6 +1785,18 @@ MonoBehaviour:
     cantripList: []
   hasLoaded: 0
   hasSaved: 0
+--- !u!114 &1389321332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 256746072548783635, guid: 2013063b41dc5264e881492ad8916549,
+    type: 3}
+  m_PrefabInstance: {fileID: 813413653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1412511373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,6 +2826,11 @@ PrefabInstance:
       propertyPath: cont1
       value: 
       objectReference: {fileID: 1889405551}
+    - target: {fileID: 7747661151962087238, guid: 9c4b46f0daac0df4295981ef9136310a,
+        type: 3}
+      propertyPath: message
+      value: 
+      objectReference: {fileID: 1389321332}
     - target: {fileID: 7747661151962087239, guid: 9c4b46f0daac0df4295981ef9136310a,
         type: 3}
       propertyPath: m_LocalPosition.x
