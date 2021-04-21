@@ -3521,9 +3521,9 @@ MonoBehaviour:
     canUseSpellsAtLvlOne: 0
     backgroundName: 
     goldAmount: 0
-    additionalSkill1: 
-    additionalSkill2: 
+    extraSkillProf: []
     extraLanguageOptions: 0
+    extraLanguageSelection: []
     toolPreficiencies: []
     backgroundFeatures: 
     extraEquipment: []
@@ -30842,7 +30842,7 @@ PrefabInstance:
     - target: {fileID: 256746071358644464, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 256746071358644465, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
@@ -30979,6 +30979,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746071884090987, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015259
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746071884090987, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 544.064
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746071884090987, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -127
       objectReference: {fileID: 0}
     - target: {fileID: 256746071884090988, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
@@ -31131,6 +31146,16 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 256746072064737446, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.1000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746072064737446, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -38.89026
+      objectReference: {fileID: 0}
     - target: {fileID: 256746072064737447, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
       propertyPath: m_fontColor.r
@@ -31167,6 +31192,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_VerticalAlignment
       value: 8192
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746072064737447, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_text
+      value: Make Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746072064737447, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256746072064737447, guid: 2013063b41dc5264e881492ad8916549,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60.95
       objectReference: {fileID: 0}
     - target: {fileID: 256746072548783634, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
