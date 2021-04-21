@@ -68,7 +68,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -88,7 +88,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -107,7 +107,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -126,7 +126,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -145,7 +145,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -164,7 +164,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -183,7 +183,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -203,7 +203,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -222,7 +222,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -241,7 +241,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -260,7 +260,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -279,7 +279,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -298,7 +298,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -318,7 +318,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -338,7 +338,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -358,7 +358,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -378,7 +378,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -398,7 +398,7 @@ public class Background : MonoBehaviour
                 {
                     backgroundNameInfo.text = $"Background: {this.Name}";
                     goldAmountInfo.text = "Gold: " + this.Gold.ToString();
-                    skillInfoTXT.text = $"{this.Name} Addtional Skils";
+                    skillInfoTXT.text = $"{this.Name} Addtional Skill Proficiencies:";
                     skillchoiceInfo1.text = $"Skill 1: {SkillProficiency1}";
                     skillchoiceInfo2.text = $"Skill 2: {SkillProficiency2}";
                     extraLanguagesInfo.text = $"{this.Name}s can learn {this.ExtraLanguagesKnown} extra languages";
@@ -421,11 +421,12 @@ public class Background : MonoBehaviour
     {
         SaveManager.instance.gameData.toolPreficiencies.Clear();
         SaveManager.instance.gameData.extraEquipment.Clear();
+        SaveManager.instance.gameData.extraSkillProf.Clear();
 
         SaveManager.instance.gameData.backgroundName = this.Name;
         SaveManager.instance.gameData.goldAmount = this.Gold;
-        SaveManager.instance.gameData.additionalSkill1 = this.SkillProficiency1.ToString();
-        SaveManager.instance.gameData.additionalSkill2 = this.SkillProficiency2.ToString();
+        SaveManager.instance.gameData.extraSkillProf.Add(this.SkillProficiency1.ToString());
+        SaveManager.instance.gameData.extraSkillProf.Add(this.SkillProficiency2.ToString());
         SaveManager.instance.gameData.extraLanguageOptions = this.ExtraLanguagesKnown;
         foreach (string t in this.ToolProficiencies)
         {

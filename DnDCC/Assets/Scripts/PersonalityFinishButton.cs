@@ -28,6 +28,8 @@ public class PersonalityFinishButton : MonoBehaviour
         SaveManager.instance.gameData.characterName = canva.transform.GetChild(4).GetChild(0).GetChild(2).GetComponentInChildren<Text>().text;
         SaveManager.instance.gameData.playerName = canva.transform.GetChild(5).GetChild(0).GetChild(2).GetComponentInChildren<Text>().text;
 
+        SaveManager.instance.Save();
+
         //Move to display scene
         SceneManager.LoadScene("FinishedCharacter");
     }

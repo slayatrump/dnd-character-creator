@@ -78,8 +78,18 @@ public class MenuController : MonoBehaviour
 
     public void BackgroundToAS()
     {
-        Background.SavingBackgroundInfoData();
-        SceneManager.LoadScene(4);
+        if (SaveManager.instance.gameData.extraLanguageOptions > 0)
+        {
+            warning.SetActive(true);
+            warningText.text = $"Your background of choice has the option of picking {SaveManager.instance.gameData.extraLanguageOptions} additonal languages.\n" +
+                $"Please take the time to select from this menu.\nYou have {SaveManager.instance.gameData.extraLanguageOptions} selections remaining";
+
+        }
+        else
+        {
+            Background.SavingBackgroundInfoData();
+            SceneManager.LoadScene(4);
+        }
     }
 
     public void ASToFeatures()

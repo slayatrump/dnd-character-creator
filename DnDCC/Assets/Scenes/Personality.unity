@@ -2162,9 +2162,9 @@ MonoBehaviour:
     canUseSpellsAtLvlOne: 0
     backgroundName: 
     goldAmount: 0
-    additionalSkill1: 
-    additionalSkill2: 
+    extraSkillProf: []
     extraLanguageOptions: 0
+    extraLanguageSelection: []
     toolPreficiencies: []
     backgroundFeatures: 
     extraEquipment: []

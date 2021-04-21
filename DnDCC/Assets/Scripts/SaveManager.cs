@@ -129,9 +129,9 @@ public class SaveData
     //Background Selection Info
     public string backgroundName;
     public int goldAmount;
-    public string additionalSkill1;
-    public string additionalSkill2;
+    public List<string> extraSkillProf;
     public int extraLanguageOptions;
+    public List<string> extraLanguageSelection;
     public List<string> toolPreficiencies;
     public string backgroundFeatures;
     public List<string> extraEquipment;
