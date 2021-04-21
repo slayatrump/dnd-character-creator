@@ -226,6 +226,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &167698641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 256746071884090988, guid: 2013063b41dc5264e881492ad8916549,
+    type: 3}
+  m_PrefabInstance: {fileID: 813413653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269912027
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +958,7 @@ PrefabInstance:
     - target: {fileID: 256746071358644465, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 256746071358644465, guid: 2013063b41dc5264e881492ad8916549,
         type: 3}
@@ -2782,6 +2794,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MMController
       objectReference: {fileID: 0}
+    - target: {fileID: 7747661151962087238, guid: 9c4b46f0daac0df4295981ef9136310a,
+        type: 3}
+      propertyPath: warningPanel
+      value: 
+      objectReference: {fileID: 1848792251}
+    - target: {fileID: 7747661151962087238, guid: 9c4b46f0daac0df4295981ef9136310a,
+        type: 3}
+      propertyPath: back1
+      value: 
+      objectReference: {fileID: 167698641}
+    - target: {fileID: 7747661151962087238, guid: 9c4b46f0daac0df4295981ef9136310a,
+        type: 3}
+      propertyPath: back2
+      value: 
+      objectReference: {fileID: 1225968659}
+    - target: {fileID: 7747661151962087238, guid: 9c4b46f0daac0df4295981ef9136310a,
+        type: 3}
+      propertyPath: cont1
+      value: 
+      objectReference: {fileID: 1889405551}
     - target: {fileID: 7747661151962087239, guid: 9c4b46f0daac0df4295981ef9136310a,
         type: 3}
       propertyPath: m_LocalPosition.x
