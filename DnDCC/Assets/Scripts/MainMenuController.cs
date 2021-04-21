@@ -9,9 +9,6 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     GameObject mStrips;
-    GameObject oStrips;
-
-    private bool isOptionsActive;
 
     public GameObject warningPanel;
     public TMP_Text message;
@@ -23,10 +20,6 @@ public class MainMenuController : MonoBehaviour
     public void Start()
     {
         mStrips = GameObject.Find("MMStrips");
-        oStrips = GameObject.Find("OptionsStrips");
-
-        oStrips.SetActive(false);
-        isOptionsActive = false;
     }
 
     public void NewCharacter()
@@ -47,7 +40,6 @@ public class MainMenuController : MonoBehaviour
         else
         {
             SaveManager.instance.DeleteSavedData();
-            //SaveManager.instance.Save();
             SceneManager.LoadScene(1);
         }
     }
@@ -71,20 +63,9 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    public void Options()
+    public void MainMenu()
     {
-        if (isOptionsActive == true)
-        {
-            mStrips.SetActive(true);
-            oStrips.SetActive(false);
-            isOptionsActive = false;
-        }
-        else
-        {
-            mStrips.SetActive(false);
-            oStrips.SetActive(true);
-            isOptionsActive = true;
-        }
+        SceneManager.LoadScene(0);
     }
 
     public void ExitApp()
