@@ -9,11 +9,6 @@ public class ClassFeaturesController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //TEST CODE REMOVE BEFORE DELIVERABLE
-        //SaveManager.instance.gameData.className = "Cleric";
-        //END TEST CODE
-
         if (SaveManager.instance.gameData.className == "Warlock")
         {
             //enable the warlock panel

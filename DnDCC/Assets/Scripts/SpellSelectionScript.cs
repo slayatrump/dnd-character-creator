@@ -21,8 +21,6 @@ public class SpellSelectionScript : SpellListController
     public string[] allCantrips; //All cantrips
     public string[] allFirstLevel; //All First Level spells
 
-    GameObject[] displayThese; //the cantrips to display
-
     //When functional, it should just take the class name from the current save data and use that instead
     public string chosenClass;
 
