@@ -128,6 +128,6 @@ public class MenuController : MonoBehaviour
     public void SpellsToPersonality()
     {
         Spell.SavingSpellData();
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(7);
     }
 }
