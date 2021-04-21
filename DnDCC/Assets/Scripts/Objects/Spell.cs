@@ -43,6 +43,31 @@ public class Spell : SpellListController
         SetUI();
         button = GameObject.Find("MoveOnButton").GetComponent<Button>();
         button.interactable = false;
+
+        GameObject[] cantrips = GameObject.FindGameObjectsWithTag("CantripCheckbox");
+        GameObject[] spells = GameObject.FindGameObjectsWithTag("SpellCheckbox");
+
+        if (SpellSelectionScript.maxSpells == 0)
+        {
+            foreach (GameObject s in spells)
+            {
+                if (!s.GetComponent<Toggle>().isOn)
+                {
+                    s.GetComponent<Toggle>().interactable = false;
+                }
+            }
+        }
+
+        if (SpellSelectionScript.maxCants == 0)
+        {
+            foreach (GameObject c in cantrips)
+            {
+                if (!c.GetComponent<Toggle>().isOn)
+                {
+                    c.GetComponent<Toggle>().interactable = false;
+                }
+            }
+        }
     }
 
     public void DisplayInfo(bool isActive)
@@ -112,9 +137,6 @@ public class Spell : SpellListController
                 RemovingSavedSpells(this.SpellName);
             }
         }
-
-        GameObject[] cantrips = GameObject.FindGameObjectsWithTag("CantripCheckbox");
-        GameObject[] spells = GameObject.FindGameObjectsWithTag("SpellCheckbox");
 
         if (SpellSelectionScript.maxCants == 0)
         {

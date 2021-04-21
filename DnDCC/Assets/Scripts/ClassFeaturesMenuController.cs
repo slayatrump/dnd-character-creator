@@ -77,6 +77,7 @@ public class ClassFeaturesMenuController : MonoBehaviour
             }
             Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice2}");
 
+            SaveManager.instance.Save();
             SceneManager.LoadScene("Spells");
             return;
         }
@@ -101,6 +102,7 @@ public class ClassFeaturesMenuController : MonoBehaviour
             }
             Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
+            SaveManager.instance.Save();
             SceneManager.LoadScene("Spells");
             return;
         }
@@ -125,6 +127,7 @@ public class ClassFeaturesMenuController : MonoBehaviour
             }
             Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
+            SaveManager.instance.Save();
             SceneManager.LoadScene("Spells");
             return;
         }
@@ -149,6 +152,7 @@ public class ClassFeaturesMenuController : MonoBehaviour
             }
             Debug.Log($"{SaveManager.instance.gameData.classFeaturesChoice1}");
 
+            SaveManager.instance.Save();
             SceneManager.LoadScene("Spells");
             return;
         }
